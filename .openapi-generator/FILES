@@ -423,5 +423,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_transaction_payment_response_refund_origin.py
 tox.ini
