@@ -77,10 +77,11 @@ api_instance = SecurePaymentIntentApi()
 try:
     # This API will create a payment intent
     api_response = api_instance.secure_paymentintents_post(x_api_key, x_app_key, x_version, origin, request)
-    print("The response of SecureEmbeddedPremiumFinanceApi->secure_epf_merchants_quotes_policy_put:\n")
+    print("The response of SecurePaymentIntentApi->secure_paymentintents_post:\n")
     print(api_response)
 except ApiException as e:
-    print("Exception when calling SecureEmbeddedPremiumFinanceApi->secure_epf_merchants_quotes_policy_put: %s\n" % e)
+    print("Exception when calling SecurePaymentIntentApi->secure_paymentintents_post: %s\n" % e)
+
 ```
 
 ## Documentation for API Endpoints
