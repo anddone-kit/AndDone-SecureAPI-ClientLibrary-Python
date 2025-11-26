@@ -36,16 +36,16 @@ class TestPaymentRequestDto(unittest.TestCase):
         if include_optional:
             return PaymentRequestDto(
                 vendor_id = '',
-                payment_method = 'Checks',
+                payment_method = 'Check',
                 amount = 1.337,
                 bank_detail = openapi_client.models.bank_detail_dto.BankDetailDto(
                     account_number = '', 
                     routing_number = '', ),
-                data = openapi_client.models.payment_request_dto_data.PaymentRequestDto_Data(
+                data = openapi_client.models.payment_request_dto_data.PaymentRequestDto_data(
                     check_number = 56, 
                     memo = '', 
                     check_date = '', 
-                    remittance_data = openapi_client.models.payment_request_dto_data_remittance_data.PaymentRequestDto_Data_remittanceData(
+                    remittance_data = openapi_client.models.payment_request_dto_data_remittance_data.PaymentRequestDto_data_remittanceData(
                         headings = [
                             openapi_client.models.heading_dto.HeadingDto(
                                 name = '', 
@@ -62,6 +62,27 @@ class TestPaymentRequestDto(unittest.TestCase):
             )
         else:
             return PaymentRequestDto(
+                vendor_id = '',
+                payment_method = 'Check',
+                amount = 1.337,
+                data = openapi_client.models.payment_request_dto_data.PaymentRequestDto_data(
+                    check_number = 56, 
+                    memo = '', 
+                    check_date = '', 
+                    remittance_data = openapi_client.models.payment_request_dto_data_remittance_data.PaymentRequestDto_data_remittanceData(
+                        headings = [
+                            openapi_client.models.heading_dto.HeadingDto(
+                                name = '', 
+                                type = '', )
+                            ], 
+                        rows = [
+                            [
+                                openapi_client.models.row_dto.RowDto(
+                                    name = '', 
+                                    value = '', 
+                                    type = '', )
+                                ]
+                            ], ), ),
         )
         """
 

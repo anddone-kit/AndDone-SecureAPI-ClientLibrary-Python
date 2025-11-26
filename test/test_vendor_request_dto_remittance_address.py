@@ -46,6 +46,13 @@ class TestVendorRequestDTORemittanceAddress(unittest.TestCase):
             )
         else:
             return VendorRequestDTORemittanceAddress(
+                attention = '',
+                address_line1 = '',
+                city = '',
+                state = '',
+                country = '',
+                postal_code = '',
+                address_source = 'NA',
         )
         """
 

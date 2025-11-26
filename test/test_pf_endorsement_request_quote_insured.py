@@ -43,7 +43,7 @@ class TestPFEndorsementRequestQuoteInsured(unittest.TestCase):
                 is_cancellation_warning_enabled = True,
                 fax_number = '',
                 email_address = '',
-                pf_type = '',
+                pf_type = 'None',
                 address = openapi_client.models.pf_endorsement_request_quote_insured_address.PFEndorsementRequest_quote_Insured_Address(
                     name = '', 
                     address1 = '', 
@@ -66,15 +66,6 @@ class TestPFEndorsementRequestQuoteInsured(unittest.TestCase):
             )
         else:
             return PFEndorsementRequestQuoteInsured(
-                email = '',
-                address = openapi_client.models.pf_endorsement_request_quote_insured_address.PFEndorsementRequest_quote_Insured_Address(
-                    name = '', 
-                    address1 = '', 
-                    address2 = '', 
-                    city = '', 
-                    state = '', 
-                    zip = '', 
-                    phone = '', ),
         )
         """
 

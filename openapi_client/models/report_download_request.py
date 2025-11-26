@@ -26,7 +26,7 @@ class ReportDownloadRequest(BaseModel):
     """
     ReportDownloadRequest
     """ # noqa: E501
-    report_id: Optional[StrictStr] = Field(default=None, alias="reportId")
+    report_id: StrictStr = Field(alias="reportId")
     report_generation_log_id: Optional[StrictStr] = Field(default=None, alias="reportGenerationLogId")
     file_compress: Optional[StrictBool] = Field(default=None, alias="fileCompress")
     var_date: Optional[StrictStr] = Field(default=None, alias="date")

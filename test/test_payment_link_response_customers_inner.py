@@ -40,7 +40,32 @@ class TestPaymentLinkResponseCustomersInner(unittest.TestCase):
                 email = '',
                 phone = '',
                 notify_via_sms = True,
-                notify_via_email = True
+                notify_via_email = True,
+                created_on = '',
+                accounts = [
+                    openapi_client.models.payment_link_response_customers_inner_accounts_inner.PaymentLinkResponse_customers_inner_accounts_inner(
+                        id = '', 
+                        channel_type = 'ACH', 
+                        card_number = '', 
+                        card_type = '', 
+                        account_token = '', 
+                        account_number = '', 
+                        bank_name = '', 
+                        is_checking_account = True, 
+                        is_expired = True, 
+                        created_on = '', 
+                        created_by = '', 
+                        modified_on = '', 
+                        modified_by = '', )
+                    ],
+                address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    city = '', 
+                    state = '', 
+                    country = 56, 
+                    postal_code = '', 
+                    time_zone = '', )
             )
         else:
             return PaymentLinkResponseCustomersInner(

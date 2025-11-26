@@ -29,9 +29,9 @@ class QuoteRequestInsuredAddress(BaseModel):
     name: StrictStr
     address1: StrictStr
     address2: Optional[StrictStr] = None
-    city: StrictStr
-    state: StrictStr
-    zip: StrictStr
+    city: Optional[StrictStr] = None
+    state: Optional[StrictStr] = None
+    zip: Optional[StrictStr] = None
     phone: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["name", "address1", "address2", "city", "state", "zip", "phone"]
 

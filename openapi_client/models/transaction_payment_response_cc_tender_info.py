@@ -48,8 +48,8 @@ class TransactionPaymentResponseCcTenderInfo(BaseModel):
     create_account_token: Optional[StrictBool] = Field(default=None, alias="createAccountToken")
     commission_type: Optional[TransactionPaymentResponseAchTenderInfoCommissionType] = Field(default=None, alias="commissionType")
     commission_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="commissionValue")
-    commission_fixed_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="CommissionFixedValue")
-    __properties: ClassVar[List[str]] = ["cardHolderName", "cardType", "maskCardNumber", "cardExpiry", "captureAmount", "amount", "convenienceAmount", "binNumber", "adjustmentPercentValue", "adjustmentFixedValue", "adjustmentAmount", "adjustmentDisplayName", "adjustmentDescriptorMessage", "paymentAdjustmentType", "preAuthCode", "maskAccount", "accountToken", "accountTokenMessage", "createAccountToken", "commissionType", "commissionValue", "CommissionFixedValue"]
+    commission_fixed_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="commissionFixedValue")
+    __properties: ClassVar[List[str]] = ["cardHolderName", "cardType", "maskCardNumber", "cardExpiry", "captureAmount", "amount", "convenienceAmount", "binNumber", "adjustmentPercentValue", "adjustmentFixedValue", "adjustmentAmount", "adjustmentDisplayName", "adjustmentDescriptorMessage", "paymentAdjustmentType", "preAuthCode", "maskAccount", "accountToken", "accountTokenMessage", "createAccountToken", "commissionType", "commissionValue", "commissionFixedValue"]
 
     @field_validator('payment_adjustment_type')
     def payment_adjustment_type_validate_enum(cls, value):
@@ -136,7 +136,7 @@ class TransactionPaymentResponseCcTenderInfo(BaseModel):
             "createAccountToken": obj.get("createAccountToken"),
             "commissionType": TransactionPaymentResponseAchTenderInfoCommissionType.from_dict(obj["commissionType"]) if obj.get("commissionType") is not None else None,
             "commissionValue": obj.get("commissionValue"),
-            "CommissionFixedValue": obj.get("CommissionFixedValue")
+            "commissionFixedValue": obj.get("commissionFixedValue")
         })
         return _obj
 

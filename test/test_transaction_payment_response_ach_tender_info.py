@@ -37,6 +37,7 @@ class TestTransactionPaymentResponseAchTenderInfo(unittest.TestCase):
             return TransactionPaymentResponseAchTenderInfo(
                 bank_name = '',
                 routing_number = '',
+                account_type = '',
                 check_type = '',
                 check_number = '',
                 name_on_check = '',
@@ -46,25 +47,20 @@ class TestTransactionPaymentResponseAchTenderInfo(unittest.TestCase):
                 amount = 1.337,
                 convenience_amount = 1.337,
                 bin_number = '',
-                tax_amount = 1.337,
-                tax_after_discount = 1.337,
-                tax_percent = 1.337,
                 adjustment_percent_value = 1.337,
                 adjustment_fixed_value = 1.337,
                 adjustment_amount = 1.337,
-                adjustment_display_name = 1.337,
-                adjustment_descriptor_message = 1.337,
-                payment_adjustment_type = 1.337,
-                pre_auth_code = 1.337,
-                mask_account = 1.337,
-                account_token = 1.337,
+                adjustment_display_name = '',
+                adjustment_descriptor_message = '',
+                payment_adjustment_type = 'None',
+                pre_auth_code = '',
+                mask_account = '',
+                account_token = '',
                 account_token_message = '',
-                create_account_token = '',
-                discount_type = '',
-                discount_percent = '',
-                discount_amount = 1.337,
+                create_account_token = True,
                 commission_type = 'Fixed',
-                commission_value = 1.337
+                commission_value = 1.337,
+                commission_fixed_value = 1.337
             )
         else:
             return TransactionPaymentResponseAchTenderInfo(

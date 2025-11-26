@@ -45,11 +45,8 @@ class TestPFQuoteEsignRequest(unittest.TestCase):
             )
         else:
             return PFQuoteEsignRequest(
-                merchant_token = '',
                 quote_key = '',
                 insured_name = '',
-                ip_address = '',
-                mac_address = '',
         )
         """
 

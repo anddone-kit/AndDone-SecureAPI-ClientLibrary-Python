@@ -38,9 +38,9 @@ class TestSecureTokenLinkByIdResponseTimeLineInner(unittest.TestCase):
                 id = '',
                 token_link_id = '',
                 merchant_id = '',
-                payment_link_type = '',
-                link_status = '',
-                token_link_status = '',
+                payment_link_type = 'NA',
+                link_status = 'Created',
+                token_link_status = 'NA',
                 event_date = ''
             )
         else:

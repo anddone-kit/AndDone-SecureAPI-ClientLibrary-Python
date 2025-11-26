@@ -13,14 +13,25 @@
 
 
 import unittest
+import json
 
 from openapi_client.api.secure_vendor_management_api import SecureVendorManagementApi
+from test.ApiExplorerTests import x_api_key, x_app_key, x_version, origin
 
 
 class TestSecureVendorManagementApi(unittest.TestCase):
     """SecureVendorManagementApi unit test stubs"""
 
     def setUp(self) -> None:
+        # call configuration file and store as object
+        with open('anddone-python-sdk-openapi-codegen/config.json') as f:
+            config = json.load(f)
+        # store api key, app key, version and origin from config file
+        self.api_key = config.api_key
+        self.app_key = config.app_key
+        self.version = config.version
+        self.origin = config.origin
+
         self.api = SecureVendorManagementApi()
 
     def tearDown(self) -> None:
@@ -31,56 +42,63 @@ class TestSecureVendorManagementApi(unittest.TestCase):
 
         This API deletes vendor into system
         """
-        pass
+        request = {}
+        self.api.vendorapi_secure_merchants_vendors_delete_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_details_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_details_post
 
         This API gets details of particular vendor
         """
-        pass
+        request = {}
+        result = self.api.vendorapi_secure_merchants_vendors_details_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_edit_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_edit_post
 
         This API Updates the existing vendor
         """
-        pass
+        request = {}
+        result = self.api.vendorapi_secure_merchants_vendors_edit_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_post
 
         This API creates vendor into system
         """
-        pass
+        request = {}
+        result = self.api.vendorapi_secure_merchants_vendors_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_search_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_search_post
 
         This API returns list of all the Vendors of Merchant
         """
-        pass
+        result = self.api.vendorapi_secure_merchants_vendors_search_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_suspend_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_suspend_post
 
         This API suspends vendor into system
         """
-        pass
+        request = {}
+        self.api.vendorapi_secure_merchants_vendors_suspend_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_timeline_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_timeline_post
 
         This API gets timeline of particular vendor
         """
-        pass
+        request = {}
+        result = self.api.vendorapi_secure_merchants_vendors_timeline_post(self.api_key, self.app_key, self.version, self.origin, request)
 
     def test_vendorapi_secure_merchants_vendors_unsuspend_post(self) -> None:
         """Test case for vendorapi_secure_merchants_vendors_unsuspend_post
 
         This API unsuspends vendor into system
         """
-        pass
+        request = {}
+        self.api.vendorapi_secure_merchants_vendors_unsuspend_post(self.api_key, self.app_key, self.version, self.origin, request)
 
 
 if __name__ == '__main__':

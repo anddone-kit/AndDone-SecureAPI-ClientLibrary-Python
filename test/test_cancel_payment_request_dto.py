@@ -39,6 +39,7 @@ class TestCancelPaymentRequestDTO(unittest.TestCase):
             )
         else:
             return CancelPaymentRequestDTO(
+                payment_id = '',
         )
         """
 

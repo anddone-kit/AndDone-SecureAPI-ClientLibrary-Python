@@ -35,7 +35,7 @@ class TestPaymentBatchResponse(unittest.TestCase):
         model = PaymentBatchResponse()
         if include_optional:
             return PaymentBatchResponse(
-                total_row_counts = 1.337,
+                total_row_count = 1.337,
                 data = [
                     openapi_client.models.payment_batch_response_data_inner.PaymentBatchResponse_data_inner(
                         id = '', 

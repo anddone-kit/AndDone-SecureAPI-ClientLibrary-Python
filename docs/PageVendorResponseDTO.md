@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total_row_count** | **float** |  | [optional] 
+**total_row_count** | **int** |  | [optional] 
 **data** | [**List[PageVendorResponseDTODataInner]**](PageVendorResponseDTODataInner.md) |  | [optional] 
 
 ## Example

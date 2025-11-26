@@ -39,12 +39,12 @@ class TestSecureTokenLinkResponseCustomersInner(unittest.TestCase):
                 last_name = '',
                 email = '',
                 phone = '',
-                address = openapi_client.models.token_link_secure_request_customers_inner_address.TokenLinkSecureRequest_customers_inner_address(
+                address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
                     address_line1 = '', 
                     address_line2 = '', 
                     city = '', 
                     state = '', 
-                    country = 1.337, 
+                    country = 56, 
                     postal_code = '', 
                     time_zone = '', )
             )

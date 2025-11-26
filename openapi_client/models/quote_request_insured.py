@@ -31,7 +31,7 @@ class QuoteRequestInsured(BaseModel):
     email: StrictStr
     care_of: Optional[StrictStr] = Field(default=None, alias="careOf")
     unique_id: Optional[StrictStr] = Field(default=None, alias="uniqueId")
-    address: QuoteRequestInsuredAddress
+    address: Optional[QuoteRequestInsuredAddress] = None
     has_data_change_agent_customer_number: Optional[StrictBool] = Field(default=None, alias="hasDataChangeAgentCustomerNumber")
     has_data_change_name: Optional[StrictBool] = Field(default=None, alias="hasDataChangeName")
     has_data_change_address1: Optional[StrictBool] = Field(default=None, alias="hasDataChangeAddress1")

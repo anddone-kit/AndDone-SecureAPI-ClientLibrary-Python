@@ -16,8 +16,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
-from typing import Optional, Union
+from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
+from typing import Optional
 from typing_extensions import Annotated
 from openapi_client.models.secure_token_link_by_id_response import SecureTokenLinkByIdResponse
 from openapi_client.models.secure_token_link_expired_response import SecureTokenLinkExpiredResponse
@@ -364,8 +364,6 @@ class SecureTokenLinksApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -702,8 +700,6 @@ class SecureTokenLinksApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -745,8 +741,8 @@ class SecureTokenLinksApi:
         to_expiry_date: Annotated[Optional[StrictStr], Field(description="toExpiryDate")] = None,
         from_date: Annotated[Optional[StrictStr], Field(description="fromDate")] = None,
         to_date: Annotated[Optional[StrictStr], Field(description="toDate")] = None,
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -802,9 +798,9 @@ class SecureTokenLinksApi:
         :param to_date: toDate
         :type to_date: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -897,8 +893,8 @@ class SecureTokenLinksApi:
         to_expiry_date: Annotated[Optional[StrictStr], Field(description="toExpiryDate")] = None,
         from_date: Annotated[Optional[StrictStr], Field(description="fromDate")] = None,
         to_date: Annotated[Optional[StrictStr], Field(description="toDate")] = None,
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -954,9 +950,9 @@ class SecureTokenLinksApi:
         :param to_date: toDate
         :type to_date: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -1049,8 +1045,8 @@ class SecureTokenLinksApi:
         to_expiry_date: Annotated[Optional[StrictStr], Field(description="toExpiryDate")] = None,
         from_date: Annotated[Optional[StrictStr], Field(description="fromDate")] = None,
         to_date: Annotated[Optional[StrictStr], Field(description="toDate")] = None,
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -1106,9 +1102,9 @@ class SecureTokenLinksApi:
         :param to_date: toDate
         :type to_date: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -1318,8 +1314,6 @@ class SecureTokenLinksApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1659,8 +1653,6 @@ class SecureTokenLinksApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1993,8 +1985,6 @@ class SecureTokenLinksApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

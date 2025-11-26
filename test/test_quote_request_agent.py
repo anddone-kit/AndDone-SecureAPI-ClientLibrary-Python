@@ -37,7 +37,7 @@ class TestQuoteRequestAgent(unittest.TestCase):
             return QuoteRequestAgent(
                 unique_id = '',
                 email = '',
-                address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                address = openapi_client.models.quote_request_agent_address.QuoteRequest_agent_address(
                     name = '', 
                     address1 = '', 
                     address2 = '', 
@@ -48,16 +48,6 @@ class TestQuoteRequestAgent(unittest.TestCase):
             )
         else:
             return QuoteRequestAgent(
-                unique_id = '',
-                email = '',
-                address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
-                    name = '', 
-                    address1 = '', 
-                    address2 = '', 
-                    city = '', 
-                    state = '', 
-                    zip = '', 
-                    phone = '', ),
         )
         """
 

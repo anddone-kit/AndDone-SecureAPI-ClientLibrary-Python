@@ -61,9 +61,7 @@ class TestQuoteRequestInsured(unittest.TestCase):
             )
         else:
             return QuoteRequestInsured(
-                agent_customer_number = '',
                 email = '',
-                care_of = '',
                 address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
                     name = '', 
                     address1 = '', 

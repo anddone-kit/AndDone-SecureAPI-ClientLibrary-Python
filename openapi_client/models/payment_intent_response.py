@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.payment_intent_request_intent import PaymentIntentRequestIntent
 from openapi_client.models.payment_intent_request_pfr import PaymentIntentRequestPfr
 from openapi_client.models.payment_intent_request_reference_data_list_inner import PaymentIntentRequestReferenceDataListInner
 from openapi_client.models.payment_intent_request_splits_inner import PaymentIntentRequestSplitsInner
 from openapi_client.models.payment_intent_response_customers_inner import PaymentIntentResponseCustomersInner
+from openapi_client.models.payment_intent_response_intent import PaymentIntentResponseIntent
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -38,7 +38,7 @@ class PaymentIntentResponse(BaseModel):
     payment_description: Optional[StrictStr] = Field(default=None, alias="paymentDescription")
     invoice_number: Optional[StrictStr] = Field(default=None, alias="invoiceNumber")
     expires_on: Optional[StrictStr] = Field(default=None, alias="expiresOn")
-    intent: Optional[PaymentIntentRequestIntent] = None
+    intent: Optional[PaymentIntentResponseIntent] = None
     save_for_future: Optional[StrictBool] = Field(default=None, alias="saveForFuture")
     enable_premium_finance: Optional[StrictBool] = Field(default=None, alias="enablePremiumFinance")
     splits: Optional[List[PaymentIntentRequestSplitsInner]] = None
@@ -160,7 +160,7 @@ class PaymentIntentResponse(BaseModel):
             "paymentDescription": obj.get("paymentDescription"),
             "invoiceNumber": obj.get("invoiceNumber"),
             "expiresOn": obj.get("expiresOn"),
-            "intent": PaymentIntentRequestIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
+            "intent": PaymentIntentResponseIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
             "saveForFuture": obj.get("saveForFuture"),
             "enablePremiumFinance": obj.get("enablePremiumFinance"),
             "splits": [PaymentIntentRequestSplitsInner.from_dict(_item) for _item in obj["splits"]] if obj.get("splits") is not None else None,

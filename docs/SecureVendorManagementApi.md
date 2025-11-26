@@ -21,8 +21,6 @@ This API deletes vendor into system
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -36,22 +34,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -89,7 +71,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -100,10 +82,10 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor deleted successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -114,8 +96,6 @@ This API gets details of particular vendor
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -130,22 +110,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -185,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -196,10 +160,10 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor details fetched successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -210,8 +174,6 @@ This API Updates the existing vendor
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -226,22 +188,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -281,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -292,10 +238,10 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor updated successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -306,8 +252,6 @@ This API creates vendor into system
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -322,22 +266,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -377,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -388,10 +316,10 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | SecureVendorResponseDTO |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -402,8 +330,6 @@ This API returns list of all the Vendors of Merchant
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -417,22 +343,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -450,10 +360,10 @@ with openapi_client.ApiClient(configuration) as api_client:
     created_by = 'created_by_example' # str | Set createdBy (optional)
     start_date = 'start_date_example' # str | set start Date (optional)
     end_date = 'end_date_example' # str | set end Date (optional)
-    page_size = 3.4 # float | Set PageSize (optional)
+    page_size = 56 # int | Set PageSize (optional)
     search_text = 'search_text_example' # str | search Text (optional)
     sort_field = 'sort_field_example' # str | Set SortField (optional)
-    start_row = 'start_row_example' # str | Set StartRow (optional)
+    start_row = 56 # int | Set StartRow (optional)
     asc = True # bool | Set Asc (optional)
 
     try:
@@ -484,10 +394,10 @@ Name | Type | Description  | Notes
  **created_by** | **str**| Set createdBy | [optional] 
  **start_date** | **str**| set start Date | [optional] 
  **end_date** | **str**| set end Date | [optional] 
- **page_size** | **float**| Set PageSize | [optional] 
+ **page_size** | **int**| Set PageSize | [optional] 
  **search_text** | **str**| search Text | [optional] 
  **sort_field** | **str**| Set SortField | [optional] 
- **start_row** | **str**| Set StartRow | [optional] 
+ **start_row** | **int**| Set StartRow | [optional] 
  **asc** | **bool**| Set Asc | [optional] 
 
 ### Return type
@@ -496,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -507,10 +417,10 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor searched successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -521,8 +431,6 @@ This API suspends vendor into system
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -536,22 +444,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -589,7 +481,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -600,10 +492,10 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor suspended successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -614,8 +506,6 @@ This API gets timeline of particular vendor
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -630,22 +520,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -685,7 +559,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -696,10 +570,10 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor timeline fetched successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -710,8 +584,6 @@ This API unsuspends vendor into system
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -725,22 +597,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -778,7 +634,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -789,10 +645,10 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Vendor unsuspended successfully |  -  |
-**400** | Bad request or validation error |  -  |
-**404** | Vendor not found |  -  |
-**500** | Internal server error |  -  |
+**200** | Successful operation |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

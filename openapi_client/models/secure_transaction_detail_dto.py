@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.secure_transaction_detail_dto_tender_info import SecureTransactionDetailDTOTenderInfo
 from openapi_client.models.transaction_payment_response_billing_contact import TransactionPaymentResponseBillingContact
 from openapi_client.models.transaction_payment_response_refund_origin import TransactionPaymentResponseRefundOrigin
@@ -53,8 +53,8 @@ class SecureTransactionDetailDTO(BaseModel):
     remarks: Optional[StrictStr] = None
     recurring_type: Optional[StrictStr] = Field(default=None, alias="recurringType")
     recurring_id: Optional[StrictStr] = Field(default=None, alias="recurringId")
-    installment_number: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="installmentNumber")
-    installment_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="installmentCount")
+    installment_number: Optional[StrictInt] = Field(default=None, alias="installmentNumber")
+    installment_count: Optional[StrictInt] = Field(default=None, alias="installmentCount")
     allow_duplicates: Optional[StrictBool] = Field(default=None, alias="allowDuplicates")
     verification_enabled: Optional[StrictBool] = Field(default=None, alias="verificationEnabled")
     sent_success_notification: Optional[StrictBool] = Field(default=None, alias="sentSuccessNotification")
@@ -65,7 +65,7 @@ class SecureTransactionDetailDTO(BaseModel):
     transaction_status: Optional[StrictStr] = Field(default=None, alias="transactionStatus")
     previous_transaction_status: Optional[StrictStr] = Field(default=None, alias="previousTransactionStatus")
     transaction_result: Optional[TransactionPaymentResponseTransactionResult] = Field(default=None, alias="transactionResult")
-    level: Optional[Union[StrictFloat, StrictInt]] = None
+    level: Optional[StrictInt] = None
     partner_id: Optional[StrictStr] = Field(default=None, alias="partnerId")
     order_id: Optional[StrictStr] = Field(default=None, alias="orderId")
     invoice_id: Optional[StrictStr] = Field(default=None, alias="invoiceId")

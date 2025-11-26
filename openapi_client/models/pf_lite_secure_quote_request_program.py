@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class PFLiteSecureQuoteRequestProgram(BaseModel):
     """
     PFLiteSecureQuoteRequestProgram
     """ # noqa: E501
-    program_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="programId")
+    program_id: Optional[StrictInt] = Field(default=None, alias="programId")
     loan_type: StrictStr = Field(alias="loanType")
     __properties: ClassVar[List[str]] = ["programId", "loanType"]
 

@@ -77,8 +77,8 @@ class SecureVendorResponseDTO(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['NA', 'Reviewing', 'Approved', 'Denied', 'Suspend', 'Deleted']):
-            raise ValueError("must be one of enum values ('NA', 'Reviewing', 'Approved', 'Denied', 'Suspend', 'Deleted')")
+        if value not in set(['NA', 'Reviewing', 'Approved', 'Denied', 'Suspended', 'Deleted']):
+            raise ValueError("must be one of enum values ('NA', 'Reviewing', 'Approved', 'Denied', 'Suspended', 'Deleted')")
         return value
 
     model_config = ConfigDict(

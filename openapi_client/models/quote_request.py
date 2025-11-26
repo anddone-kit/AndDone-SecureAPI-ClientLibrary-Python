@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.quote_request_agent import QuoteRequestAgent
 from openapi_client.models.quote_request_details import QuoteRequestDetails
@@ -31,12 +31,13 @@ class QuoteRequest(BaseModel):
     QuoteRequest
     """ # noqa: E501
     merchant_id: Optional[StrictStr] = Field(default=None, alias="merchantId")
+    offer_auto_pay: Optional[StrictBool] = Field(default=None, alias="offerAutoPay")
     payment_intent_id: StrictStr = Field(alias="paymentIntentId")
     details: QuoteRequestDetails
     insured: QuoteRequestInsured
     agent: QuoteRequestAgent
     policies: List[QuoteRequestPoliciesInner]
-    __properties: ClassVar[List[str]] = ["merchantId", "paymentIntentId", "details", "insured", "agent", "policies"]
+    __properties: ClassVar[List[str]] = ["merchantId", "offerAutoPay", "paymentIntentId", "details", "insured", "agent", "policies"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -106,6 +107,7 @@ class QuoteRequest(BaseModel):
 
         _obj = cls.model_validate({
             "merchantId": obj.get("merchantId"),
+            "offerAutoPay": obj.get("offerAutoPay"),
             "paymentIntentId": obj.get("paymentIntentId"),
             "details": QuoteRequestDetails.from_dict(obj["details"]) if obj.get("details") is not None else None,
             "insured": QuoteRequestInsured.from_dict(obj["insured"]) if obj.get("insured") is not None else None,

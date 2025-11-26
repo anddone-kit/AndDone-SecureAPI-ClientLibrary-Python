@@ -43,7 +43,7 @@ class TestVerifyBankAccountResponse(unittest.TestCase):
                 estimated_verification_date = '',
                 event_id = '',
                 event_type = '',
-                bank_account_entity_id = 56,
+                bank_account_entity_id = 1.337,
                 bank_account_entity_type = 'None',
                 created_on = '',
                 created_by = '',

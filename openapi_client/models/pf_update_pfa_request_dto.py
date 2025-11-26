@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
-from typing import Any, ClassVar, Dict, List
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
+from typing import Any, ClassVar, Dict, List, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,7 +26,7 @@ class PFUpdatePFARequestDTO(BaseModel):
     """
     PFUpdatePFARequestDTO
     """ # noqa: E501
-    quote_key: StrictInt = Field(description="This denotes the quoteKey.", alias="quoteKey")
+    quote_key: Union[StrictFloat, StrictInt] = Field(description="This denotes the quoteKey.", alias="quoteKey")
     __properties: ClassVar[List[str]] = ["quoteKey"]
 
     model_config = ConfigDict(

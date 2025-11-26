@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **expire_in** | **int** |  | 
 **response_type** | **str** |  | [optional] 
 **expire_in_unit** | **str** |  | 
-**intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  | 
+**intent** | [**PaymentIntentResponseIntent**](PaymentIntentResponseIntent.md) |  | 
 **call_back_parameters** | [**PaymentLinkResponseCallbackParameters**](PaymentLinkResponseCallbackParameters.md) |  | [optional] 
 
 ## Example

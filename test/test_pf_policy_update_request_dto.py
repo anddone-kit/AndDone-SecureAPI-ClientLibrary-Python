@@ -35,7 +35,7 @@ class TestPFPolicyUpdateRequestDTO(unittest.TestCase):
         model = PFPolicyUpdateRequestDTO()
         if include_optional:
             return PFPolicyUpdateRequestDTO(
-                quote_key = 1.337,
+                quote_key = 56,
                 account_number = '',
                 premium = 1.337,
                 category = '',
@@ -43,7 +43,7 @@ class TestPFPolicyUpdateRequestDTO(unittest.TestCase):
             )
         else:
             return PFPolicyUpdateRequestDTO(
-                quote_key = 1.337,
+                quote_key = 56,
                 premium = 1.337,
                 category = '',
                 new_policy_number = '',

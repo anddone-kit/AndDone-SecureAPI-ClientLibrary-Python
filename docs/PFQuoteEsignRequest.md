@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **mac_address** | **str** | This denotes the MAC address of the client. | [optional] 
 **captcha_token** | **str** | This denotes the captchaToken. | [optional] 
 **action_name** | **str** | This denotes the action name. | [optional] 
+**is_sign_apa** | **bool** | This denotes isSignAPA status. | [optional] 
 
 ## Example
 

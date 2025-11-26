@@ -16,8 +16,6 @@ This API will do a check of eligibility of account
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -32,22 +30,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -87,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -106,19 +88,17 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secure_epf_quote_endorsement_booking_put**
-> PFUpdatePFAResponse secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+> PFUpdatePFAResponse secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
 
 This API will update PFA to book a endorsement quote.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
-from openapi_client.models.pf_quote_booking_request import PFQuoteBookingRequest
 from openapi_client.models.pf_update_pfa_response import PFUpdatePFAResponse
+from openapi_client.models.secure_pf_quote_booking_request import SecurePFQuoteBookingRequest
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -128,22 +108,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -153,11 +117,11 @@ with openapi_client.ApiClient(configuration) as api_client:
     x_app_key = 'x_app_key_example' # str | an authorization header
     x_version = 'x_version_example' # str | x-version
     origin = 'origin_example' # str | origin
-    pf_quote_booking_request = openapi_client.PFQuoteBookingRequest() # PFQuoteBookingRequest | PFQuoteBooking Request details
+    secure_pf_quote_booking_request = openapi_client.SecurePFQuoteBookingRequest() # SecurePFQuoteBookingRequest | PFQuoteBooking Request details
 
     try:
         # This API will update PFA to book a endorsement quote.
-        api_response = api_instance.secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, pf_quote_booking_request)
+        api_response = api_instance.secure_epf_quote_endorsement_booking_put(x_api_key, x_app_key, x_version, origin, secure_pf_quote_booking_request)
         print("The response of SecureEmbeddedPremiumFinanceEndorsementsApi->secure_epf_quote_endorsement_booking_put:\n")
         pprint(api_response)
     except Exception as e:
@@ -175,7 +139,7 @@ Name | Type | Description  | Notes
  **x_app_key** | **str**| an authorization header | 
  **x_version** | **str**| x-version | 
  **origin** | **str**| origin | 
- **pf_quote_booking_request** | [**PFQuoteBookingRequest**](PFQuoteBookingRequest.md)| PFQuoteBooking Request details | 
+ **secure_pf_quote_booking_request** | [**SecurePFQuoteBookingRequest**](SecurePFQuoteBookingRequest.md)| PFQuoteBooking Request details | 
 
 ### Return type
 
@@ -183,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -208,8 +172,6 @@ This API will do return a quote for an existing policy or new policy for an exis
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -224,22 +186,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -279,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

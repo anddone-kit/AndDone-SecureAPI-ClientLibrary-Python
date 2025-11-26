@@ -363,8 +363,6 @@ class SecurePremiumFinanceLiteApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -704,8 +702,6 @@ class SecurePremiumFinanceLiteApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -795,7 +791,7 @@ class SecurePremiumFinanceLiteApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "PaymentLinkResponse",
+            '201': "PaymentLinkResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -880,7 +876,7 @@ class SecurePremiumFinanceLiteApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "PaymentLinkResponse",
+            '201': "PaymentLinkResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -965,7 +961,7 @@ class SecurePremiumFinanceLiteApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "PaymentLinkResponse",
+            '201': "PaymentLinkResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -1045,8 +1041,6 @@ class SecurePremiumFinanceLiteApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

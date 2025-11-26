@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**quote_key** | **int** | This denotes the quoteKey. | 
+**quote_key** | **float** | This denotes the quoteKey. | 
 
 ## Example
 

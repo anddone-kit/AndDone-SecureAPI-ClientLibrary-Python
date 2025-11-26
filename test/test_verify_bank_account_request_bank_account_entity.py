@@ -35,7 +35,7 @@ class TestVerifyBankAccountRequestBankAccountEntity(unittest.TestCase):
         model = VerifyBankAccountRequestBankAccountEntity()
         if include_optional:
             return VerifyBankAccountRequestBankAccountEntity(
-                id = '',
+                id = 56,
                 type = ''
             )
         else:

@@ -35,9 +35,7 @@ class TestSecureTokenLinkResponseIntent(unittest.TestCase):
         model = SecureTokenLinkResponseIntent()
         if include_optional:
             return SecureTokenLinkResponseIntent(
-                payment_types = [
-                    'NotDefined'
-                    ]
+                payment_types = 'NotDefined'
             )
         else:
             return SecureTokenLinkResponseIntent(

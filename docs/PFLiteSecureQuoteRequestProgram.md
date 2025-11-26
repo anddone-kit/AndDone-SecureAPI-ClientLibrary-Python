@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**program_id** | **float** |  | [optional] 
+**program_id** | **int** |  | [optional] 
 **loan_type** | **str** |  | 
 
 ## Example

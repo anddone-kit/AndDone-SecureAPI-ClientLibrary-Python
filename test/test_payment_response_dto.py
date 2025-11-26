@@ -39,9 +39,9 @@ class TestPaymentResponseDto(unittest.TestCase):
                 payment_id = '',
                 merchant_id = '',
                 vendor_id = '',
-                payment_status = '',
+                payment_status = 'NA',
                 payment_method_status = 'NA',
-                payment_method = 'Checks',
+                payment_method = 'Check',
                 amount = 1.337,
                 data = openapi_client.models.data_dto.DataDto(
                     check_number = 56, 

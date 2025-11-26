@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **vendor_name** | **str** |  | [optional] 
 **merchant_dba_name** | **str** |  | [optional] 
 **payment_id** | **str** |  | [optional] 
-**check_number** | **float** |  | [optional] 
+**check_number** | **int** |  | [optional] 
 **payment_method** | **str** |  | [optional] 
 **amount** | **float** |  | [optional] 
 **bank_name** | **str** |  | [optional] 

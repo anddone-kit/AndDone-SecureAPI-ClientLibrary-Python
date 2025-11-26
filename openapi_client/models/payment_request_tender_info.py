@@ -43,7 +43,7 @@ class PaymentRequestTenderInfo(BaseModel):
     track_data: Optional[StrictStr] = Field(default=None, alias="trackData")
     remove_discounting: Optional[StrictBool] = Field(default=None, alias="removeDiscounting")
     suppress_commission: Optional[StrictBool] = Field(default=None, alias="suppressCommission")
-    amount: Optional[Union[StrictFloat, StrictInt]] = None
+    amount: Union[StrictFloat, StrictInt]
     convenience_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="convenienceAmount")
     pre_auth_code: Optional[StrictStr] = Field(default=None, alias="preAuthCode")
     create_account_token: Optional[StrictBool] = Field(default=None, alias="createAccountToken")

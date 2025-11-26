@@ -38,7 +38,7 @@ class TestPaymentListResponseDTO(unittest.TestCase):
                 id = '',
                 merchant_id = '',
                 merchant_dba_name = '',
-                payment_method_type = 'Checks',
+                payment_method_type = 'Check',
                 payment_based_id = '',
                 vendor_id = '',
                 vendor_name = '',

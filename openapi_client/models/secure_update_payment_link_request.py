@@ -38,7 +38,7 @@ class SecureUpdatePaymentLinkRequest(BaseModel):
     payment_description: Optional[StrictStr] = Field(default=None, alias="paymentDescription")
     customers: Optional[List[PaymentLinkResponseCustomersInner]] = None
     invoice_number: Optional[StrictStr] = Field(default=None, alias="invoiceNumber")
-    expire_by: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="expireBy")
+    expire_by: Optional[StrictInt] = Field(default=None, alias="expireBy")
     expire_on: Optional[StrictStr] = Field(default=None, alias="expireOn")
     line_items: Optional[List[PaymentLinkResponseLineItemsInner]] = Field(default=None, alias="lineItems")
     short_description: Optional[StrictStr] = Field(default=None, alias="shortDescription")

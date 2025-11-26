@@ -26,13 +26,13 @@ class PFCheckEndorsementsResponseItemPoliciesInner(BaseModel):
     """
     PFCheckEndorsementsResponseItemPoliciesInner
     """ # noqa: E501
-    policy_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="policyID")
+    policy_id: Optional[StrictInt] = Field(default=None, alias="policyID")
     company_name: Optional[StrictStr] = Field(default=None, alias="companyName")
     policy_number: Optional[StrictStr] = Field(default=None, alias="policyNumber")
     premium: Optional[Union[StrictFloat, StrictInt]] = None
     coverage_type: Optional[StrictStr] = Field(default=None, alias="coverageType")
     coverage_type_description: Optional[StrictStr] = Field(default=None, alias="coverageTypeDescription")
-    company_type_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="companyTypeID")
+    company_type_id: Optional[StrictInt] = Field(default=None, alias="companyTypeID")
     __properties: ClassVar[List[str]] = ["policyID", "companyName", "policyNumber", "premium", "coverageType", "coverageTypeDescription", "companyTypeID"]
 
     model_config = ConfigDict(

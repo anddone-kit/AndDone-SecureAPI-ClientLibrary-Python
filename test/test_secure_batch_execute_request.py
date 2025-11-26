@@ -39,6 +39,7 @@ class TestSecureBatchExecuteRequest(unittest.TestCase):
             )
         else:
             return SecureBatchExecuteRequest(
+                batch_id = '',
         )
         """
 

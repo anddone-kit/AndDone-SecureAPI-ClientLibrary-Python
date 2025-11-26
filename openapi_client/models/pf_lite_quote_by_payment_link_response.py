@@ -32,7 +32,7 @@ class PFLiteQuoteByPaymentLinkResponse(BaseModel):
     pf_type: Optional[StrictStr] = Field(default=None, description="Type of premium finance", alias="pfType")
     is_endorsement: Optional[StrictBool] = Field(default=None, description="Indicates if it is an endorsement", alias="isEndorsement")
     merchant_id: Optional[StrictStr] = Field(default=None, description="Identifier of the merchant", alias="merchantId")
-    program_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Identifier of the program", alias="programId")
+    program_id: Optional[StrictInt] = Field(default=None, description="Identifier of the program", alias="programId")
     payment_link_id: Optional[StrictStr] = Field(default=None, description="Identifier of the payment link", alias="paymentLinkId")
     account_number: Optional[StrictStr] = Field(default=None, description="Account number", alias="accountNumber")
     quote_status: Optional[StrictStr] = Field(default=None, description="The status of the quote.", alias="quoteStatus")
@@ -47,12 +47,13 @@ class PFLiteQuoteByPaymentLinkResponse(BaseModel):
     finance_charge: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Finance charge", alias="financeCharge")
     total_payments: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total payments", alias="totalPayments")
     payment_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Payment amount", alias="paymentAmount")
-    doc_stamp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Document stamp", alias="docStamp")
+    doc_stamp: Optional[StrictInt] = Field(default=None, description="Document stamp", alias="docStamp")
     first_due_date: Optional[StrictStr] = Field(default=None, description="First due date", alias="firstDueDate")
     apr: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Annual percentage rate")
     installments: Optional[StrictInt] = Field(default=None, description="Number of installments")
     batch_id: Optional[StrictStr] = Field(default=None, description="Batch identifier", alias="batchId")
-    payments_retained: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of payments retained", alias="paymentsRetained")
+    autopay_status: Optional[StrictStr] = Field(default=None, description="Autopayment status", alias="autopayStatus")
+    payments_retained: Optional[StrictInt] = Field(default=None, description="Number of payments retained", alias="paymentsRetained")
     payment_retained_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Amount retained from payments", alias="paymentRetainedAmount")
     retail_agent_register_login_url: Optional[StrictStr] = Field(default=None, description="URL for retail agent registration/login", alias="retailAgentRegisterLoginURL")
     insured_name: Optional[StrictStr] = Field(default=None, description="Name of the insured", alias="insuredName")
@@ -68,7 +69,7 @@ class PFLiteQuoteByPaymentLinkResponse(BaseModel):
     modified_by: Optional[StrictStr] = Field(default=None, description="Modifier of the quote", alias="modifiedBy")
     un_sign_pfa: Optional[StrictStr] = Field(default=None, description="Un-signed PFA document", alias="unSignPFA")
     sign_pfa: Optional[StrictStr] = Field(default=None, description="Signed PFA document", alias="signPFA")
-    __properties: ClassVar[List[str]] = ["id", "quoteKey", "pfType", "isEndorsement", "merchantId", "programId", "paymentLinkId", "accountNumber", "quoteStatus", "policies", "isActive", "premium", "additionalFees", "downAmount", "tax", "brokerFee", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "paymentsRetained", "paymentRetainedAmount", "retailAgentRegisterLoginURL", "insuredName", "isEsignPFA", "nextPaymentDueDate", "lastPaymentDate", "isDownPaymentRequired", "isEsignRequired", "isDeleted", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "unSignPFA", "signPFA"]
+    __properties: ClassVar[List[str]] = ["id", "quoteKey", "pfType", "isEndorsement", "merchantId", "programId", "paymentLinkId", "accountNumber", "quoteStatus", "policies", "isActive", "premium", "additionalFees", "downAmount", "tax", "brokerFee", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "autopayStatus", "paymentsRetained", "paymentRetainedAmount", "retailAgentRegisterLoginURL", "insuredName", "isEsignPFA", "nextPaymentDueDate", "lastPaymentDate", "isDownPaymentRequired", "isEsignRequired", "isDeleted", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "unSignPFA", "signPFA"]
 
     @field_validator('quote_status')
     def quote_status_validate_enum(cls, value):
@@ -163,6 +164,7 @@ class PFLiteQuoteByPaymentLinkResponse(BaseModel):
             "apr": obj.get("apr"),
             "installments": obj.get("installments"),
             "batchId": obj.get("batchId"),
+            "autopayStatus": obj.get("autopayStatus"),
             "paymentsRetained": obj.get("paymentsRetained"),
             "paymentRetainedAmount": obj.get("paymentRetainedAmount"),
             "retailAgentRegisterLoginURL": obj.get("retailAgentRegisterLoginURL"),

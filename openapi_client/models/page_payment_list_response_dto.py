@@ -27,7 +27,7 @@ class PagePaymentListResponseDTO(BaseModel):
     """
     PagePaymentListResponseDTO
     """ # noqa: E501
-    total_row_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalRowCount")
+    total_row_count: Optional[StrictInt] = Field(default=None, alias="totalRowCount")
     total_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalAmount")
     data: Optional[List[PagePaymentListResponseDTODataInner]] = None
     __properties: ClassVar[List[str]] = ["totalRowCount", "totalAmount", "data"]

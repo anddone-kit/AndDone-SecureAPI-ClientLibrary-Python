@@ -26,17 +26,17 @@ class PFEndorsementRequestQuoteCommunication(BaseModel):
     """
     PFEndorsementRequestQuoteCommunication
     """ # noqa: E501
-    insured_e_sign_completion_url: Optional[StrictStr] = Field(default=None, alias="InsuredESignCompletionURL")
-    payment_portal_cancel_redirect_url: Optional[StrictStr] = Field(default=None, alias="PaymentPortalCancelRedirectURL")
-    payment_portal_decline_offer_redirect_url: Optional[StrictBool] = Field(default=None, alias="PaymentPortalDeclineOfferRedirectURL")
-    return_insured_e_sign_url: Optional[StrictBool] = Field(default=None, alias="ReturnInsuredESignURL")
-    e_sign_auto_start: Optional[StrictBool] = Field(default=None, alias="ESignAutoStart")
-    e_sign_start_pick_options: Optional[StrictBool] = Field(default=None, alias="ESignStartPickOptions")
-    suppress_insured_e_sign_email: Optional[StrictBool] = Field(default=None, alias="SuppressInsuredESignEmail")
-    has_documents_to_upload: Optional[StrictBool] = Field(default=None, alias="HasDocumentsToUpload")
-    send_email_to_retail_agent: Optional[StrictBool] = Field(default=None, alias="SendEmailToRetailAgent")
-    send_welcome_letter_email_to_insured: Optional[StrictBool] = Field(default=None, alias="SendWelcomeLetterEmailToInsured")
-    __properties: ClassVar[List[str]] = ["InsuredESignCompletionURL", "PaymentPortalCancelRedirectURL", "PaymentPortalDeclineOfferRedirectURL", "ReturnInsuredESignURL", "ESignAutoStart", "ESignStartPickOptions", "SuppressInsuredESignEmail", "HasDocumentsToUpload", "SendEmailToRetailAgent", "SendWelcomeLetterEmailToInsured"]
+    insured_e_sign_completion_url: Optional[StrictStr] = Field(default=None, alias="insuredESignCompletionURL")
+    payment_portal_cancel_redirect_url: Optional[StrictStr] = Field(default=None, alias="paymentPortalCancelRedirectURL")
+    payment_portal_decline_offer_redirect_url: Optional[StrictBool] = Field(default=None, alias="paymentPortalDeclineOfferRedirectURL")
+    return_insured_e_sign_url: Optional[StrictBool] = Field(default=None, alias="returnInsuredESignURL")
+    e_sign_auto_start: Optional[StrictBool] = Field(default=None, alias="eSignAutoStart")
+    e_sign_start_pick_options: Optional[StrictBool] = Field(default=None, alias="eSignStartPickOptions")
+    suppress_insured_e_sign_email: Optional[StrictBool] = Field(default=None, alias="suppressInsuredESignEmail")
+    has_documents_to_upload: Optional[StrictBool] = Field(default=None, alias="hasDocumentsToUpload")
+    send_email_to_retail_agent: Optional[StrictBool] = Field(default=None, alias="sendEmailToRetailAgent")
+    send_welcome_letter_email_to_insured: Optional[StrictBool] = Field(default=None, alias="sendWelcomeLetterEmailToInsured")
+    __properties: ClassVar[List[str]] = ["insuredESignCompletionURL", "paymentPortalCancelRedirectURL", "paymentPortalDeclineOfferRedirectURL", "returnInsuredESignURL", "eSignAutoStart", "eSignStartPickOptions", "suppressInsuredESignEmail", "hasDocumentsToUpload", "sendEmailToRetailAgent", "sendWelcomeLetterEmailToInsured"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,16 +89,16 @@ class PFEndorsementRequestQuoteCommunication(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "InsuredESignCompletionURL": obj.get("InsuredESignCompletionURL"),
-            "PaymentPortalCancelRedirectURL": obj.get("PaymentPortalCancelRedirectURL"),
-            "PaymentPortalDeclineOfferRedirectURL": obj.get("PaymentPortalDeclineOfferRedirectURL"),
-            "ReturnInsuredESignURL": obj.get("ReturnInsuredESignURL"),
-            "ESignAutoStart": obj.get("ESignAutoStart"),
-            "ESignStartPickOptions": obj.get("ESignStartPickOptions"),
-            "SuppressInsuredESignEmail": obj.get("SuppressInsuredESignEmail"),
-            "HasDocumentsToUpload": obj.get("HasDocumentsToUpload"),
-            "SendEmailToRetailAgent": obj.get("SendEmailToRetailAgent"),
-            "SendWelcomeLetterEmailToInsured": obj.get("SendWelcomeLetterEmailToInsured")
+            "insuredESignCompletionURL": obj.get("insuredESignCompletionURL"),
+            "paymentPortalCancelRedirectURL": obj.get("paymentPortalCancelRedirectURL"),
+            "paymentPortalDeclineOfferRedirectURL": obj.get("paymentPortalDeclineOfferRedirectURL"),
+            "returnInsuredESignURL": obj.get("returnInsuredESignURL"),
+            "eSignAutoStart": obj.get("eSignAutoStart"),
+            "eSignStartPickOptions": obj.get("eSignStartPickOptions"),
+            "suppressInsuredESignEmail": obj.get("suppressInsuredESignEmail"),
+            "hasDocumentsToUpload": obj.get("hasDocumentsToUpload"),
+            "sendEmailToRetailAgent": obj.get("sendEmailToRetailAgent"),
+            "sendWelcomeLetterEmailToInsured": obj.get("sendWelcomeLetterEmailToInsured")
         })
         return _obj
 

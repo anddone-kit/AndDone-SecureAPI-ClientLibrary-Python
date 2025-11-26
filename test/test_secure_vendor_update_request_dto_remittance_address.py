@@ -42,7 +42,6 @@ class TestSecureVendorUpdateRequestDTORemittanceAddress(unittest.TestCase):
                 state = '',
                 country = '',
                 postal_code = '',
-                address_type = 'NA',
                 address_source = 'NA'
             )
         else:

@@ -40,11 +40,14 @@ class TestVerifyBankAccountRequest(unittest.TestCase):
                 account_holder_name = '',
                 statement_display_name = '',
                 bank_account_entity = openapi_client.models.verify_bank_account_request_bank_account_entity.VerifyBankAccountRequest_bankAccountEntity(
-                    id = '', 
+                    id = 56, 
                     type = '', )
             )
         else:
             return VerifyBankAccountRequest(
+                account_number = '',
+                routing_number = '',
+                account_holder_name = '',
         )
         """
 

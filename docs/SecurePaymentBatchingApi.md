@@ -18,8 +18,6 @@ This API is used for getting Secure Payment Batch Details
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -34,22 +32,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -89,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -114,8 +96,6 @@ This API execute on-demand batch transaction.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -129,22 +109,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -182,7 +146,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -207,8 +171,6 @@ This API is used for getting Secure Payment Batches
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -222,22 +184,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -247,8 +193,8 @@ with openapi_client.ApiClient(configuration) as api_client:
     x_app_key = 'x_app_key_example' # str | an authorization header
     x_version = 'x_version_example' # str | x-version
     origin = 'origin_example' # str | origin
-    start_row = 3.4 # float | Set StartRow (optional)
-    page_size = 3.4 # float | Set PageSize (optional)
+    start_row = 56 # int | Set StartRow (optional)
+    page_size = 56 # int | Set PageSize (optional)
     sort_field = 'sort_field_example' # str | Set SortField (optional)
     asc = True # bool | Set Asc (optional)
 
@@ -272,8 +218,8 @@ Name | Type | Description  | Notes
  **x_app_key** | **str**| an authorization header | 
  **x_version** | **str**| x-version | 
  **origin** | **str**| origin | 
- **start_row** | **float**| Set StartRow | [optional] 
- **page_size** | **float**| Set PageSize | [optional] 
+ **start_row** | **int**| Set StartRow | [optional] 
+ **page_size** | **int**| Set PageSize | [optional] 
  **sort_field** | **str**| Set SortField | [optional] 
  **asc** | **bool**| Set Asc | [optional] 
 
@@ -283,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -308,8 +254,6 @@ This API will returns batch timeline.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -324,22 +268,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -379,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -404,8 +332,6 @@ This API cancels transactions from an active batch.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -419,22 +345,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -472,7 +382,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

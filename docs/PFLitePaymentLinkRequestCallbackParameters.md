@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **reference_no** | **str** |  | [optional] 
 **reference_type** | **str** |  | [optional] 
 **transaction_id** | **str** |  | [optional] 
-**redirection_time** | **float** |  | [optional] 
+**redirection_time** | **int** |  | [optional] 
 
 ## Example
 

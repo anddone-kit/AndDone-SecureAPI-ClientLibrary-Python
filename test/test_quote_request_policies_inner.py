@@ -36,7 +36,7 @@ class TestQuoteRequestPoliciesInner(unittest.TestCase):
         if include_optional:
             return QuoteRequestPoliciesInner(
                 policy_id = 56,
-                policy_number = 56,
+                policy_number = 1.337,
                 premium = 1.337,
                 fee = 1.337,
                 tax = 1.337,
@@ -64,12 +64,12 @@ class TestQuoteRequestPoliciesInner(unittest.TestCase):
                     zip = '', 
                     phone = '', 
                     unique_id = '', ),
-                ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                     unique_id = '', 
                     name = '', 
                     care_of = '', 
                     is_validation_required = True, 
-                    address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                    address = openapi_client.models.quote_request_policies_inner_ga_address.QuoteRequest_policies_inner_ga_address(
                         name = '', 
                         address1 = '', 
                         address2 = '', 
@@ -77,12 +77,12 @@ class TestQuoteRequestPoliciesInner(unittest.TestCase):
                         state = '', 
                         zip = '', 
                         phone = '', ), ),
-                broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                     unique_id = '', 
                     name = '', 
                     care_of = '', 
                     is_validation_required = True, 
-                    address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                    address = openapi_client.models.quote_request_policies_inner_ga_address.QuoteRequest_policies_inner_ga_address(
                         name = '', 
                         address1 = '', 
                         address2 = '', 
@@ -93,6 +93,19 @@ class TestQuoteRequestPoliciesInner(unittest.TestCase):
             )
         else:
             return QuoteRequestPoliciesInner(
+                premium = 1.337,
+                coverage = '',
+                effective_date = '',
+                company = openapi_client.models.quote_request_policies_inner_company.QuoteRequest_policies_inner_company(
+                    best_number = '', 
+                    name = '', 
+                    address1 = '', 
+                    address2 = '', 
+                    city = '', 
+                    state = '', 
+                    zip = '', 
+                    phone = '', 
+                    unique_id = '', ),
         )
         """
 

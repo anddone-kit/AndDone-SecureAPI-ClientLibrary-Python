@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **payment_description** | **str** |  | [optional] 
 **invoice_number** | **str** |  | [optional] 
 **expires_on** | **str** |  | [optional] 
-**intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  | [optional] 
+**intent** | [**PaymentIntentResponseIntent**](PaymentIntentResponseIntent.md) |  | [optional] 
 **save_for_future** | **bool** |  | [optional] 
 **enable_premium_finance** | **bool** |  | [optional] 
 **splits** | [**List[PaymentIntentRequestSplitsInner]**](PaymentIntentRequestSplitsInner.md) |  | [optional] 

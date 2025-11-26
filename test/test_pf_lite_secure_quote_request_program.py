@@ -35,14 +35,12 @@ class TestPFLiteSecureQuoteRequestProgram(unittest.TestCase):
         model = PFLiteSecureQuoteRequestProgram()
         if include_optional:
             return PFLiteSecureQuoteRequestProgram(
-                program_id = 1.337,
-                loan_type = 'Commercial',
-                broker_fee = ''
+                program_id = '',
+                loan_type = ''
             )
         else:
             return PFLiteSecureQuoteRequestProgram(
-                program_id = 1.337,
-                loan_type = 'Commercial',
+                loan_type = '',
         )
         """
 

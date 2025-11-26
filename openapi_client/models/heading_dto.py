@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,7 +28,8 @@ class HeadingDto(BaseModel):
     """ # noqa: E501
     name: Optional[StrictStr] = None
     type: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["name", "type"]
+    is_aggregate_amount: Optional[StrictBool] = Field(default=None, alias="isAggregateAmount")
+    __properties: ClassVar[List[str]] = ["name", "type", "isAggregateAmount"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,7 +83,8 @@ class HeadingDto(BaseModel):
 
         _obj = cls.model_validate({
             "name": obj.get("name"),
-            "type": obj.get("type")
+            "type": obj.get("type"),
+            "isAggregateAmount": obj.get("isAggregateAmount")
         })
         return _obj
 

@@ -16,8 +16,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr
-from typing import List, Optional, Union
+from pydantic import Field, StrictBool, StrictInt, StrictStr
+from typing import List, Optional
 from typing_extensions import Annotated
 from openapi_client.models.payment_batch_cancellation_request import PaymentBatchCancellationRequest
 from openapi_client.models.payment_batch_details_response import PaymentBatchDetailsResponse
@@ -363,8 +363,6 @@ class SecurePaymentBatchingApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -697,8 +695,6 @@ class SecurePaymentBatchingApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -726,8 +722,8 @@ class SecurePaymentBatchingApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -755,9 +751,9 @@ class SecurePaymentBatchingApi:
         :param origin: origin (required)
         :type origin: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -823,8 +819,8 @@ class SecurePaymentBatchingApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -852,9 +848,9 @@ class SecurePaymentBatchingApi:
         :param origin: origin (required)
         :type origin: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -920,8 +916,8 @@ class SecurePaymentBatchingApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        start_row: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
@@ -949,9 +945,9 @@ class SecurePaymentBatchingApi:
         :param origin: origin (required)
         :type origin: str
         :param start_row: Set StartRow
-        :type start_row: float
+        :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param sort_field: Set SortField
         :type sort_field: str
         :param asc: Set Asc
@@ -1078,8 +1074,6 @@ class SecurePaymentBatchingApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1419,8 +1413,6 @@ class SecurePaymentBatchingApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1753,8 +1745,6 @@ class SecurePaymentBatchingApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

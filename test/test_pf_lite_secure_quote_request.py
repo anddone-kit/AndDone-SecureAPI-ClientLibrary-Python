@@ -57,9 +57,8 @@ class TestPFLiteSecureQuoteRequest(unittest.TestCase):
                         zip = '', 
                         phone_number = '', ), ),
                 program = openapi_client.models.pf_lite_secure_quote_request_program.PFLiteSecureQuoteRequest_program(
-                    program_id = 1.337, 
-                    loan_type = 'Commercial', 
-                    broker_fee = '', ),
+                    program_id = '', 
+                    loan_type = '', ),
                 policies = [
                     openapi_client.models.pf_lite_secure_quote_request_policies_inner.PFLiteSecureQuoteRequest_policies_inner(
                         id = '', 
@@ -70,16 +69,56 @@ class TestPFLiteSecureQuoteRequest(unittest.TestCase):
                         coverage_type = '', 
                         effective_date = '', 
                         minimum_earned_percent = 1.337, 
+                        cancel_days = '', 
                         carrier = openapi_client.models.pf_lite_secure_quote_request_policies_inner_carrier.PFLiteSecureQuoteRequest_policies_inner_carrier(
                             name = '', 
                             best_number = '', 
                             unique_id = '', ), 
-                        expiration_date = '', 
-                        cancel_days = '', )
+                        expiration_date = '', )
                     ]
             )
         else:
             return PFLiteSecureQuoteRequest(
+                merchant_id = '',
+                merchant = openapi_client.models.pf_lite_secure_quote_request_merchant.PFLiteSecureQuoteRequest_merchant(
+                    contact_name = '', 
+                    contact_phone = '', ),
+                insured = openapi_client.models.pf_lite_secure_quote_request_insured.PFLiteSecureQuoteRequest_insured(
+                    id = '', 
+                    first_name = '', 
+                    last_name = '', 
+                    named_insured = '', 
+                    mobile_phone_number = '', 
+                    email_address = '', 
+                    is_cancellation_warning_via_text_enabled = True, 
+                    fax_number = '', 
+                    address = openapi_client.models.pf_lite_secure_quote_request_insured_address.PFLiteSecureQuoteRequest_insured_address(
+                        address1 = '', 
+                        address2 = '', 
+                        city = '', 
+                        state = '', 
+                        zip = '', 
+                        phone_number = '', ), ),
+                program = openapi_client.models.pf_lite_secure_quote_request_program.PFLiteSecureQuoteRequest_program(
+                    program_id = '', 
+                    loan_type = '', ),
+                policies = [
+                    openapi_client.models.pf_lite_secure_quote_request_policies_inner.PFLiteSecureQuoteRequest_policies_inner(
+                        id = '', 
+                        policy_number = '', 
+                        premium = 1.337, 
+                        additional_fees = 1.337, 
+                        tax = 1.337, 
+                        coverage_type = '', 
+                        effective_date = '', 
+                        minimum_earned_percent = 1.337, 
+                        cancel_days = '', 
+                        carrier = openapi_client.models.pf_lite_secure_quote_request_policies_inner_carrier.PFLiteSecureQuoteRequest_policies_inner_carrier(
+                            name = '', 
+                            best_number = '', 
+                            unique_id = '', ), 
+                        expiration_date = '', )
+                    ],
         )
         """
 

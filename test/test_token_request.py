@@ -39,6 +39,7 @@ class TestTokenRequest(unittest.TestCase):
             )
         else:
             return TokenRequest(
+                token = '',
         )
         """
 

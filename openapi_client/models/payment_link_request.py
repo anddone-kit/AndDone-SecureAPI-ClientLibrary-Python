@@ -21,11 +21,11 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, Stri
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from openapi_client.models.payment_intent_request_pfr import PaymentIntentRequestPfr
 from openapi_client.models.payment_intent_request_splits_inner import PaymentIntentRequestSplitsInner
+from openapi_client.models.payment_link_request_reference_data_list_inner import PaymentLinkRequestReferenceDataListInner
 from openapi_client.models.payment_link_request_settings import PaymentLinkRequestSettings
 from openapi_client.models.payment_link_response_callback_parameters import PaymentLinkResponseCallbackParameters
 from openapi_client.models.payment_link_response_customers_inner import PaymentLinkResponseCustomersInner
 from openapi_client.models.payment_link_response_line_items_inner import PaymentLinkResponseLineItemsInner
-from openapi_client.models.payment_link_response_reference_data_list_inner import PaymentLinkResponseReferenceDataListInner
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -36,10 +36,10 @@ class PaymentLinkRequest(BaseModel):
     merchant_id: StrictStr = Field(alias="merchantId")
     title: StrictStr
     amount: Union[StrictFloat, StrictInt]
-    payment_description: Optional[StrictStr] = Field(default=None, alias="paymentDescription")
+    payment_description: StrictStr = Field(alias="paymentDescription")
     customers: Optional[List[PaymentLinkResponseCustomersInner]] = None
     invoice_number: Optional[StrictStr] = Field(default=None, alias="invoiceNumber")
-    expire_by: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="expireBy")
+    expire_by: Optional[StrictInt] = Field(default=None, alias="expireBy")
     expire_in: StrictInt = Field(alias="expireIn")
     expire_in_unit: StrictStr = Field(alias="expireInUnit")
     expire_on: Optional[StrictStr] = Field(default=None, alias="expireOn")
@@ -56,7 +56,7 @@ class PaymentLinkRequest(BaseModel):
     reference_type: Optional[StrictStr] = Field(default=None, alias="referenceType")
     reference_number: Optional[StrictStr] = Field(default=None, alias="referenceNumber")
     reference_key: Optional[StrictStr] = Field(default=None, alias="referenceKey")
-    reference_data_list: List[PaymentLinkResponseReferenceDataListInner] = Field(alias="referenceDataList")
+    reference_data_list: List[PaymentLinkRequestReferenceDataListInner] = Field(alias="referenceDataList")
     enable_premium_finance: Optional[StrictBool] = Field(default=None, alias="enablePremiumFinance")
     suppress_technology_fee: Optional[StrictBool] = Field(default=None, alias="suppressTechnologyFee")
     override_technology_fee: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="overrideTechnologyFee")
@@ -235,7 +235,7 @@ class PaymentLinkRequest(BaseModel):
             "referenceType": obj.get("referenceType"),
             "referenceNumber": obj.get("referenceNumber"),
             "referenceKey": obj.get("referenceKey"),
-            "referenceDataList": [PaymentLinkResponseReferenceDataListInner.from_dict(_item) for _item in obj["referenceDataList"]] if obj.get("referenceDataList") is not None else None,
+            "referenceDataList": [PaymentLinkRequestReferenceDataListInner.from_dict(_item) for _item in obj["referenceDataList"]] if obj.get("referenceDataList") is not None else None,
             "enablePremiumFinance": obj.get("enablePremiumFinance"),
             "suppressTechnologyFee": obj.get("suppressTechnologyFee"),
             "overrideTechnologyFee": obj.get("overrideTechnologyFee"),

@@ -52,7 +52,7 @@ class TestPFEndorsementResponse(unittest.TestCase):
                         doc_stamp = 1.337, 
                         first_due_date = '', 
                         apr = 1.337, 
-                        installments = 1.337, 
+                        installments = 56, 
                         payments_retained = 1.337, 
                         payment_retained_amount = 1.337, 
                         e_sign_result = openapi_client.models.pf_endorsement_response_item_quote_e_sign_result.PFEndorsementResponse_item_quote_eSignResult(
@@ -61,7 +61,22 @@ class TestPFEndorsementResponse(unittest.TestCase):
                             batch_id = '', 
                             agent_url = '', 
                             insured_url = '', 
-                            e_sign_option = 1.337, ), ), )
+                            e_sign_option = 1.337, ), 
+                        is_down_payment_required = True, 
+                        is_esign_required = True, 
+                        is_endorsement = True, ), 
+                    payment_intent = openapi_client.models.pf_endorsement_response_item_payment_intent.PFEndorsementResponse_item_paymentIntent(
+                        payment_token = '', 
+                        title = '', 
+                        amount = 1.337, 
+                        invoice_number = '', 
+                        expire_on = '', 
+                        short_description = '', 
+                        payment_description = '', 
+                        intent = openapi_client.models.pf_endorsement_response_item_payment_intent_intent.PFEndorsementResponse_item_paymentIntent_intent(
+                            payment_types = [
+                                'NotDefined'
+                                ], ), ), )
             )
         else:
             return PFEndorsementResponse(

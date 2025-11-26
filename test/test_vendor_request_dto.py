@@ -38,8 +38,8 @@ class TestVendorRequestDTO(unittest.TestCase):
                 vendor_name = '',
                 vendor_alias_name = '',
                 vendor_db_name = '',
-                legal_entity_type = 'Corporation',
-                payment_method_type = 'Checks',
+                legal_entity_type = 'NA',
+                payment_method_type = 'Check',
                 notification_type = 'NA',
                 vendor_notes = '',
                 phone_number = '',
@@ -56,7 +56,7 @@ class TestVendorRequestDTO(unittest.TestCase):
                     country = '', 
                     postal_code = '', 
                     address_source = 'NA', ),
-                physical_address = openapi_client.models.vendor_request_dto_remittance_address.VendorRequestDTO_remittanceAddress(
+                physical_address = openapi_client.models.vendor_request_dto_physical_address.VendorRequestDTO_physicalAddress(
                     attention = '', 
                     address_line1 = '', 
                     address_line2 = '', 
@@ -68,6 +68,22 @@ class TestVendorRequestDTO(unittest.TestCase):
             )
         else:
             return VendorRequestDTO(
+                vendor_name = '',
+                vendor_db_name = '',
+                legal_entity_type = 'NA',
+                payment_method_type = 'Check',
+                notification_type = 'NA',
+                phone_number = '',
+                email = '',
+                physical_address = openapi_client.models.vendor_request_dto_physical_address.VendorRequestDTO_physicalAddress(
+                    attention = '', 
+                    address_line1 = '', 
+                    address_line2 = '', 
+                    city = '', 
+                    state = '', 
+                    country = '', 
+                    postal_code = '', 
+                    address_source = 'NA', ),
         )
         """
 

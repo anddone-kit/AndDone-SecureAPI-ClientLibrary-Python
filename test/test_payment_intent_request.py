@@ -35,29 +35,69 @@ class TestPaymentIntentRequest(unittest.TestCase):
         model = PaymentIntentRequest()
         if include_optional:
             return PaymentIntentRequest(
+                title = '',
+                amount = 1.337,
+                invoice_number = '',
+                expires_in = '',
+                short_description = '',
+                payment_description = '',
+                merchant_token = '',
+                intent = openapi_client.models.payment_intent_request_intent.PaymentIntentRequest_intent(
+                    payment_types = [
+                        'CreditCard'
+                        ], ),
+                save_for_future = True,
+                enable_premium_finance = True,
+                splits = [
+                    openapi_client.models.payment_intent_request_splits_inner.PaymentIntentRequest_splits_inner(
+                        virtual_account = '', 
+                        amount = 1.337, 
+                        reference = '', 
+                        account_type = '', 
+                        charge_indicator = True, )
+                    ],
+                quote_key = '',
+                account_number = '',
+                suppress_technology_fee = True,
+                override_technology_fee = 1.337,
+                is_premium_financier = True,
+                pfr = openapi_client.models.payment_intent_request_pfr.PaymentIntentRequest_pfr(
+                    entity = '', 
+                    reference = '', 
+                    quote = '', 
+                    account_number = '', 
+                    payment_type = 'NA', ),
                 save_customer = True,
                 customers = [
                     openapi_client.models.payment_intent_request_customers_inner.PaymentIntentRequest_customers_inner(
+                        customer_id = '', 
                         first_name = '', 
                         last_name = '', 
                         email = '', 
-                        phone = '', 
-                        customer_id = '', )
+                        phone = '', )
                     ],
                 additional_details_preference = 'None',
                 selected_customer_fields = '',
+                reference_type = 'None',
+                reference_number = '',
+                reference_key = '',
                 reference_data_list = [
                     openapi_client.models.payment_intent_request_reference_data_list_inner.PaymentIntentRequest_referenceDataList_inner(
-                        reference_type = 'QuoteNumber', 
+                        reference_type = 'None', 
                         reference_number = '', 
                         reference_key = '', )
                     ],
-                reference_type = 'None',
-                reference_number = '',
-                reference_key = ''
+                display_mode = 'None'
             )
         else:
             return PaymentIntentRequest(
+                title = '',
+                amount = 1.337,
+                intent = openapi_client.models.payment_intent_request_intent.PaymentIntentRequest_intent(
+                    payment_types = [
+                        'CreditCard'
+                        ], ),
+                additional_details_preference = 'None',
         )
         """
 

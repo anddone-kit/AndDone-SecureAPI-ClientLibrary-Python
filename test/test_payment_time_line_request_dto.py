@@ -39,6 +39,7 @@ class TestPaymentTimeLineRequestDto(unittest.TestCase):
             )
         else:
             return PaymentTimeLineRequestDto(
+                payment_id = '',
         )
         """
 

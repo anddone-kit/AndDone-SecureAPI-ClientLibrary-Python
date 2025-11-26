@@ -42,7 +42,7 @@ class TestSecureVendorResponseDTO(unittest.TestCase):
                 vendor_name = '',
                 vendor_alias_name = '',
                 vendor_db_name = '',
-                payment_method_type = 'Checks',
+                payment_method_type = 'Check',
                 notification_type = '',
                 vendor_notes = '',
                 phone_number = '',
@@ -60,7 +60,7 @@ class TestSecureVendorResponseDTO(unittest.TestCase):
                     postal_code = '', 
                     address_type = 'NA', 
                     address_source = 'NA', ),
-                physical_address = openapi_client.models.secure_vendor_response_dto_physical_address.SecureVendorResponseDTO_physicalAddress(
+                physical_address = openapi_client.models.secure_vendor_response_dto_remittance_address.SecureVendorResponseDTO_remittanceAddress(
                     attention = '', 
                     address_line1 = '', 
                     address_line2 = '', 
@@ -69,15 +69,12 @@ class TestSecureVendorResponseDTO(unittest.TestCase):
                     country = '', 
                     postal_code = '', 
                     address_type = 'NA', 
-                    address_source = 'NA', 
-                    vendor_status = 'NA', 
-                    created_by = '', 
-                    modified_by = '', 
-                    created_on = '', 
-                    modified_on = '', 
-                    approved_date = '', 
-                    ofac_verified = 'None', 
-                    address_verified = 'None', )
+                    address_source = 'NA', ),
+                vendor_status = 'NA',
+                created_by = '',
+                modified_by = '',
+                created_on = '',
+                modified_on = ''
             )
         else:
             return SecureVendorResponseDTO(

@@ -37,14 +37,14 @@ class TestTokenLinkSecureRequest(unittest.TestCase):
             return TokenLinkSecureRequest(
                 merchant_id = '',
                 title = '',
-                expire_in = 1.337,
-                expire_in_unit = 'Minutes',
+                expire_in = 56,
+                expire_in_unit = 'Seconds',
                 response_type = 'OnScreen',
-                intent = openapi_client.models.payment_intent_response_intent.PaymentIntentResponse_intent(
+                intent = openapi_client.models.token_link_secure_request_intent.TokenLinkSecureRequest_intent(
                     payment_types = [
                         'CreditCard'
                         ], ),
-                callback_parameters = openapi_client.models.token_link_secure_request_callback_parameters.TokenLinkSecureRequest_callbackParameters(
+                callback_parameters = openapi_client.models.payment_link_response_callback_parameters.PaymentLinkResponse_callbackParameters(
                     callback_success_url = '', 
                     callback_failure_url = '', 
                     access_key = '', 
@@ -54,7 +54,7 @@ class TestTokenLinkSecureRequest(unittest.TestCase):
                     transaction_id = '', 
                     callback_api_url = '', 
                     callback_message = '', 
-                    redirection_time = 56, ),
+                    redirection_time = 1.337, ),
                 customers = [
                     openapi_client.models.token_link_secure_request_customers_inner.TokenLinkSecureRequest_customers_inner(
                         first_name = '', 
@@ -62,18 +62,25 @@ class TestTokenLinkSecureRequest(unittest.TestCase):
                         email = '', 
                         phone = '', 
                         phone_country_code = '', 
-                        address = openapi_client.models.token_link_secure_request_customers_inner_address.TokenLinkSecureRequest_customers_inner_address(
+                        address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
                             address_line1 = '', 
                             address_line2 = '', 
                             city = '', 
                             state = '', 
-                            country = 1.337, 
+                            country = 56, 
                             postal_code = '', 
                             time_zone = '', ), )
                     ]
             )
         else:
             return TokenLinkSecureRequest(
+                title = '',
+                expire_in = 56,
+                expire_in_unit = 'Seconds',
+                intent = openapi_client.models.token_link_secure_request_intent.TokenLinkSecureRequest_intent(
+                    payment_types = [
+                        'CreditCard'
+                        ], ),
         )
         """
 

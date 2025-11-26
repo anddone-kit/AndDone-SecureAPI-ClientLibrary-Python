@@ -43,7 +43,8 @@ class TestPaymentLinkResponseCallbackParameters(unittest.TestCase):
                 reference_type = '',
                 transaction_id = '',
                 callback_api_url = '',
-                callback_message = ''
+                callback_message = '',
+                redirection_time = 1.337
             )
         else:
             return PaymentLinkResponseCallbackParameters(

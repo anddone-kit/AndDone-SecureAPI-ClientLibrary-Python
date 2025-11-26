@@ -30,7 +30,7 @@ class PFEndorsementRequestQuotePoliciesInner(BaseModel):
     """
     PFEndorsementRequestQuotePoliciesInner
     """ # noqa: E501
-    policy_id: Optional[StrictStr] = Field(default=None, description="This denotes the policy identifier.", alias="policyId")
+    policy_id: Optional[StrictInt] = Field(default=None, description="This denotes the policy identifier.", alias="policyId")
     premium: Union[StrictFloat, StrictInt] = Field(description="This denotes the premium amount.")
     down: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the down amount.")
     down_percent: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the down percentage.", alias="downPercent")
@@ -43,9 +43,9 @@ class PFEndorsementRequestQuotePoliciesInner(BaseModel):
     coverage: Optional[StrictStr] = Field(default=None, description="This denotes the coverage and it is required if adding new policy.")
     effective_date: StrictStr = Field(description="This denotes the effective date.", alias="effectiveDate")
     expiration_date: StrictStr = Field(description="This denotes the expiration date and it is required if adding new policy.", alias="expirationDate")
-    term: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the number of terms.")
+    term: Optional[StrictInt] = Field(default=None, description="This denotes the number of terms.")
     minimum_earned: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the minimum earned amount.", alias="minimumEarned")
-    minimum_earned_percent: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the minimum earned percent.", alias="MinimumEarnedPercent")
+    minimum_earned_percent: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the minimum earned percent.", alias="minimumEarnedPercent")
     auditable: Optional[StrictBool] = Field(default=None, description="This denotes the flag if it is auditable or not.")
     cancel_days: Optional[StrictStr] = Field(default=None, description="This denotes the cancel days.", alias="cancelDays")
     loss_payee_requested: Optional[StrictBool] = Field(default=None, description="This denotes the flag of loss payee requested.", alias="lossPayeeRequested")
@@ -54,7 +54,7 @@ class PFEndorsementRequestQuotePoliciesInner(BaseModel):
     total_pay_funding: Optional[List[PFEndorsementRequestQuotePoliciesInnerTotalPayFundingInner]] = Field(default=None, alias="totalPayFunding")
     policy_fee: Optional[List[PFEndorsementRequestQuotePoliciesInnerPolicyFeeInner]] = Field(default=None, alias="policyFee")
     invoice_number: Optional[StrictStr] = Field(default=None, description="This denotes the invoice number.", alias="invoiceNumber")
-    __properties: ClassVar[List[str]] = ["policyId", "premium", "down", "downPercent", "fee", "tax", "policyNumber", "company", "ga", "broker", "coverage", "effectiveDate", "expirationDate", "term", "minimumEarned", "MinimumEarnedPercent", "auditable", "cancelDays", "lossPayeeRequested", "minimumLiability", "maximumLiability", "totalPayFunding", "policyFee", "invoiceNumber"]
+    __properties: ClassVar[List[str]] = ["policyId", "premium", "down", "downPercent", "fee", "tax", "policyNumber", "company", "ga", "broker", "coverage", "effectiveDate", "expirationDate", "term", "minimumEarned", "minimumEarnedPercent", "auditable", "cancelDays", "lossPayeeRequested", "minimumLiability", "maximumLiability", "totalPayFunding", "policyFee", "invoiceNumber"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -145,7 +145,7 @@ class PFEndorsementRequestQuotePoliciesInner(BaseModel):
             "expirationDate": obj.get("expirationDate"),
             "term": obj.get("term"),
             "minimumEarned": obj.get("minimumEarned"),
-            "MinimumEarnedPercent": obj.get("MinimumEarnedPercent"),
+            "minimumEarnedPercent": obj.get("minimumEarnedPercent"),
             "auditable": obj.get("auditable"),
             "cancelDays": obj.get("cancelDays"),
             "lossPayeeRequested": obj.get("lossPayeeRequested"),

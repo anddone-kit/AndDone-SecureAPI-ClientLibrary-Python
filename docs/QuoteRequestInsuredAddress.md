@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **address1** | **str** |  | 
 **address2** | **str** |  | [optional] 
-**city** | **str** |  | 
-**state** | **str** |  | 
-**zip** | **str** |  | 
+**city** | **str** |  | [optional] 
+**state** | **str** |  | [optional] 
+**zip** | **str** |  | [optional] 
 **phone** | **str** |  | [optional] 
 
 ## Example

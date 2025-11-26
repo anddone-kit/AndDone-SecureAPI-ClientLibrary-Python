@@ -16,10 +16,11 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import List, Optional, Union
 from typing_extensions import Annotated
 from openapi_client.models.cancel_payment_request_dto import CancelPaymentRequestDTO
+from openapi_client.models.outbound_payment_image_response_dto import OutboundPaymentImageResponseDTO
 from openapi_client.models.outbound_payment_timeline_response_dto_inner import OutboundPaymentTimelineResponseDTOInner
 from openapi_client.models.page_payment_list_response_dto import PagePaymentListResponseDTO
 from openapi_client.models.payment_detail_response_dto import PaymentDetailResponseDTO
@@ -365,8 +366,6 @@ class SecureOutboundPaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -696,8 +695,6 @@ class SecureOutboundPaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1034,13 +1031,350 @@ class SecureOutboundPaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
             method='POST',
             resource_path='/vendorapi/secure/outboundpayments/detail',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def vendorapi_secure_outboundpayments_image_post(
+        self,
+        x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_version: Annotated[StrictStr, Field(description="x-version")],
+        origin: Annotated[StrictStr, Field(description="origin")],
+        payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> OutboundPaymentImageResponseDTO:
+        """This API gets outbound payment JPG image in Base64 string format
+
+
+        :param x_api_key: an authorization header (required)
+        :type x_api_key: str
+        :param x_app_key: an authorization header (required)
+        :type x_app_key: str
+        :param x_version: x-version (required)
+        :type x_version: str
+        :param origin: origin (required)
+        :type origin: str
+        :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
+        :type payment_time_line_request_dto: PaymentTimeLineRequestDto
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendorapi_secure_outboundpayments_image_post_serialize(
+            x_api_key=x_api_key,
+            x_app_key=x_app_key,
+            x_version=x_version,
+            origin=origin,
+            payment_time_line_request_dto=payment_time_line_request_dto,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "OutboundPaymentImageResponseDTO",
+            '400': None,
+            '404': None,
+            '500': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def vendorapi_secure_outboundpayments_image_post_with_http_info(
+        self,
+        x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_version: Annotated[StrictStr, Field(description="x-version")],
+        origin: Annotated[StrictStr, Field(description="origin")],
+        payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[OutboundPaymentImageResponseDTO]:
+        """This API gets outbound payment JPG image in Base64 string format
+
+
+        :param x_api_key: an authorization header (required)
+        :type x_api_key: str
+        :param x_app_key: an authorization header (required)
+        :type x_app_key: str
+        :param x_version: x-version (required)
+        :type x_version: str
+        :param origin: origin (required)
+        :type origin: str
+        :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
+        :type payment_time_line_request_dto: PaymentTimeLineRequestDto
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendorapi_secure_outboundpayments_image_post_serialize(
+            x_api_key=x_api_key,
+            x_app_key=x_app_key,
+            x_version=x_version,
+            origin=origin,
+            payment_time_line_request_dto=payment_time_line_request_dto,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "OutboundPaymentImageResponseDTO",
+            '400': None,
+            '404': None,
+            '500': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def vendorapi_secure_outboundpayments_image_post_without_preload_content(
+        self,
+        x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
+        x_version: Annotated[StrictStr, Field(description="x-version")],
+        origin: Annotated[StrictStr, Field(description="origin")],
+        payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """This API gets outbound payment JPG image in Base64 string format
+
+
+        :param x_api_key: an authorization header (required)
+        :type x_api_key: str
+        :param x_app_key: an authorization header (required)
+        :type x_app_key: str
+        :param x_version: x-version (required)
+        :type x_version: str
+        :param origin: origin (required)
+        :type origin: str
+        :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
+        :type payment_time_line_request_dto: PaymentTimeLineRequestDto
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._vendorapi_secure_outboundpayments_image_post_serialize(
+            x_api_key=x_api_key,
+            x_app_key=x_app_key,
+            x_version=x_version,
+            origin=origin,
+            payment_time_line_request_dto=payment_time_line_request_dto,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "OutboundPaymentImageResponseDTO",
+            '400': None,
+            '404': None,
+            '500': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _vendorapi_secure_outboundpayments_image_post_serialize(
+        self,
+        x_api_key,
+        x_app_key,
+        x_version,
+        origin,
+        payment_time_line_request_dto,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        # process the header parameters
+        if x_api_key is not None:
+            _header_params['x-api-key'] = x_api_key
+        if x_app_key is not None:
+            _header_params['x-app-key'] = x_app_key
+        if x_version is not None:
+            _header_params['x-version'] = x_version
+        if origin is not None:
+            _header_params['origin'] = origin
+        # process the form parameters
+        # process the body parameter
+        if payment_time_line_request_dto is not None:
+            _body_params = payment_time_line_request_dto
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/vendorapi/secure/outboundpayments/image',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1375,8 +1709,6 @@ class SecureOutboundPaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1416,7 +1748,10 @@ class SecureOutboundPaymentsApi:
         start_date: Annotated[Optional[StrictStr], Field(description="sets startDate")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="sets endDate")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="sets searchText")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="sets startRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="sets pageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="sets sortField")] = None,
+        asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1465,8 +1800,14 @@ class SecureOutboundPaymentsApi:
         :type end_date: str
         :param search_text: sets searchText
         :type search_text: str
+        :param start_row: sets startRow
+        :type start_row: int
+        :param page_size: sets pageSize
+        :type page_size: int
         :param sort_field: sets sortField
         :type sort_field: str
+        :param asc: Set Asc
+        :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1506,7 +1847,10 @@ class SecureOutboundPaymentsApi:
             start_date=start_date,
             end_date=end_date,
             search_text=search_text,
+            start_row=start_row,
+            page_size=page_size,
             sort_field=sort_field,
+            asc=asc,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1548,7 +1892,10 @@ class SecureOutboundPaymentsApi:
         start_date: Annotated[Optional[StrictStr], Field(description="sets startDate")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="sets endDate")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="sets searchText")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="sets startRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="sets pageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="sets sortField")] = None,
+        asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1597,8 +1944,14 @@ class SecureOutboundPaymentsApi:
         :type end_date: str
         :param search_text: sets searchText
         :type search_text: str
+        :param start_row: sets startRow
+        :type start_row: int
+        :param page_size: sets pageSize
+        :type page_size: int
         :param sort_field: sets sortField
         :type sort_field: str
+        :param asc: Set Asc
+        :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1638,7 +1991,10 @@ class SecureOutboundPaymentsApi:
             start_date=start_date,
             end_date=end_date,
             search_text=search_text,
+            start_row=start_row,
+            page_size=page_size,
             sort_field=sort_field,
+            asc=asc,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1680,7 +2036,10 @@ class SecureOutboundPaymentsApi:
         start_date: Annotated[Optional[StrictStr], Field(description="sets startDate")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="sets endDate")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="sets searchText")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="sets startRow")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="sets pageSize")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="sets sortField")] = None,
+        asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1729,8 +2088,14 @@ class SecureOutboundPaymentsApi:
         :type end_date: str
         :param search_text: sets searchText
         :type search_text: str
+        :param start_row: sets startRow
+        :type start_row: int
+        :param page_size: sets pageSize
+        :type page_size: int
         :param sort_field: sets sortField
         :type sort_field: str
+        :param asc: Set Asc
+        :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1770,7 +2135,10 @@ class SecureOutboundPaymentsApi:
             start_date=start_date,
             end_date=end_date,
             search_text=search_text,
+            start_row=start_row,
+            page_size=page_size,
             sort_field=sort_field,
+            asc=asc,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1807,7 +2175,10 @@ class SecureOutboundPaymentsApi:
         start_date,
         end_date,
         search_text,
+        start_row,
+        page_size,
         sort_field,
+        asc,
         _request_auth,
         _content_type,
         _headers,
@@ -1878,9 +2249,21 @@ class SecureOutboundPaymentsApi:
             
             _query_params.append(('searchText', search_text))
             
+        if start_row is not None:
+            
+            _query_params.append(('startRow', start_row))
+            
+        if page_size is not None:
+            
+            _query_params.append(('pageSize', page_size))
+            
         if sort_field is not None:
             
             _query_params.append(('sortField', sort_field))
+            
+        if asc is not None:
+            
+            _query_params.append(('asc', asc))
             
         # process the header parameters
         if x_api_key is not None:
@@ -1906,8 +2289,6 @@ class SecureOutboundPaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

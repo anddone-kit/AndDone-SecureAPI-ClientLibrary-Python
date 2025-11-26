@@ -42,7 +42,6 @@ class TestPFLiteSecureQuoteRequestPoliciesInnerCarrier(unittest.TestCase):
         else:
             return PFLiteSecureQuoteRequestPoliciesInnerCarrier(
                 name = '',
-                best_number = '',
                 unique_id = '',
         )
         """

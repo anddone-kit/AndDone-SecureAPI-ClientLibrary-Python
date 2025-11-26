@@ -40,7 +40,7 @@ class TestPFEndorsementRequestQuoteDetails(unittest.TestCase):
                 coupon_invoice_printed = True,
                 crd = 1.337,
                 interval = '',
-                installments = 1.337,
+                installments = 56,
                 program_id = 1.337,
                 broker_fee = 1.337,
                 e_sign_option = '',

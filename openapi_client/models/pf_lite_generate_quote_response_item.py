@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from openapi_client.models.pf_lite_generate_quote_response_item_e_sign_result import PFLiteGenerateQuoteResponseItemESignResult
 from typing import Optional, Set
@@ -27,7 +27,7 @@ class PFLiteGenerateQuoteResponseItem(BaseModel):
     """
     PFLiteGenerateQuoteResponseItem
     """ # noqa: E501
-    quote_key: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="quoteKey")
+    quote_key: Optional[StrictInt] = Field(default=None, alias="quoteKey")
     premium: Optional[Union[StrictFloat, StrictInt]] = None
     down_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="downAmount")
     amount_financed: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="amountFinanced")
@@ -39,7 +39,7 @@ class PFLiteGenerateQuoteResponseItem(BaseModel):
     apr: Optional[Union[StrictFloat, StrictInt]] = None
     installments: Optional[StrictInt] = None
     batch_id: Optional[StrictStr] = Field(default=None, alias="batchId")
-    payments_retained: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="paymentsRetained")
+    payments_retained: Optional[StrictInt] = Field(default=None, alias="paymentsRetained")
     payment_retained_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="paymentRetainedAmount")
     unsigned_pfa_url: Optional[StrictStr] = Field(default=None, alias="unsignedPFAUrl")
     retail_agent_register_login_url: Optional[StrictStr] = Field(default=None, alias="retailAgentRegisterLoginURL")
@@ -47,7 +47,8 @@ class PFLiteGenerateQuoteResponseItem(BaseModel):
     errors: Optional[StrictStr] = None
     pfa: Optional[StrictStr] = None
     electronic_signature_url: Optional[StrictStr] = Field(default=None, alias="electronicSignatureURL")
-    __properties: ClassVar[List[str]] = ["quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "paymentsRetained", "paymentRetainedAmount", "unsignedPFAUrl", "retailAgentRegisterLoginURL", "eSignResult", "errors", "pfa", "electronicSignatureURL"]
+    offer_auto_pay: Optional[StrictBool] = Field(default=None, alias="offerAutoPay")
+    __properties: ClassVar[List[str]] = ["quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "paymentsRetained", "paymentRetainedAmount", "unsignedPFAUrl", "retailAgentRegisterLoginURL", "eSignResult", "errors", "pfa", "electronicSignatureURL", "offerAutoPay"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -122,7 +123,8 @@ class PFLiteGenerateQuoteResponseItem(BaseModel):
             "eSignResult": PFLiteGenerateQuoteResponseItemESignResult.from_dict(obj["eSignResult"]) if obj.get("eSignResult") is not None else None,
             "errors": obj.get("errors"),
             "pfa": obj.get("pfa"),
-            "electronicSignatureURL": obj.get("electronicSignatureURL")
+            "electronicSignatureURL": obj.get("electronicSignatureURL"),
+            "offerAutoPay": obj.get("offerAutoPay")
         })
         return _obj
 

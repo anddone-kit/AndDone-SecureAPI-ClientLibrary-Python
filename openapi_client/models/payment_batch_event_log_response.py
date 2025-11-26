@@ -31,7 +31,7 @@ class PaymentBatchEventLogResponse(BaseModel):
     merchant_id: Optional[StrictStr] = Field(default=None, alias="merchantId")
     previous_event_status: Optional[StrictStr] = Field(default=None, alias="previousEventStatus")
     event_status: Optional[StrictStr] = Field(default=None, alias="eventStatus")
-    voided_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="voidedCount")
+    voided_count: Optional[StrictInt] = Field(default=None, alias="voidedCount")
     voided_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="voidedAmount")
     closed_on: Optional[StrictStr] = Field(default=None, alias="closedOn")
     event_date: Optional[StrictStr] = Field(default=None, alias="eventDate")

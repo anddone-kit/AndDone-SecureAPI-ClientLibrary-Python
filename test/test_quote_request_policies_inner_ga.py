@@ -39,7 +39,7 @@ class TestQuoteRequestPoliciesInnerGa(unittest.TestCase):
                 name = '',
                 care_of = '',
                 is_validation_required = True,
-                address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                address = openapi_client.models.quote_request_policies_inner_ga_address.QuoteRequest_policies_inner_ga_address(
                     name = '', 
                     address1 = '', 
                     address2 = '', 
@@ -50,6 +50,7 @@ class TestQuoteRequestPoliciesInnerGa(unittest.TestCase):
             )
         else:
             return QuoteRequestPoliciesInnerGa(
+                unique_id = '',
         )
         """
 

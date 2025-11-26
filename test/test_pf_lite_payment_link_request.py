@@ -39,36 +39,83 @@ class TestPFLitePaymentLinkRequest(unittest.TestCase):
                 is_pay_in_full = True,
                 title = '',
                 payment_description = '',
-                expire_in = 56,
-                expire_in_unit = 'Minutes',
+                expire_in = '',
+                expire_in_unit = 'NA',
                 reference_data_list = [
-                    openapi_client.models.payment_intent_request_reference_data_list_inner.PaymentIntentRequest_referenceDataList_inner(
-                        reference_type = 'QuoteNumber', 
+                    openapi_client.models.pf_lite_payment_link_request_reference_data_list_inner.PFLitePaymentLinkRequest_referenceDataList_inner(
+                        reference_type = 'None', 
                         reference_number = '', 
                         reference_key = '', )
                     ],
                 callback_parameters = openapi_client.models.pf_lite_payment_link_request_callback_parameters.PFLitePaymentLinkRequest_callbackParameters(
                     callback_api_url = '', 
-                    callback_message = '', ),
+                    callback_message = '', 
+                    access_key = '', 
+                    secret_key = '', 
+                    reference_no = '', 
+                    reference_type = '', 
+                    transaction_id = '', 
+                    redirection_time = 1.337, ),
                 customers = [
-                    openapi_client.models.payment_link_response_customers_inner.PaymentLinkResponse_customers_inner(
+                    openapi_client.models.pf_lite_payment_link_request_customers_inner.PFLitePaymentLinkRequest_customers_inner(
                         first_name = '', 
                         last_name = '', 
                         email = '', 
                         phone = '', 
+                        phone_country_code = '', 
+                        address = openapi_client.models.pf_lite_payment_link_request_customers_inner_address.PFLitePaymentLinkRequest_customers_inner_address(
+                            address_line1 = '', 
+                            address_line2 = '', 
+                            city = '', 
+                            state = '', 
+                            country = 56, 
+                            postal_code = '', 
+                            time_zone = '', ), 
                         notify_via_sms = True, 
                         notify_via_email = True, )
                     ],
                 settings = openapi_client.models.pf_lite_payment_link_request_settings.PFLitePaymentLinkRequest_settings(
                     selected_customer_fields = '', 
-                    additional_details_preference = 'AskShopper', 
+                    additional_details_preference = 'None', 
+                    display_summary = True, 
+                    accept_customer_info = True, 
+                    remove_header = True, 
+                    accept_card = True, 
+                    accept_bank_account = True, 
+                    save_customer = True, 
+                    save_customer_account = True, 
                     intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
                         payment_types = [
-                            ''
+                            'ACH'
                             ], ), )
             )
         else:
             return PFLitePaymentLinkRequest(
+                quote_key = '',
+                title = '',
+                payment_description = '',
+                expire_in = '',
+                expire_in_unit = 'NA',
+                reference_data_list = [
+                    openapi_client.models.pf_lite_payment_link_request_reference_data_list_inner.PFLitePaymentLinkRequest_referenceDataList_inner(
+                        reference_type = 'None', 
+                        reference_number = '', 
+                        reference_key = '', )
+                    ],
+                settings = openapi_client.models.pf_lite_payment_link_request_settings.PFLitePaymentLinkRequest_settings(
+                    selected_customer_fields = '', 
+                    additional_details_preference = 'None', 
+                    display_summary = True, 
+                    accept_customer_info = True, 
+                    remove_header = True, 
+                    accept_card = True, 
+                    accept_bank_account = True, 
+                    save_customer = True, 
+                    save_customer_account = True, 
+                    intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
+                        payment_types = [
+                            'ACH'
+                            ], ), ),
         )
         """
 

@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.transaction_payment_response_refund_transactions_data_inner import TransactionPaymentResponseRefundTransactionsDataInner
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,7 +27,7 @@ class TransactionPaymentResponseRefundTransactions(BaseModel):
     """
     TransactionPaymentResponseRefundTransactions
     """ # noqa: E501
-    total_row_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalRowCount")
+    total_row_count: Optional[StrictInt] = Field(default=None, alias="totalRowCount")
     data: Optional[List[TransactionPaymentResponseRefundTransactionsDataInner]] = None
     __properties: ClassVar[List[str]] = ["totalRowCount", "data"]
 

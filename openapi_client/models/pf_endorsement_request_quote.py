@@ -17,13 +17,13 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.pf_endorsement_request_quote_agent import PFEndorsementRequestQuoteAgent
 from openapi_client.models.pf_endorsement_request_quote_communication import PFEndorsementRequestQuoteCommunication
 from openapi_client.models.pf_endorsement_request_quote_details import PFEndorsementRequestQuoteDetails
 from openapi_client.models.pf_endorsement_request_quote_insured import PFEndorsementRequestQuoteInsured
 from openapi_client.models.pf_endorsement_request_quote_policies_inner import PFEndorsementRequestQuotePoliciesInner
+from openapi_client.models.pf_lite_secure_quote_request_agent import PFLiteSecureQuoteRequestAgent
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -32,14 +32,14 @@ class PFEndorsementRequestQuote(BaseModel):
     PFEndorsementRequestQuote
     """ # noqa: E501
     account_number: Optional[StrictStr] = Field(default=None, alias="accountNumber")
-    agreement_id: StrictStr = Field(description="This denotes the agreementId received in check endorsement API.", alias="agreementId")
+    agreement_id: StrictInt = Field(description="This denotes the agreementId received in check endorsement API.", alias="agreementId")
     merchant_reference: StrictStr = Field(alias="merchantReference")
     policies: List[PFEndorsementRequestQuotePoliciesInner]
     details: Optional[PFEndorsementRequestQuoteDetails] = None
-    insured: Optional[PFEndorsementRequestQuoteInsured] = Field(default=None, alias="Insured")
-    agent: Optional[PFEndorsementRequestQuoteAgent] = Field(default=None, alias="Agent")
+    insured: Optional[PFEndorsementRequestQuoteInsured] = None
+    agent: Optional[PFLiteSecureQuoteRequestAgent] = None
     communication: Optional[PFEndorsementRequestQuoteCommunication] = None
-    __properties: ClassVar[List[str]] = ["accountNumber", "agreementId", "merchantReference", "policies", "details", "Insured", "Agent", "communication"]
+    __properties: ClassVar[List[str]] = ["accountNumber", "agreementId", "merchantReference", "policies", "details", "insured", "agent", "communication"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,10 +92,10 @@ class PFEndorsementRequestQuote(BaseModel):
             _dict['details'] = self.details.to_dict()
         # override the default output from pydantic by calling `to_dict()` of insured
         if self.insured:
-            _dict['Insured'] = self.insured.to_dict()
+            _dict['insured'] = self.insured.to_dict()
         # override the default output from pydantic by calling `to_dict()` of agent
         if self.agent:
-            _dict['Agent'] = self.agent.to_dict()
+            _dict['agent'] = self.agent.to_dict()
         # override the default output from pydantic by calling `to_dict()` of communication
         if self.communication:
             _dict['communication'] = self.communication.to_dict()
@@ -116,8 +116,8 @@ class PFEndorsementRequestQuote(BaseModel):
             "merchantReference": obj.get("merchantReference"),
             "policies": [PFEndorsementRequestQuotePoliciesInner.from_dict(_item) for _item in obj["policies"]] if obj.get("policies") is not None else None,
             "details": PFEndorsementRequestQuoteDetails.from_dict(obj["details"]) if obj.get("details") is not None else None,
-            "Insured": PFEndorsementRequestQuoteInsured.from_dict(obj["Insured"]) if obj.get("Insured") is not None else None,
-            "Agent": PFEndorsementRequestQuoteAgent.from_dict(obj["Agent"]) if obj.get("Agent") is not None else None,
+            "insured": PFEndorsementRequestQuoteInsured.from_dict(obj["insured"]) if obj.get("insured") is not None else None,
+            "agent": PFLiteSecureQuoteRequestAgent.from_dict(obj["agent"]) if obj.get("agent") is not None else None,
             "communication": PFEndorsementRequestQuoteCommunication.from_dict(obj["communication"]) if obj.get("communication") is not None else None
         })
         return _obj

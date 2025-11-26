@@ -42,7 +42,7 @@ class TestPageVendorResponseDTODataInner(unittest.TestCase):
                 vendor_name = '',
                 vendor_alias_name = '',
                 vendor_db_name = '',
-                payment_method_type = 'Checks',
+                payment_method_type = 'Check',
                 notification_type = '',
                 vendor_notes = '',
                 phone_number = '',

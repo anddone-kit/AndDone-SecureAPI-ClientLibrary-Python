@@ -22,8 +22,8 @@ from openapi_client.models.pf_check_endorsements_request import PFCheckEndorseme
 from openapi_client.models.pf_check_endorsements_response import PFCheckEndorsementsResponse
 from openapi_client.models.pf_endorsement_request import PFEndorsementRequest
 from openapi_client.models.pf_endorsement_response import PFEndorsementResponse
-from openapi_client.models.pf_quote_booking_request import PFQuoteBookingRequest
 from openapi_client.models.pf_update_pfa_response import PFUpdatePFAResponse
+from openapi_client.models.secure_pf_quote_booking_request import SecurePFQuoteBookingRequest
 
 from openapi_client.api_client import ApiClient, RequestSerialized
 from openapi_client.api_response import ApiResponse
@@ -362,8 +362,6 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -391,7 +389,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        pf_quote_booking_request: Annotated[PFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
+        secure_pf_quote_booking_request: Annotated[SecurePFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -416,8 +414,8 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         :type x_version: str
         :param origin: origin (required)
         :type origin: str
-        :param pf_quote_booking_request: PFQuoteBooking Request details (required)
-        :type pf_quote_booking_request: PFQuoteBookingRequest
+        :param secure_pf_quote_booking_request: PFQuoteBooking Request details (required)
+        :type secure_pf_quote_booking_request: SecurePFQuoteBookingRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -445,7 +443,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
             x_app_key=x_app_key,
             x_version=x_version,
             origin=origin,
-            pf_quote_booking_request=pf_quote_booking_request,
+            secure_pf_quote_booking_request=secure_pf_quote_booking_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -476,7 +474,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        pf_quote_booking_request: Annotated[PFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
+        secure_pf_quote_booking_request: Annotated[SecurePFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -501,8 +499,8 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         :type x_version: str
         :param origin: origin (required)
         :type origin: str
-        :param pf_quote_booking_request: PFQuoteBooking Request details (required)
-        :type pf_quote_booking_request: PFQuoteBookingRequest
+        :param secure_pf_quote_booking_request: PFQuoteBooking Request details (required)
+        :type secure_pf_quote_booking_request: SecurePFQuoteBookingRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -530,7 +528,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
             x_app_key=x_app_key,
             x_version=x_version,
             origin=origin,
-            pf_quote_booking_request=pf_quote_booking_request,
+            secure_pf_quote_booking_request=secure_pf_quote_booking_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -561,7 +559,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_version: Annotated[StrictStr, Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
-        pf_quote_booking_request: Annotated[PFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
+        secure_pf_quote_booking_request: Annotated[SecurePFQuoteBookingRequest, Field(description="PFQuoteBooking Request details")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -586,8 +584,8 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         :type x_version: str
         :param origin: origin (required)
         :type origin: str
-        :param pf_quote_booking_request: PFQuoteBooking Request details (required)
-        :type pf_quote_booking_request: PFQuoteBookingRequest
+        :param secure_pf_quote_booking_request: PFQuoteBooking Request details (required)
+        :type secure_pf_quote_booking_request: SecurePFQuoteBookingRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -615,7 +613,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
             x_app_key=x_app_key,
             x_version=x_version,
             origin=origin,
-            pf_quote_booking_request=pf_quote_booking_request,
+            secure_pf_quote_booking_request=secure_pf_quote_booking_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -641,7 +639,7 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
         x_app_key,
         x_version,
         origin,
-        pf_quote_booking_request,
+        secure_pf_quote_booking_request,
         _request_auth,
         _content_type,
         _headers,
@@ -675,8 +673,8 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
             _header_params['origin'] = origin
         # process the form parameters
         # process the body parameter
-        if pf_quote_booking_request is not None:
-            _body_params = pf_quote_booking_request
+        if secure_pf_quote_booking_request is not None:
+            _body_params = secure_pf_quote_booking_request
 
 
         # set the HTTP header `Accept`
@@ -703,8 +701,6 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1044,8 +1040,6 @@ class SecureEmbeddedPremiumFinanceEndorsementsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

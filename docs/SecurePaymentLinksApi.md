@@ -17,8 +17,6 @@ This API is used for getting Payment Links by PaymentLink ID
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -33,22 +31,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -88,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -113,8 +95,6 @@ This API is used for to set expired payment link
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -129,22 +109,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -184,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -208,8 +172,6 @@ This API is used to update Payment Links
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -224,22 +186,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -281,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -306,8 +252,6 @@ This API is used to create Payment Links
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -322,22 +266,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -377,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **email** | **str** |  | 
 **care_of** | **str** |  | [optional] 
 **unique_id** | **str** |  | [optional] 
-**address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  | 
+**address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  | [optional] 
 **has_data_change_agent_customer_number** | **bool** |  | [optional] 
 **has_data_change_name** | **bool** |  | [optional] 
 **has_data_change_address1** | **bool** |  | [optional] 

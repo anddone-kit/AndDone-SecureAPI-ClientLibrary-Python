@@ -47,7 +47,7 @@ class PageVendorResponseDTODataInner(BaseModel):
     use_same_as_physical_address: Optional[StrictBool] = Field(default=None, alias="useSameAsPhysicalAddress")
     physical_address: Optional[VendorResponseDTORemittanceAddress] = Field(default=None, alias="physicalAddress")
     remittance_address: Optional[VendorResponseDTORemittanceAddress] = Field(default=None, alias="remittanceAddress")
-    verification_results: Optional[List[VendorResponseDTOVerificationResultsInner]] = Field(default=None, alias="verificationResults")
+    verification_results: Optional[VendorResponseDTOVerificationResultsInner] = Field(default=None, alias="verificationResults")
     created_by: Optional[StrictStr] = Field(default=None, alias="createdBy")
     modified_by: Optional[StrictStr] = Field(default=None, alias="modifiedBy")
     created_on: Optional[StrictStr] = Field(default=None, alias="createdOn")
@@ -131,13 +131,9 @@ class PageVendorResponseDTODataInner(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of remittance_address
         if self.remittance_address:
             _dict['remittanceAddress'] = self.remittance_address.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in verification_results (list)
-        _items = []
+        # override the default output from pydantic by calling `to_dict()` of verification_results
         if self.verification_results:
-            for _item_verification_results in self.verification_results:
-                if _item_verification_results:
-                    _items.append(_item_verification_results.to_dict())
-            _dict['verificationResults'] = _items
+            _dict['verificationResults'] = self.verification_results.to_dict()
         # override the default output from pydantic by calling `to_dict()` of template
         if self.template:
             _dict['template'] = self.template.to_dict()
@@ -171,7 +167,7 @@ class PageVendorResponseDTODataInner(BaseModel):
             "useSameAsPhysicalAddress": obj.get("useSameAsPhysicalAddress"),
             "physicalAddress": VendorResponseDTORemittanceAddress.from_dict(obj["physicalAddress"]) if obj.get("physicalAddress") is not None else None,
             "remittanceAddress": VendorResponseDTORemittanceAddress.from_dict(obj["remittanceAddress"]) if obj.get("remittanceAddress") is not None else None,
-            "verificationResults": [VendorResponseDTOVerificationResultsInner.from_dict(_item) for _item in obj["verificationResults"]] if obj.get("verificationResults") is not None else None,
+            "verificationResults": VendorResponseDTOVerificationResultsInner.from_dict(obj["verificationResults"]) if obj.get("verificationResults") is not None else None,
             "createdBy": obj.get("createdBy"),
             "modifiedBy": obj.get("modifiedBy"),
             "createdOn": obj.get("createdOn"),

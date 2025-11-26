@@ -38,7 +38,7 @@ class MerchantTransactionEntityResponseDataInner(BaseModel):
     reference_transaction_id: Optional[StrictStr] = Field(default=None, alias="referenceTransactionId")
     reference_customer_id: Optional[StrictStr] = Field(default=None, alias="referenceCustomerId")
     recurring_id: Optional[StrictStr] = Field(default=None, alias="recurringId")
-    batch_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="batchId")
+    batch_id: Optional[StrictInt] = Field(default=None, alias="batchId")
     transaction_status: Optional[StrictStr] = Field(default=None, alias="transactionStatus")
     settlement_date: Optional[StrictStr] = Field(default=None, alias="settlementDate")
     auth_code: Optional[StrictStr] = Field(default=None, alias="authCode")

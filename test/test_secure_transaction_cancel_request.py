@@ -40,6 +40,8 @@ class TestSecureTransactionCancelRequest(unittest.TestCase):
             )
         else:
             return SecureTransactionCancelRequest(
+                transaction_id = '',
+                void_reason = '',
         )
         """
 

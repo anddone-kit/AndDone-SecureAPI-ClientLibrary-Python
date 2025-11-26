@@ -393,22 +393,22 @@ conf = openapi_client.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if 'x-api-key' in self.api_key:
-            auth['x-api-key'] = {
+        if 'api-key' in self.api_key:
+            auth['api-key'] = {
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'x-api-key',
                 'value': self.get_api_key_with_prefix(
-                    'x-api-key',
+                    'api-key',
                 ),
             }
-        if 'x-app-key' in self.api_key:
-            auth['x-app-key'] = {
+        if 'app-key' in self.api_key:
+            auth['app-key'] = {
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'x-app-key',
                 'value': self.get_api_key_with_prefix(
-                    'x-app-key',
+                    'app-key',
                 ),
             }
         if 'x-version' in self.api_key:

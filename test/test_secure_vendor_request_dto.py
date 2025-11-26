@@ -39,6 +39,7 @@ class TestSecureVendorRequestDTO(unittest.TestCase):
             )
         else:
             return SecureVendorRequestDTO(
+                vendor_id = '',
         )
         """
 

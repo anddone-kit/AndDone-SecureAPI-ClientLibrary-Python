@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy_id** | **float** |  | [optional] 
+**policy_id** | **int** |  | [optional] 
 **company_name** | **str** |  | [optional] 
 **policy_number** | **str** |  | [optional] 
 **premium** | **float** |  | [optional] 
 **coverage_type** | **str** |  | [optional] 
 **coverage_type_description** | **str** |  | [optional] 
-**company_type_id** | **float** |  | [optional] 
+**company_type_id** | **int** |  | [optional] 
 
 ## Example
 

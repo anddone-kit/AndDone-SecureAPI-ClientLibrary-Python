@@ -19,9 +19,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
+from openapi_client.models.payment_intent_request_intent import PaymentIntentRequestIntent
 from openapi_client.models.payment_link_response_callback_parameters import PaymentLinkResponseCallbackParameters
 from openapi_client.models.token_link_secure_request_customers_inner import TokenLinkSecureRequestCustomersInner
-from openapi_client.models.token_link_secure_request_intent import TokenLinkSecureRequestIntent
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -34,7 +34,7 @@ class TokenLinkSecureRequest(BaseModel):
     expire_in: StrictInt = Field(alias="expireIn")
     expire_in_unit: StrictStr = Field(alias="expireInUnit")
     response_type: Optional[StrictStr] = Field(default=None, alias="responseType")
-    intent: TokenLinkSecureRequestIntent
+    intent: PaymentIntentRequestIntent
     callback_parameters: Optional[PaymentLinkResponseCallbackParameters] = Field(default=None, alias="callbackParameters")
     customers: Optional[List[TokenLinkSecureRequestCustomersInner]] = None
     __properties: ClassVar[List[str]] = ["merchantId", "title", "expireIn", "expireInUnit", "responseType", "intent", "callbackParameters", "customers"]
@@ -125,7 +125,7 @@ class TokenLinkSecureRequest(BaseModel):
             "expireIn": obj.get("expireIn"),
             "expireInUnit": obj.get("expireInUnit"),
             "responseType": obj.get("responseType"),
-            "intent": TokenLinkSecureRequestIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
+            "intent": PaymentIntentRequestIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
             "callbackParameters": PaymentLinkResponseCallbackParameters.from_dict(obj["callbackParameters"]) if obj.get("callbackParameters") is not None else None,
             "customers": [TokenLinkSecureRequestCustomersInner.from_dict(_item) for _item in obj["customers"]] if obj.get("customers") is not None else None
         })

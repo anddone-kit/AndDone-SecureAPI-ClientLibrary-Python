@@ -31,7 +31,7 @@ class QuoteResponse(BaseModel):
     p_f_type: Optional[StrictStr] = Field(default=None, description="The type of premium finance.", alias="pFType")
     is_endorsement: Optional[StrictBool] = Field(default=None, description="Indicates if the quote is an endorsement.", alias="isEndorsement")
     merchant_id: Optional[StrictStr] = Field(default=None, description="The ID of the merchant.", alias="merchantId")
-    program_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The ID of the program.", alias="programId")
+    program_id: Optional[StrictInt] = Field(default=None, description="The ID of the program.", alias="programId")
     program_name: Optional[StrictStr] = Field(default=None, description="The name of the program.", alias="programName")
     payment_intent_id: Optional[StrictStr] = Field(default=None, description="The ID of the payment intent.", alias="paymentIntentId")
     account_number: Optional[StrictStr] = Field(default=None, description="The account number.", alias="accountNumber")
@@ -47,12 +47,13 @@ class QuoteResponse(BaseModel):
     total_payments: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The total payments.", alias="totalPayments")
     payment_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The payment amount.", alias="paymentAmount")
     total_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Total amount.", alias="totalAmount")
-    doc_stamp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The document stamp.", alias="docStamp")
+    doc_stamp: Optional[StrictInt] = Field(default=None, description="The document stamp.", alias="docStamp")
     first_due_date: Optional[StrictStr] = Field(default=None, description="The first due date.", alias="firstDueDate")
     apr: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The annual percentage rate (APR).")
     installments: Optional[StrictInt] = Field(default=None, description="The number of installments.")
     batch_id: Optional[StrictStr] = Field(default=None, description="The batch ID.", alias="batchId")
-    payments_retained: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The number of payments retained.", alias="paymentsRetained")
+    autopay_status: Optional[StrictStr] = Field(default=None, description="The autopayStatus.", alias="autopayStatus")
+    payments_retained: Optional[StrictInt] = Field(default=None, description="The number of payments retained.", alias="paymentsRetained")
     payment_retained_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The amount retained from the payment.", alias="paymentRetainedAmount")
     retail_agent_register_login_url: Optional[StrictStr] = Field(default=None, description="The URL for the retail agent register login.", alias="retailAgentRegisterLoginURL")
     insured_name: Optional[StrictStr] = Field(default=None, description="The name of the insured.", alias="insuredName")
@@ -62,13 +63,14 @@ class QuoteResponse(BaseModel):
     is_down_payment_required: Optional[StrictBool] = Field(default=None, description="Indicates if a down payment is required.", alias="isDownPaymentRequired")
     is_esign_required: Optional[StrictBool] = Field(default=None, description="Indicates if eSign is required.", alias="isEsignRequired")
     is_deleted: Optional[StrictBool] = Field(default=None, description="Indicates if the quote is deleted.", alias="isDeleted")
+    offer_auto_pay: Optional[StrictBool] = Field(default=None, description="The OfferAutoPay Status.", alias="offerAutoPay")
     created_on: Optional[StrictStr] = Field(default=None, description="The date when the quote was created.", alias="createdOn")
     created_by: Optional[StrictStr] = Field(default=None, description="The user who created the quote.", alias="createdBy")
     modified_on: Optional[StrictStr] = Field(default=None, description="The date when the quote was last modified.", alias="modifiedOn")
     modified_by: Optional[StrictStr] = Field(default=None, description="The user who last modified the quote.", alias="modifiedBy")
     un_sign_pfa: Optional[StrictStr] = Field(default=None, description="The unsigned PFA document.", alias="unSignPFA")
     sign_pfa: Optional[StrictStr] = Field(default=None, description="The signed PFA document.", alias="signPFA")
-    __properties: ClassVar[List[str]] = ["id", "quoteKey", "pFType", "isEndorsement", "merchantId", "programId", "programName", "paymentIntentId", "accountNumber", "quoteStatus", "isActive", "premium", "tax", "additionalFees", "brokerFee", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "totalAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "paymentsRetained", "paymentRetainedAmount", "retailAgentRegisterLoginURL", "insuredName", "isEsignPFA", "nextPaymentDueDate", "lastPaymentDate", "isDownPaymentRequired", "isEsignRequired", "isDeleted", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "unSignPFA", "signPFA"]
+    __properties: ClassVar[List[str]] = ["id", "quoteKey", "pFType", "isEndorsement", "merchantId", "programId", "programName", "paymentIntentId", "accountNumber", "quoteStatus", "isActive", "premium", "tax", "additionalFees", "brokerFee", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "totalAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "autopayStatus", "paymentsRetained", "paymentRetainedAmount", "retailAgentRegisterLoginURL", "insuredName", "isEsignPFA", "nextPaymentDueDate", "lastPaymentDate", "isDownPaymentRequired", "isEsignRequired", "isDeleted", "offerAutoPay", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "unSignPFA", "signPFA"]
 
     @field_validator('quote_status')
     def quote_status_validate_enum(cls, value):
@@ -157,6 +159,7 @@ class QuoteResponse(BaseModel):
             "apr": obj.get("apr"),
             "installments": obj.get("installments"),
             "batchId": obj.get("batchId"),
+            "autopayStatus": obj.get("autopayStatus"),
             "paymentsRetained": obj.get("paymentsRetained"),
             "paymentRetainedAmount": obj.get("paymentRetainedAmount"),
             "retailAgentRegisterLoginURL": obj.get("retailAgentRegisterLoginURL"),
@@ -167,6 +170,7 @@ class QuoteResponse(BaseModel):
             "isDownPaymentRequired": obj.get("isDownPaymentRequired"),
             "isEsignRequired": obj.get("isEsignRequired"),
             "isDeleted": obj.get("isDeleted"),
+            "offerAutoPay": obj.get("offerAutoPay"),
             "createdOn": obj.get("createdOn"),
             "createdBy": obj.get("createdBy"),
             "modifiedOn": obj.get("modifiedOn"),

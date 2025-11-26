@@ -346,8 +346,6 @@ class SecurePaymentIntentApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -437,7 +435,7 @@ class SecurePaymentIntentApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "PaymentIntentResponse",
+            '200': "PaymentIntentResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -522,7 +520,7 @@ class SecurePaymentIntentApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "PaymentIntentResponse",
+            '200': "PaymentIntentResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -607,7 +605,7 @@ class SecurePaymentIntentApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "PaymentIntentResponse",
+            '200': "PaymentIntentResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -687,8 +685,6 @@ class SecurePaymentIntentApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

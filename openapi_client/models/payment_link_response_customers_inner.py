@@ -35,9 +35,10 @@ class PaymentLinkResponseCustomersInner(BaseModel):
     notify_via_sms: Optional[StrictBool] = Field(default=None, alias="notifyViaSMS")
     notify_via_email: Optional[StrictBool] = Field(default=None, alias="notifyViaEmail")
     created_on: Optional[StrictStr] = Field(default=None, alias="createdOn")
+    company_name: Optional[StrictStr] = Field(default=None, alias="companyName")
     accounts: Optional[List[PaymentLinkResponseCustomersInnerAccountsInner]] = None
     address: Optional[TransactionPaymentResponseBillingContactAddress] = None
-    __properties: ClassVar[List[str]] = ["firstName", "lastName", "email", "phone", "notifyViaSMS", "notifyViaEmail", "createdOn", "accounts", "address"]
+    __properties: ClassVar[List[str]] = ["firstName", "lastName", "email", "phone", "notifyViaSMS", "notifyViaEmail", "createdOn", "companyName", "accounts", "address"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -107,6 +108,7 @@ class PaymentLinkResponseCustomersInner(BaseModel):
             "notifyViaSMS": obj.get("notifyViaSMS"),
             "notifyViaEmail": obj.get("notifyViaEmail"),
             "createdOn": obj.get("createdOn"),
+            "companyName": obj.get("companyName"),
             "accounts": [PaymentLinkResponseCustomersInnerAccountsInner.from_dict(_item) for _item in obj["accounts"]] if obj.get("accounts") is not None else None,
             "address": TransactionPaymentResponseBillingContactAddress.from_dict(obj["address"]) if obj.get("address") is not None else None
         })

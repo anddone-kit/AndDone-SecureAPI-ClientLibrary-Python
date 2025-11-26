@@ -39,9 +39,9 @@ class TestQuoteRequest(unittest.TestCase):
                 payment_intent_id = '',
                 details = openapi_client.models.quote_request_details.QuoteRequest_details(
                     coupon_invoice_printed = True, 
-                    installments = 1.337, 
+                    installments = 56, 
                     program_ids = [
-                        1.337
+                        56
                         ], 
                     batch_id = '', 
                     commercial = 'NA', 
@@ -76,7 +76,7 @@ class TestQuoteRequest(unittest.TestCase):
                 agent = openapi_client.models.quote_request_agent.QuoteRequest_agent(
                     unique_id = '', 
                     email = '', 
-                    address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                    address = openapi_client.models.quote_request_agent_address.QuoteRequest_agent_address(
                         name = '', 
                         address1 = '', 
                         address2 = '', 
@@ -87,7 +87,7 @@ class TestQuoteRequest(unittest.TestCase):
                 policies = [
                     openapi_client.models.quote_request_policies_inner.QuoteRequest_policies_inner(
                         policy_id = 56, 
-                        policy_number = 56, 
+                        policy_number = 1.337, 
                         premium = 1.337, 
                         fee = 1.337, 
                         tax = 1.337, 
@@ -115,12 +115,12 @@ class TestQuoteRequest(unittest.TestCase):
                             zip = '', 
                             phone = '', 
                             unique_id = '', ), 
-                        ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                        ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                             unique_id = '', 
                             name = '', 
                             care_of = '', 
                             is_validation_required = True, 
-                            address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                            address = openapi_client.models.quote_request_policies_inner_ga_address.QuoteRequest_policies_inner_ga_address(
                                 name = '', 
                                 address1 = '', 
                                 address2 = '', 
@@ -128,7 +128,7 @@ class TestQuoteRequest(unittest.TestCase):
                                 state = '', 
                                 zip = '', 
                                 phone = '', ), ), 
-                        broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                        broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                             unique_id = '', 
                             name = '', 
                             care_of = '', 
@@ -140,9 +140,9 @@ class TestQuoteRequest(unittest.TestCase):
                 payment_intent_id = '',
                 details = openapi_client.models.quote_request_details.QuoteRequest_details(
                     coupon_invoice_printed = True, 
-                    installments = 1.337, 
+                    installments = 56, 
                     program_ids = [
-                        1.337
+                        56
                         ], 
                     batch_id = '', 
                     commercial = 'NA', 
@@ -177,7 +177,7 @@ class TestQuoteRequest(unittest.TestCase):
                 agent = openapi_client.models.quote_request_agent.QuoteRequest_agent(
                     unique_id = '', 
                     email = '', 
-                    address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                    address = openapi_client.models.quote_request_agent_address.QuoteRequest_agent_address(
                         name = '', 
                         address1 = '', 
                         address2 = '', 
@@ -188,7 +188,7 @@ class TestQuoteRequest(unittest.TestCase):
                 policies = [
                     openapi_client.models.quote_request_policies_inner.QuoteRequest_policies_inner(
                         policy_id = 56, 
-                        policy_number = 56, 
+                        policy_number = 1.337, 
                         premium = 1.337, 
                         fee = 1.337, 
                         tax = 1.337, 
@@ -216,12 +216,12 @@ class TestQuoteRequest(unittest.TestCase):
                             zip = '', 
                             phone = '', 
                             unique_id = '', ), 
-                        ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                        ga = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                             unique_id = '', 
                             name = '', 
                             care_of = '', 
                             is_validation_required = True, 
-                            address = openapi_client.models.quote_request_insured_address.QuoteRequest_insured_address(
+                            address = openapi_client.models.quote_request_policies_inner_ga_address.QuoteRequest_policies_inner_ga_address(
                                 name = '', 
                                 address1 = '', 
                                 address2 = '', 
@@ -229,7 +229,7 @@ class TestQuoteRequest(unittest.TestCase):
                                 state = '', 
                                 zip = '', 
                                 phone = '', ), ), 
-                        broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_Ga(
+                        broker = openapi_client.models.quote_request_policies_inner_ga.QuoteRequest_policies_inner_ga(
                             unique_id = '', 
                             name = '', 
                             care_of = '', 

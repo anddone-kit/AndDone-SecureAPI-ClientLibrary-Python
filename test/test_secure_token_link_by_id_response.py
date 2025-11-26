@@ -51,6 +51,7 @@ class TestSecureTokenLinkByIdResponse(unittest.TestCase):
                     self_token = '', 
                     token_provider = '', 
                     account_holder_name = '', 
+                    card_number = '', 
                     card_expiry = '', 
                     routing_number = '', 
                     masked_account_number = '', 
@@ -61,10 +62,10 @@ class TestSecureTokenLinkByIdResponse(unittest.TestCase):
                         address_line2 = '', 
                         city = '', 
                         state = '', 
-                        country = 1.337, 
+                        country = 56, 
                         postal_code = '', 
                         time_zone = '', ), ),
-                intent = openapi_client.models.secure_token_link_by_id_response_intent.SecureTokenLinkByIdResponse_intent(
+                intent = openapi_client.models.pf_endorsement_response_item_payment_intent_intent.PFEndorsementResponse_item_paymentIntent_intent(
                     payment_types = [
                         'NotDefined'
                         ], ),
@@ -74,12 +75,12 @@ class TestSecureTokenLinkByIdResponse(unittest.TestCase):
                         last_name = '', 
                         email = '', 
                         phone = '', 
-                        address = openapi_client.models.token_link_secure_request_customers_inner_address.TokenLinkSecureRequest_customers_inner_address(
+                        address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
                             address_line1 = '', 
                             address_line2 = '', 
                             city = '', 
                             state = '', 
-                            country = 1.337, 
+                            country = 56, 
                             postal_code = '', 
                             time_zone = '', ), )
                     ],
@@ -88,9 +89,9 @@ class TestSecureTokenLinkByIdResponse(unittest.TestCase):
                         id = '', 
                         token_link_id = '', 
                         merchant_id = '', 
-                        payment_link_type = '', 
-                        link_status = '', 
-                        token_link_status = '', 
+                        payment_link_type = 'NA', 
+                        link_status = 'Created', 
+                        token_link_status = 'NA', 
                         event_date = '', )
                     ]
             )

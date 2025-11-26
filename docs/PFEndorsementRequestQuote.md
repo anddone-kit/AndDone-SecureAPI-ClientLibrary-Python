@@ -6,12 +6,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_number** | **str** |  | [optional] 
-**agreement_id** | **str** | This denotes the agreementId received in check endorsement API. | 
+**agreement_id** | **int** | This denotes the agreementId received in check endorsement API. | 
 **merchant_reference** | **str** |  | 
 **policies** | [**List[PFEndorsementRequestQuotePoliciesInner]**](PFEndorsementRequestQuotePoliciesInner.md) |  | 
 **details** | [**PFEndorsementRequestQuoteDetails**](PFEndorsementRequestQuoteDetails.md) |  | [optional] 
 **insured** | [**PFEndorsementRequestQuoteInsured**](PFEndorsementRequestQuoteInsured.md) |  | [optional] 
-**agent** | [**PFEndorsementRequestQuoteAgent**](PFEndorsementRequestQuoteAgent.md) |  | [optional] 
+**agent** | [**PFLiteSecureQuoteRequestAgent**](PFLiteSecureQuoteRequestAgent.md) |  | [optional] 
 **communication** | [**PFEndorsementRequestQuoteCommunication**](PFEndorsementRequestQuoteCommunication.md) |  | [optional] 
 
 ## Example

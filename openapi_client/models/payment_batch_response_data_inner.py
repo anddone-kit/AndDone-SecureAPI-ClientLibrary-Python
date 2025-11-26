@@ -39,9 +39,9 @@ class PaymentBatchResponseDataInner(BaseModel):
     created_by: Optional[StrictStr] = Field(default=None, alias="createdBy")
     modified_on: Optional[StrictStr] = Field(default=None, alias="modifiedOn")
     modified_by: Optional[StrictStr] = Field(default=None, alias="modifiedBy")
-    capture_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="captureCount")
+    capture_count: Optional[StrictInt] = Field(default=None, alias="captureCount")
     capture_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="captureAmount")
-    voided_count: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="voidedCount")
+    voided_count: Optional[StrictInt] = Field(default=None, alias="voidedCount")
     voided_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="voidedAmount")
     __properties: ClassVar[List[str]] = ["id", "merchantId", "batchStatus", "processMethods", "processorName", "isDefault", "executedOnDemand", "executionTime", "completionTime", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "captureCount", "captureAmount", "voidedCount", "voidedAmount"]
 

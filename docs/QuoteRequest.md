@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **merchant_id** | **str** |  | [optional] 
+**offer_auto_pay** | **bool** |  | [optional] 
 **payment_intent_id** | **str** |  | 
 **details** | [**QuoteRequestDetails**](QuoteRequestDetails.md) |  | 
 **insured** | [**QuoteRequestInsured**](QuoteRequestInsured.md) |  | 

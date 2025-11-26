@@ -42,14 +42,14 @@ class TestPaymentIntentResponse(unittest.TestCase):
                 payment_description = '',
                 invoice_number = '',
                 expires_on = '',
-                intent = openapi_client.models.payment_intent_response_intent.PaymentIntentResponse_intent(
+                intent = openapi_client.models.payment_intent_request_intent.PaymentIntentRequest_intent(
                     payment_types = [
                         'CreditCard'
                         ], ),
                 save_for_future = True,
                 enable_premium_finance = True,
                 splits = [
-                    openapi_client.models.payment_intent_response_splits_inner.PaymentIntentResponse_splits_inner(
+                    openapi_client.models.payment_intent_request_splits_inner.PaymentIntentRequest_splits_inner(
                         virtual_account = '', 
                         amount = 1.337, 
                         reference = '', 
@@ -58,6 +58,15 @@ class TestPaymentIntentResponse(unittest.TestCase):
                     ],
                 quote_key = '',
                 account_number = '',
+                suppress_technology_fee = True,
+                override_technology_fee = 1.337,
+                is_premium_financier = True,
+                pfr = openapi_client.models.payment_intent_request_pfr.PaymentIntentRequest_pfr(
+                    entity = '', 
+                    reference = '', 
+                    quote = '', 
+                    account_number = '', 
+                    payment_type = 'NA', ),
                 customers = [
                     openapi_client.models.payment_intent_response_customers_inner.PaymentIntentResponse_customers_inner(
                         first_name = '', 
@@ -69,10 +78,11 @@ class TestPaymentIntentResponse(unittest.TestCase):
                 selected_customer_fields = '',
                 reference_data_list = [
                     openapi_client.models.payment_intent_request_reference_data_list_inner.PaymentIntentRequest_referenceDataList_inner(
-                        reference_type = 'QuoteNumber', 
+                        reference_type = 'None', 
                         reference_number = '', 
                         reference_key = '', )
-                    ]
+                    ],
+                display_mode = 'None'
             )
         else:
             return PaymentIntentResponse(

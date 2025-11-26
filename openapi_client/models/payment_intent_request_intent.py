@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -26,15 +26,12 @@ class PaymentIntentRequestIntent(BaseModel):
     """
     PaymentIntentRequestIntent
     """ # noqa: E501
-    payment_types: Optional[List[StrictStr]] = Field(default=None, alias="paymentTypes")
+    payment_types: List[StrictStr] = Field(alias="paymentTypes")
     __properties: ClassVar[List[str]] = ["paymentTypes"]
 
     @field_validator('payment_types')
     def payment_types_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         for i in value:
             if i not in set(['CreditCard', 'DebitCard', 'ACH']):
                 raise ValueError("each list item must be one of ('CreditCard', 'DebitCard', 'ACH')")

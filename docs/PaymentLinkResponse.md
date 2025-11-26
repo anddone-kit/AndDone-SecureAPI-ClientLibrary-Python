@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **expire_in_unit** | **str** |  | [optional] 
 **expire_on** | **str** |  | [optional] 
 **payments** | [**List[PaymentLinkResponsePaymentsInner]**](PaymentLinkResponsePaymentsInner.md) |  | [optional] 
-**no_of_payment_made** | **float** |  | [optional] 
+**no_of_payment_made** | **int** |  | [optional] 
 **total_paid_amount** | **float** |  | [optional] 
 **link_status** | **str** |  | [optional] 
 **invoice_number** | **str** |  | [optional] 

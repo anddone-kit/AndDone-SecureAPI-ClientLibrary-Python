@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -35,7 +35,7 @@ class PaymentLinkResponseCallbackParameters(BaseModel):
     transaction_id: Optional[StrictStr] = Field(default=None, alias="transactionId")
     callback_api_url: Optional[StrictStr] = Field(default=None, alias="callbackApiUrl")
     callback_message: Optional[StrictStr] = Field(default=None, alias="callbackMessage")
-    redirection_time: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="redirectionTime")
+    redirection_time: Optional[StrictInt] = Field(default=None, alias="redirectionTime")
     __properties: ClassVar[List[str]] = ["callbackSuccessUrl", "callbackFailureUrl", "accessKey", "secretKey", "referenceNo", "referenceType", "transactionId", "callbackApiUrl", "callbackMessage", "redirectionTime"]
 
     model_config = ConfigDict(

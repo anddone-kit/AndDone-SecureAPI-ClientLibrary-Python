@@ -17,8 +17,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
+from openapi_client.models.pf_lite_secure_quote_request_agent import PFLiteSecureQuoteRequestAgent
 from openapi_client.models.pf_lite_secure_quote_request_insured import PFLiteSecureQuoteRequestInsured
 from openapi_client.models.pf_lite_secure_quote_request_merchant import PFLiteSecureQuoteRequestMerchant
 from openapi_client.models.pf_lite_secure_quote_request_policies_inner import PFLiteSecureQuoteRequestPoliciesInner
@@ -36,7 +37,9 @@ class PFLiteSecureQuoteRequest(BaseModel):
     insured: PFLiteSecureQuoteRequestInsured
     program: PFLiteSecureQuoteRequestProgram
     policies: List[PFLiteSecureQuoteRequestPoliciesInner]
-    __properties: ClassVar[List[str]] = ["merchantId", "brokerFee", "merchant", "insured", "program", "policies"]
+    offer_auto_pay: Optional[StrictBool] = Field(default=None, alias="offerAutoPay")
+    agent: Optional[PFLiteSecureQuoteRequestAgent] = None
+    __properties: ClassVar[List[str]] = ["merchantId", "brokerFee", "merchant", "insured", "program", "policies", "offerAutoPay", "agent"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -93,6 +96,9 @@ class PFLiteSecureQuoteRequest(BaseModel):
                 if _item_policies:
                     _items.append(_item_policies.to_dict())
             _dict['policies'] = _items
+        # override the default output from pydantic by calling `to_dict()` of agent
+        if self.agent:
+            _dict['agent'] = self.agent.to_dict()
         return _dict
 
     @classmethod
@@ -110,7 +116,9 @@ class PFLiteSecureQuoteRequest(BaseModel):
             "merchant": PFLiteSecureQuoteRequestMerchant.from_dict(obj["merchant"]) if obj.get("merchant") is not None else None,
             "insured": PFLiteSecureQuoteRequestInsured.from_dict(obj["insured"]) if obj.get("insured") is not None else None,
             "program": PFLiteSecureQuoteRequestProgram.from_dict(obj["program"]) if obj.get("program") is not None else None,
-            "policies": [PFLiteSecureQuoteRequestPoliciesInner.from_dict(_item) for _item in obj["policies"]] if obj.get("policies") is not None else None
+            "policies": [PFLiteSecureQuoteRequestPoliciesInner.from_dict(_item) for _item in obj["policies"]] if obj.get("policies") is not None else None,
+            "offerAutoPay": obj.get("offerAutoPay"),
+            "agent": PFLiteSecureQuoteRequestAgent.from_dict(obj["agent"]) if obj.get("agent") is not None else None
         })
         return _obj
 

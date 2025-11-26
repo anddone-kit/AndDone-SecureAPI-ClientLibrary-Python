@@ -35,11 +35,11 @@ class TestPaymentIntentRequestCustomersInner(unittest.TestCase):
         model = PaymentIntentRequestCustomersInner()
         if include_optional:
             return PaymentIntentRequestCustomersInner(
+                customer_id = '',
                 first_name = '',
                 last_name = '',
                 email = '',
-                phone = '',
-                customer_id = ''
+                phone = ''
             )
         else:
             return PaymentIntentRequestCustomersInner(

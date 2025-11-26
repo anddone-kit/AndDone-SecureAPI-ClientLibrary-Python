@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **merchant_id** | **str** |  | [optional] 
 **previous_event_status** | **str** |  | [optional] 
 **event_status** | **str** |  | [optional] 
-**voided_count** | **float** |  | [optional] 
+**voided_count** | **int** |  | [optional] 
 **voided_amount** | **float** |  | [optional] 
 **closed_on** | **str** |  | [optional] 
 **event_date** | **str** |  | [optional] 

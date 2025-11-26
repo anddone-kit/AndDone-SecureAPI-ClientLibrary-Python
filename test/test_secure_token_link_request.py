@@ -39,6 +39,7 @@ class TestSecureTokenLinkRequest(unittest.TestCase):
             )
         else:
             return SecureTokenLinkRequest(
+                token_link_id = '',
         )
         """
 

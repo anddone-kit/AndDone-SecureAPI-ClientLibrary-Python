@@ -36,31 +36,27 @@ class TestTransactionPaymentResponseCcTenderInfo(unittest.TestCase):
         if include_optional:
             return TransactionPaymentResponseCcTenderInfo(
                 card_holder_name = '',
+                card_type = '',
                 mask_card_number = '',
                 card_expiry = '',
                 capture_amount = 1.337,
                 amount = 1.337,
+                convenience_amount = 1.337,
                 bin_number = '',
-                tax_amount = 1.337,
-                tax_after_discount = 1.337,
-                tax_percent = 1.337,
                 adjustment_percent_value = 1.337,
                 adjustment_fixed_value = 1.337,
                 adjustment_amount = 1.337,
                 adjustment_display_name = '',
                 adjustment_descriptor_message = '',
-                payment_adjustment_type = 'CashIncentive',
+                payment_adjustment_type = 'None',
                 pre_auth_code = '',
-                mask_account = 1.337,
+                mask_account = '',
                 account_token = '',
                 account_token_message = '',
                 create_account_token = True,
-                discount_type = 'Fixed',
-                discount_percent = 1.337,
-                discount_amount = 1.337,
-                convenience_amount = 1.337,
                 commission_type = 'Fixed',
-                commission_value = 1.337
+                commission_value = 1.337,
+                commission_fixed_value = 1.337
             )
         else:
             return TransactionPaymentResponseCcTenderInfo(

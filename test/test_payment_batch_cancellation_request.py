@@ -44,6 +44,12 @@ class TestPaymentBatchCancellationRequest(unittest.TestCase):
             )
         else:
             return PaymentBatchCancellationRequest(
+                merchant_id = '',
+                batch_id = '',
+                void_reason = '',
+                transaction_ids = [
+                    ''
+                    ],
         )
         """
 

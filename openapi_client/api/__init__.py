@@ -1,9 +1,9 @@
 # flake8: noqa
 
 # import apis into api package
+from openapi_client.api.secure_autopay_enrollment_api import SecureAutopayEnrollmentApi
 from openapi_client.api.secure_embedded_premium_finance_api import SecureEmbeddedPremiumFinanceApi
 from openapi_client.api.secure_embedded_premium_finance_endorsements_api import SecureEmbeddedPremiumFinanceEndorsementsApi
-from openapi_client.api.secure_orum_api import SecureOrumApi
 from openapi_client.api.secure_outbound_payments_api import SecureOutboundPaymentsApi
 from openapi_client.api.secure_payment_batching_api import SecurePaymentBatchingApi
 from openapi_client.api.secure_payment_intent_api import SecurePaymentIntentApi

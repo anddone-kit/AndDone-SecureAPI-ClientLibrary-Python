@@ -35,50 +35,10 @@ class TestPaymentLinkRequest(unittest.TestCase):
         model = PaymentLinkRequest()
         if include_optional:
             return PaymentLinkRequest(
-                title = '',
                 merchant_id = '',
-                short_description = '',
-                save_for_future = True,
-                payment_description = '',
-                is_pay_in_full = True,
+                title = '',
                 amount = 1.337,
-                invoice_number = '',
-                enable_partial_payment = True,
-                enable_multiple_payment = True,
-                enable_protection = True,
-                protection_mode = 'EmailOTP',
-                display_receipt = True,
-                expire_in = 56,
-                expire_by = 56,
-                expire_on = '',
-                reference_type = 'None',
-                expire_in_unit = 'Minutes',
-                reference_number = '',
-                reference_key = '',
-                enable_premium_finance = True,
-                platform_settlement_status = 'NotDefined',
-                reference_data_list = [
-                    openapi_client.models.payment_intent_request_reference_data_list_inner.PaymentIntentRequest_referenceDataList_inner(
-                        reference_type = 'QuoteNumber', 
-                        reference_number = '', 
-                        reference_key = '', )
-                    ],
-                account_number = '',
-                response_type = 'OnScreen',
-                callback_parameters = openapi_client.models.payment_link_request_callback_parameters.PaymentLinkRequest_callbackParameters(
-                    callback_api_url = '', 
-                    callback_message = '', 
-                    callback_success_url = '', 
-                    callback_failure_url = '', 
-                    access_key = '', 
-                    secret_key = '', 
-                    reference_no = '', 
-                    reference_type = '', 
-                    transaction_id = '', 
-                    redirection_time = 56, ),
-                payment_link_type = 'NA',
-                apply_payment_adjustments = True,
-                quote_key = '',
+                payment_description = '',
                 customers = [
                     openapi_client.models.payment_link_response_customers_inner.PaymentLinkResponse_customers_inner(
                         first_name = '', 
@@ -86,41 +46,135 @@ class TestPaymentLinkRequest(unittest.TestCase):
                         email = '', 
                         phone = '', 
                         notify_via_sms = True, 
-                        notify_via_email = True, )
+                        notify_via_email = True, 
+                        created_on = '', 
+                        accounts = [
+                            openapi_client.models.payment_link_response_customers_inner_accounts_inner.PaymentLinkResponse_customers_inner_accounts_inner(
+                                id = '', 
+                                channel_type = 'ACH', 
+                                card_number = '', 
+                                card_type = '', 
+                                account_token = '', 
+                                account_number = '', 
+                                bank_name = '', 
+                                is_checking_account = True, 
+                                is_expired = True, 
+                                created_on = '', 
+                                created_by = '', 
+                                modified_on = '', 
+                                modified_by = '', )
+                            ], 
+                        address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
+                            address_line1 = '', 
+                            address_line2 = '', 
+                            city = '', 
+                            state = '', 
+                            country = 56, 
+                            postal_code = '', 
+                            time_zone = '', ), )
                     ],
-                splits = [
-                    openapi_client.models.payment_link_request_splits_inner.PaymentLinkRequest_splits_inner(
-                        virtual_account = '', 
-                        account_type = 1.337, 
-                        amount = 1.337, 
-                        reference = '', 
-                        charge_indicator = True, )
-                    ],
+                invoice_number = '',
+                expire_by = 1.337,
+                expire_in = 56,
+                expire_in_unit = 'Seconds',
+                expire_on = '',
                 line_items = [
                     openapi_client.models.payment_link_response_line_items_inner.PaymentLinkResponse_lineItems_inner(
-                        line_item_type = 1.337, 
+                        line_item_type = 'External', 
                         product_id = '', 
                         description = '', 
-                        quantity = 1.337, 
+                        quantity = 56, 
                         rate = 1.337, )
                     ],
+                short_description = '',
+                response_type = 'OnScreen',
+                callback_parameters = openapi_client.models.payment_link_response_callback_parameters.PaymentLinkResponse_callbackParameters(
+                    callback_success_url = '', 
+                    callback_failure_url = '', 
+                    access_key = '', 
+                    secret_key = '', 
+                    reference_no = '', 
+                    reference_type = '', 
+                    transaction_id = '', 
+                    callback_api_url = '', 
+                    callback_message = '', 
+                    redirection_time = 1.337, ),
                 settings = openapi_client.models.payment_link_request_settings.PaymentLinkRequest_settings(
-                    additional_details_preference = 'AskShopper', 
-                    intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
-                        payment_types = [
-                            ''
-                            ], ), 
                     selected_customer_fields = '', 
+                    additional_details_preference = 'None', 
                     display_summary = True, 
                     accept_customer_info = True, 
                     remove_header = True, 
                     accept_card = True, 
                     accept_bank_account = True, 
                     save_customer = True, 
-                    save_customer_account = True, )
+                    save_customer_account = True, 
+                    intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
+                        payment_types = [
+                            'ACH'
+                            ], ), ),
+                payment_link_type = 'NA',
+                save_for_future = True,
+                splits = [
+                    openapi_client.models.payment_intent_request_splits_inner.PaymentIntentRequest_splits_inner(
+                        virtual_account = '', 
+                        amount = 1.337, 
+                        reference = '', 
+                        account_type = '', 
+                        charge_indicator = True, )
+                    ],
+                quote_key = '',
+                account_number = '',
+                reference_type = 'None',
+                reference_number = '',
+                reference_key = '',
+                reference_data_list = [
+                    openapi_client.models.payment_link_response_reference_data_list_inner.PaymentLinkResponse_referenceDataList_inner(
+                        reference_type = 'QuoteId', 
+                        reference_number = '', 
+                        reference_key = '', )
+                    ],
+                enable_premium_finance = True,
+                suppress_technology_fee = True,
+                override_technology_fee = 1.337,
+                platform_settlement_status = 'NotDefined',
+                is_pay_in_full = True,
+                is_premium_financier = True,
+                pfr = openapi_client.models.payment_intent_request_pfr.PaymentIntentRequest_pfr(
+                    entity = '', 
+                    reference = '', 
+                    quote = '', 
+                    account_number = '', 
+                    payment_type = 'NA', ),
+                pf_type = 'PF'
             )
         else:
             return PaymentLinkRequest(
+                merchant_id = '',
+                title = '',
+                amount = 1.337,
+                expire_in = 56,
+                expire_in_unit = 'Seconds',
+                settings = openapi_client.models.payment_link_request_settings.PaymentLinkRequest_settings(
+                    selected_customer_fields = '', 
+                    additional_details_preference = 'None', 
+                    display_summary = True, 
+                    accept_customer_info = True, 
+                    remove_header = True, 
+                    accept_card = True, 
+                    accept_bank_account = True, 
+                    save_customer = True, 
+                    save_customer_account = True, 
+                    intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
+                        payment_types = [
+                            'ACH'
+                            ], ), ),
+                reference_data_list = [
+                    openapi_client.models.payment_link_response_reference_data_list_inner.PaymentLinkResponse_referenceDataList_inner(
+                        reference_type = 'QuoteId', 
+                        reference_number = '', 
+                        reference_key = '', )
+                    ],
         )
         """
 

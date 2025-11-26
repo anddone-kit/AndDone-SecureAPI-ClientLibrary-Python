@@ -40,7 +40,7 @@ class TestPFGenerateQuoteResponseItemESignResult(unittest.TestCase):
                 batch_id = '',
                 agent_url = '',
                 insured_url = '',
-                e_sign_option = 56
+                e_sign_option = 1.337
             )
         else:
             return PFGenerateQuoteResponseItemESignResult(

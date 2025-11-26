@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **expire_in** | **int** |  | 
 **expire_in_unit** | **str** |  | 
 **response_type** | **str** |  | [optional] 
-**intent** | [**TokenLinkSecureRequestIntent**](TokenLinkSecureRequestIntent.md) |  | 
+**intent** | [**PaymentIntentRequestIntent**](PaymentIntentRequestIntent.md) |  | 
 **callback_parameters** | [**PaymentLinkResponseCallbackParameters**](PaymentLinkResponseCallbackParameters.md) |  | [optional] 
 **customers** | [**List[TokenLinkSecureRequestCustomersInner]**](TokenLinkSecureRequestCustomersInner.md) |  | [optional] 
 

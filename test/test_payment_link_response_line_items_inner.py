@@ -35,10 +35,10 @@ class TestPaymentLinkResponseLineItemsInner(unittest.TestCase):
         model = PaymentLinkResponseLineItemsInner()
         if include_optional:
             return PaymentLinkResponseLineItemsInner(
-                line_item_type = 1.337,
+                line_item_type = 'External',
                 product_id = '',
                 description = '',
-                quantity = 1.337,
+                quantity = 56,
                 rate = 1.337
             )
         else:

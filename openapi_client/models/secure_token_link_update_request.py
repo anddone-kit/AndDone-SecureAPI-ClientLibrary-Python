@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.payment_intent_request_intent import PaymentIntentRequestIntent
+from openapi_client.models.payment_intent_response_intent import PaymentIntentResponseIntent
 from openapi_client.models.payment_link_response_callback_parameters import PaymentLinkResponseCallbackParameters
 from typing import Optional, Set
 from typing_extensions import Self
@@ -32,7 +32,7 @@ class SecureTokenLinkUpdateRequest(BaseModel):
     expire_in: StrictInt = Field(alias="expireIn")
     response_type: Optional[StrictStr] = Field(default=None, alias="responseType")
     expire_in_unit: StrictStr = Field(alias="expireInUnit")
-    intent: PaymentIntentRequestIntent
+    intent: PaymentIntentResponseIntent
     call_back_parameters: Optional[PaymentLinkResponseCallbackParameters] = Field(default=None, alias="callBackParameters")
     __properties: ClassVar[List[str]] = ["tokenLinkId", "expireIn", "responseType", "expireInUnit", "intent", "callBackParameters"]
 
@@ -114,7 +114,7 @@ class SecureTokenLinkUpdateRequest(BaseModel):
             "expireIn": obj.get("expireIn"),
             "responseType": obj.get("responseType"),
             "expireInUnit": obj.get("expireInUnit"),
-            "intent": PaymentIntentRequestIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
+            "intent": PaymentIntentResponseIntent.from_dict(obj["intent"]) if obj.get("intent") is not None else None,
             "callBackParameters": PaymentLinkResponseCallbackParameters.from_dict(obj["callBackParameters"]) if obj.get("callBackParameters") is not None else None
         })
         return _obj

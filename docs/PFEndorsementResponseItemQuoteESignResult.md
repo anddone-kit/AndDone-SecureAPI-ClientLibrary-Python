@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **batch_id** | **str** |  | [optional] 
 **agent_url** | **str** |  | [optional] 
 **insured_url** | **str** |  | [optional] 
-**e_sign_option** | **float** |  | [optional] 
+**e_sign_option** | **int** |  | [optional] 
 
 ## Example
 

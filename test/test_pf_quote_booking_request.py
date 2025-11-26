@@ -35,11 +35,12 @@ class TestPFQuoteBookingRequest(unittest.TestCase):
         model = PFQuoteBookingRequest()
         if include_optional:
             return PFQuoteBookingRequest(
-                quote_key = 1.337,
+                quote_key = 56,
                 merchant_token = ''
             )
         else:
             return PFQuoteBookingRequest(
+                quote_key = 56,
         )
         """
 

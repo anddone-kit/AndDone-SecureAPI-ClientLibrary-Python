@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.pf_check_endorsements_response_item_policies_inner import PFCheckEndorsementsResponseItemPoliciesInner
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,8 +27,8 @@ class PFCheckEndorsementsResponseItem(BaseModel):
     """
     PFCheckEndorsementsResponseItem
     """ # noqa: E501
-    agreement_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="agreementID")
-    client_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="clientID")
+    agreement_id: Optional[StrictInt] = Field(default=None, alias="agreementID")
+    client_id: Optional[StrictInt] = Field(default=None, alias="clientID")
     account_number: Optional[StrictStr] = Field(default=None, alias="accountNumber")
     client_name: Optional[StrictStr] = Field(default=None, alias="clientName")
     is_commercial: Optional[StrictBool] = Field(default=None, alias="isCommercial")

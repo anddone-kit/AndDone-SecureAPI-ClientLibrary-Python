@@ -30,7 +30,6 @@ from openapi_client.models.pf_retrieve_pfa_request_dto import PFRetrievePFAReque
 from openapi_client.models.pf_update_pfa_response import PFUpdatePFAResponse
 from openapi_client.models.quote_request import QuoteRequest
 from openapi_client.models.quote_response import QuoteResponse
-from openapi_client.models.secure_epf_quotes_post200_response import SecureEpfQuotesPost200Response
 
 from openapi_client.api_client import ApiClient, RequestSerialized
 from openapi_client.api_response import ApiResponse
@@ -369,8 +368,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -710,8 +707,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1044,8 +1039,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1385,8 +1378,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1766,7 +1757,7 @@ class SecureEmbeddedPremiumFinanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> SecureEpfQuotesPost200Response:
+    ) -> QuoteResponse:
         """This API will return quote by QuoteKey.
 
 
@@ -1815,7 +1806,7 @@ class SecureEmbeddedPremiumFinanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SecureEpfQuotesPost200Response",
+            '200': "QuoteResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -1851,7 +1842,7 @@ class SecureEmbeddedPremiumFinanceApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[SecureEpfQuotesPost200Response]:
+    ) -> ApiResponse[QuoteResponse]:
         """This API will return quote by QuoteKey.
 
 
@@ -1900,7 +1891,7 @@ class SecureEmbeddedPremiumFinanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SecureEpfQuotesPost200Response",
+            '200': "QuoteResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -1985,7 +1976,7 @@ class SecureEmbeddedPremiumFinanceApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "SecureEpfQuotesPost200Response",
+            '200': "QuoteResponse",
             '400': None,
             '404': None,
             '500': None,
@@ -2065,8 +2056,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -2406,8 +2395,6 @@ class SecureEmbeddedPremiumFinanceApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

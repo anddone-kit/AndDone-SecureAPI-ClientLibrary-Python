@@ -113,7 +113,7 @@ class TestPFEndorsementRequestQuote(unittest.TestCase):
                     coupon_invoice_printed = True, 
                     crd = 1.337, 
                     interval = '', 
-                    installments = 1.337, 
+                    installments = 56, 
                     program_id = 1.337, 
                     broker_fee = 1.337, 
                     e_sign_option = '', 
@@ -145,7 +145,7 @@ class TestPFEndorsementRequestQuote(unittest.TestCase):
                     is_cancellation_warning_enabled = True, 
                     fax_number = '', 
                     email_address = '', 
-                    pf_type = '', 
+                    pf_type = 'None', 
                     address = openapi_client.models.pf_endorsement_request_quote_insured_address.PFEndorsementRequest_quote_Insured_Address(
                         name = '', 
                         address1 = '', 
@@ -192,6 +192,7 @@ class TestPFEndorsementRequestQuote(unittest.TestCase):
         else:
             return PFEndorsementRequestQuote(
                 agreement_id = '',
+                merchant_reference = '',
                 policies = [
                     openapi_client.models.pf_endorsement_request_quote_policies_inner.PFEndorsementRequest_quote_policies_inner(
                         policy_id = '', 
@@ -261,35 +262,6 @@ class TestPFEndorsementRequestQuote(unittest.TestCase):
                             ], 
                         invoice_number = '', )
                     ],
-                insured = openapi_client.models.pf_endorsement_request_quote_insured.PFEndorsementRequest_quote_Insured(
-                    agent_customer_number = '', 
-                    email = '', 
-                    care_of = '', 
-                    unique_id = '', 
-                    mobile_phone_number = '', 
-                    is_cancellation_warning_enabled = True, 
-                    fax_number = '', 
-                    email_address = '', 
-                    pf_type = '', 
-                    address = openapi_client.models.pf_endorsement_request_quote_insured_address.PFEndorsementRequest_quote_Insured_Address(
-                        name = '', 
-                        address1 = '', 
-                        address2 = '', 
-                        city = '', 
-                        state = '', 
-                        zip = '', 
-                        phone = '', ), 
-                    has_data_change_agent_customer_number = True, 
-                    has_data_change_name = True, 
-                    has_data_change_address1 = True, 
-                    has_data_change_address2 = True, 
-                    has_data_change_city = True, 
-                    has_data_change_state = True, 
-                    has_data_change_zip = True, 
-                    has_data_change_phone = True, 
-                    has_data_change_email = True, 
-                    has_data_change_care_of = True, 
-                    has_data_change_insured = True, ),
         )
         """
 

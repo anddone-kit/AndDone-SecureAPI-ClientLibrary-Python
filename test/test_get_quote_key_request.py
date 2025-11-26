@@ -39,6 +39,7 @@ class TestGetQuoteKeyRequest(unittest.TestCase):
             )
         else:
             return GetQuoteKeyRequest(
+                quote_key = '',
         )
         """
 

@@ -35,7 +35,7 @@ class TestPageVendorResponseDTO(unittest.TestCase):
         model = PageVendorResponseDTO()
         if include_optional:
             return PageVendorResponseDTO(
-                total_row_count = 56,
+                total_row_count = 1.337,
                 data = [
                     openapi_client.models.page_vendor_response_dto_data_inner.PageVendorResponseDTO_data_inner(
                         id = '', 
@@ -45,7 +45,7 @@ class TestPageVendorResponseDTO(unittest.TestCase):
                         vendor_name = '', 
                         vendor_alias_name = '', 
                         vendor_db_name = '', 
-                        payment_method_type = 'Checks', 
+                        payment_method_type = 'Check', 
                         notification_type = '', 
                         vendor_notes = '', 
                         phone_number = '', 

@@ -28,24 +28,24 @@ class PFEndorsementResponseItemQuote(BaseModel):
     PFEndorsementResponseItemQuote
     """ # noqa: E501
     pfa: Optional[StrictStr] = None
-    quote_key: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="quoteKey")
+    quote_key: Optional[StrictInt] = Field(default=None, alias="quoteKey")
     premium: Optional[Union[StrictFloat, StrictInt]] = None
     down_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="downAmount")
     amount_financed: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="amountFinanced")
     finance_charge: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="financeCharge")
     total_payments: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalPayments")
     payment_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="paymentAmount")
-    doc_stamp: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="docStamp")
+    doc_stamp: Optional[StrictInt] = Field(default=None, alias="docStamp")
     first_due_date: Optional[StrictStr] = Field(default=None, alias="firstDueDate")
     apr: Optional[Union[StrictFloat, StrictInt]] = None
     installments: Optional[StrictInt] = None
-    payments_retained: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="paymentsRetained")
+    payments_retained: Optional[StrictInt] = Field(default=None, alias="paymentsRetained")
     payment_retained_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="paymentRetainedAmount")
     e_sign_result: Optional[PFEndorsementResponseItemQuoteESignResult] = Field(default=None, alias="eSignResult")
     is_down_payment_required: Optional[StrictBool] = Field(default=None, alias="isDownPaymentRequired")
-    is_esign_required: Optional[StrictBool] = Field(default=None, alias="IsEsignRequired")
-    is_endorsement: Optional[StrictBool] = Field(default=None, alias="IsEndorsement")
-    __properties: ClassVar[List[str]] = ["pfa", "quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "paymentsRetained", "paymentRetainedAmount", "eSignResult", "isDownPaymentRequired", "IsEsignRequired", "IsEndorsement"]
+    is_esign_required: Optional[StrictBool] = Field(default=None, alias="isEsignRequired")
+    is_endorsement: Optional[StrictBool] = Field(default=None, alias="isEndorsement")
+    __properties: ClassVar[List[str]] = ["pfa", "quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "paymentsRetained", "paymentRetainedAmount", "eSignResult", "isDownPaymentRequired", "isEsignRequired", "isEndorsement"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -117,8 +117,8 @@ class PFEndorsementResponseItemQuote(BaseModel):
             "paymentRetainedAmount": obj.get("paymentRetainedAmount"),
             "eSignResult": PFEndorsementResponseItemQuoteESignResult.from_dict(obj["eSignResult"]) if obj.get("eSignResult") is not None else None,
             "isDownPaymentRequired": obj.get("isDownPaymentRequired"),
-            "IsEsignRequired": obj.get("IsEsignRequired"),
-            "IsEndorsement": obj.get("IsEndorsement")
+            "isEsignRequired": obj.get("isEsignRequired"),
+            "isEndorsement": obj.get("isEndorsement")
         })
         return _obj
 

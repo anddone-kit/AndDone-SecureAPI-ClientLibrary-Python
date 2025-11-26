@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **notify_via_sms** | **bool** |  | [optional] 
 **notify_via_email** | **bool** |  | [optional] 
 **created_on** | **str** |  | [optional] 
+**company_name** | **str** |  | [optional] 
 **accounts** | [**List[PaymentLinkResponseCustomersInnerAccountsInner]**](PaymentLinkResponseCustomersInnerAccountsInner.md) |  | [optional] 
 **address** | [**TransactionPaymentResponseBillingContactAddress**](TransactionPaymentResponseBillingContactAddress.md) |  | [optional] 
 

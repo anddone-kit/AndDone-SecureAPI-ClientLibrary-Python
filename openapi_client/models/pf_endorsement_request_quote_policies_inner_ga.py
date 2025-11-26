@@ -26,16 +26,16 @@ class PFEndorsementRequestQuotePoliciesInnerGa(BaseModel):
     """
     PFEndorsementRequestQuotePoliciesInnerGa
     """ # noqa: E501
-    unique_id: Optional[StrictStr] = Field(default=None, alias="UniqueID")
-    name: Optional[StrictStr] = Field(default=None, alias="Name")
-    care_of: Optional[StrictStr] = Field(default=None, alias="CareOf")
-    address1: Optional[StrictStr] = Field(default=None, alias="Address1")
-    address2: Optional[StrictStr] = Field(default=None, alias="Address2")
-    city: Optional[StrictStr] = Field(default=None, alias="City")
-    state: Optional[StrictStr] = Field(default=None, alias="State")
-    zip: Optional[StrictStr] = Field(default=None, alias="Zip")
+    unique_id: Optional[StrictStr] = Field(default=None, alias="uniqueID")
+    name: Optional[StrictStr] = None
+    care_of: Optional[StrictStr] = Field(default=None, alias="careOf")
+    address1: Optional[StrictStr] = None
+    address2: Optional[StrictStr] = None
+    city: Optional[StrictStr] = None
+    state: Optional[StrictStr] = None
+    zip: Optional[StrictStr] = None
     phone: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["UniqueID", "Name", "CareOf", "Address1", "Address2", "City", "State", "Zip", "phone"]
+    __properties: ClassVar[List[str]] = ["uniqueID", "name", "careOf", "address1", "address2", "city", "state", "zip", "phone"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -88,14 +88,14 @@ class PFEndorsementRequestQuotePoliciesInnerGa(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "UniqueID": obj.get("UniqueID"),
-            "Name": obj.get("Name"),
-            "CareOf": obj.get("CareOf"),
-            "Address1": obj.get("Address1"),
-            "Address2": obj.get("Address2"),
-            "City": obj.get("City"),
-            "State": obj.get("State"),
-            "Zip": obj.get("Zip"),
+            "uniqueID": obj.get("uniqueID"),
+            "name": obj.get("name"),
+            "careOf": obj.get("careOf"),
+            "address1": obj.get("address1"),
+            "address2": obj.get("address2"),
+            "city": obj.get("city"),
+            "state": obj.get("state"),
+            "zip": obj.get("zip"),
             "phone": obj.get("phone")
         })
         return _obj

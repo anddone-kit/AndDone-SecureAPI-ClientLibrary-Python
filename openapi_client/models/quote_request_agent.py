@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.quote_request_agent_address import QuoteRequestAgentAddress
+from openapi_client.models.quote_request_insured_address import QuoteRequestInsuredAddress
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class QuoteRequestAgent(BaseModel):
     """ # noqa: E501
     unique_id: Optional[StrictStr] = Field(default=None, alias="uniqueID")
     email: Optional[StrictStr] = None
-    address: Optional[QuoteRequestAgentAddress] = None
+    address: Optional[QuoteRequestInsuredAddress] = None
     __properties: ClassVar[List[str]] = ["uniqueID", "email", "address"]
 
     model_config = ConfigDict(
@@ -88,7 +88,7 @@ class QuoteRequestAgent(BaseModel):
         _obj = cls.model_validate({
             "uniqueID": obj.get("uniqueID"),
             "email": obj.get("email"),
-            "address": QuoteRequestAgentAddress.from_dict(obj["address"]) if obj.get("address") is not None else None
+            "address": QuoteRequestInsuredAddress.from_dict(obj["address"]) if obj.get("address") is not None else None
         })
         return _obj
 

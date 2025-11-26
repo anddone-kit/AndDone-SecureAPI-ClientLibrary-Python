@@ -44,7 +44,7 @@ class TestSecureTransactionRefundRequest(unittest.TestCase):
                 refund_detail = '',
                 refund_type = 'NA',
                 splits = [
-                    openapi_client.models.payment_intent_response_splits_inner.PaymentIntentResponse_splits_inner(
+                    openapi_client.models.payment_intent_request_splits_inner.PaymentIntentRequest_splits_inner(
                         virtual_account = '', 
                         amount = 1.337, 
                         reference = '', 
@@ -54,6 +54,11 @@ class TestSecureTransactionRefundRequest(unittest.TestCase):
             )
         else:
             return SecureTransactionRefundRequest(
+                refund_amount = 1.337,
+                transaction_id = '',
+                refund_reason = '',
+                refund_detail = '',
+                refund_type = 'NA',
         )
         """
 

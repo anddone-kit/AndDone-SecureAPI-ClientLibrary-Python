@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_types** | **List[str]** |  | [optional] 
+**payment_types** | **List[str]** |  | 
 
 ## Example
 

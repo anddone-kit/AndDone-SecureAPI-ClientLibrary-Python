@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,14 +26,14 @@ class PFEndorsementRequestQuoteInsuredAddress(BaseModel):
     """
     This denotes the address of the insured.
     """ # noqa: E501
-    name: Optional[StrictStr] = Field(default=None, alias="Name")
-    address1: Optional[StrictStr] = Field(default=None, alias="Address1")
-    address2: Optional[StrictStr] = Field(default=None, alias="Address2")
-    city: Optional[StrictStr] = Field(default=None, alias="City")
-    state: Optional[StrictStr] = Field(default=None, alias="State")
-    zip: Optional[StrictStr] = Field(default=None, alias="Zip")
-    phone: Optional[StrictStr] = Field(default=None, alias="Phone")
-    __properties: ClassVar[List[str]] = ["Name", "Address1", "Address2", "City", "State", "Zip", "Phone"]
+    name: Optional[StrictStr] = None
+    address1: Optional[StrictStr] = None
+    address2: Optional[StrictStr] = None
+    city: Optional[StrictStr] = None
+    state: Optional[StrictStr] = None
+    zip: Optional[StrictStr] = None
+    phone: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["name", "address1", "address2", "city", "state", "zip", "phone"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,13 +86,13 @@ class PFEndorsementRequestQuoteInsuredAddress(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Name": obj.get("Name"),
-            "Address1": obj.get("Address1"),
-            "Address2": obj.get("Address2"),
-            "City": obj.get("City"),
-            "State": obj.get("State"),
-            "Zip": obj.get("Zip"),
-            "Phone": obj.get("Phone")
+            "name": obj.get("name"),
+            "address1": obj.get("address1"),
+            "address2": obj.get("address2"),
+            "city": obj.get("city"),
+            "state": obj.get("state"),
+            "zip": obj.get("zip"),
+            "phone": obj.get("phone")
         })
         return _obj
 

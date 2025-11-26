@@ -39,7 +39,7 @@ class TestPFGenerateQuoteResponse(unittest.TestCase):
                 message = '',
                 integration_id = '',
                 item = openapi_client.models.pf_generate_quote_response_item.PFGenerateQuoteResponse_item(
-                    quote_key = 56, 
+                    quote_key = 1.337, 
                     premium = 1.337, 
                     down_amount = 1.337, 
                     amount_financed = 1.337, 
@@ -51,7 +51,7 @@ class TestPFGenerateQuoteResponse(unittest.TestCase):
                     apr = 1.337, 
                     installments = 56, 
                     batch_id = '', 
-                    payments_retained = 56, 
+                    payments_retained = 1.337, 
                     payment_retained_amount = 1.337, 
                     unsigned_pfa_url = '', 
                     retail_agent_register_login_url = '', 
@@ -61,9 +61,9 @@ class TestPFGenerateQuoteResponse(unittest.TestCase):
                         batch_id = '', 
                         agent_url = '', 
                         insured_url = '', 
-                        e_sign_option = 56, ), 
+                        e_sign_option = 1.337, ), 
                     errors = '', 
-                    p_fa = '', 
+                    pfa = '', 
                     electronic_signature_url = '', )
             )
         else:

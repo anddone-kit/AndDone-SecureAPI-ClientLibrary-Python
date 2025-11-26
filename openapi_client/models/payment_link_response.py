@@ -45,7 +45,7 @@ class PaymentLinkResponse(BaseModel):
     expire_in_unit: Optional[StrictStr] = Field(default=None, alias="expireInUnit")
     expire_on: Optional[StrictStr] = Field(default=None, alias="expireOn")
     payments: Optional[List[PaymentLinkResponsePaymentsInner]] = None
-    no_of_payment_made: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="noOfPaymentMade")
+    no_of_payment_made: Optional[StrictInt] = Field(default=None, alias="noOfPaymentMade")
     total_paid_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="totalPaidAmount")
     link_status: Optional[StrictStr] = Field(default=None, alias="linkStatus")
     invoice_number: Optional[StrictStr] = Field(default=None, alias="invoiceNumber")

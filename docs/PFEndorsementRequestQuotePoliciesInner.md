@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy_id** | **str** | This denotes the policy identifier. | [optional] 
+**policy_id** | **int** | This denotes the policy identifier. | [optional] 
 **premium** | **float** | This denotes the premium amount. | 
 **down** | **float** | This denotes the down amount. | [optional] 
 **down_percent** | **float** | This denotes the down percentage. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **coverage** | **str** | This denotes the coverage and it is required if adding new policy. | [optional] 
 **effective_date** | **str** | This denotes the effective date. | 
 **expiration_date** | **str** | This denotes the expiration date and it is required if adding new policy. | 
-**term** | **float** | This denotes the number of terms. | [optional] 
+**term** | **int** | This denotes the number of terms. | [optional] 
 **minimum_earned** | **float** | This denotes the minimum earned amount. | [optional] 
 **minimum_earned_percent** | **float** | This denotes the minimum earned percent. | [optional] 
 **auditable** | **bool** | This denotes the flag if it is auditable or not. | [optional] 

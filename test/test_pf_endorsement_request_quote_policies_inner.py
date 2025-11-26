@@ -104,11 +104,9 @@ class TestPFEndorsementRequestQuotePoliciesInner(unittest.TestCase):
             )
         else:
             return PFEndorsementRequestQuotePoliciesInner(
-                policy_id = '',
                 premium = 1.337,
                 effective_date = '',
                 expiration_date = '',
-                term = 1.337,
         )
         """
 

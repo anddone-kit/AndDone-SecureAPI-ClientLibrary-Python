@@ -40,13 +40,13 @@ class TestPaymentDetailResponseDTO(unittest.TestCase):
                 vendor_name = '',
                 merchant_dba_name = '',
                 payment_id = '',
-                check_number = 56,
-                payment_method = 'Checks',
+                check_number = 1.337,
+                payment_method = 'Check',
                 amount = 1.337,
                 bank_name = '',
                 bank_account_number = '',
-                payment_status = 'Created',
-                payment_method_status = 'Accepted',
+                payment_status = 'NA',
+                payment_method_status = 'NA',
                 remittance_data = ''
             )
         else:

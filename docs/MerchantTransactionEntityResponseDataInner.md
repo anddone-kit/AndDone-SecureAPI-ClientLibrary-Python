@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **reference_transaction_id** | **str** |  | [optional] 
 **reference_customer_id** | **str** |  | [optional] 
 **recurring_id** | **str** |  | [optional] 
-**batch_id** | **float** |  | [optional] 
+**batch_id** | **int** |  | [optional] 
 **transaction_status** | **str** |  | [optional] 
 **settlement_date** | **str** |  | [optional] 
 **auth_code** | **str** |  | [optional] 

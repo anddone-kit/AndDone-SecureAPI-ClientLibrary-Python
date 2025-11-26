@@ -72,7 +72,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -90,7 +90,7 @@ class SecurePaymentsApi:
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -161,7 +161,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -197,7 +197,7 @@ class SecurePaymentsApi:
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -321,7 +321,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -339,7 +339,7 @@ class SecurePaymentsApi:
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -410,7 +410,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -446,7 +446,7 @@ class SecurePaymentsApi:
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -570,7 +570,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -588,7 +588,7 @@ class SecurePaymentsApi:
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -659,7 +659,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -695,7 +695,7 @@ class SecurePaymentsApi:
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1048,8 +1048,6 @@ class SecurePaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1389,8 +1387,6 @@ class SecurePaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1440,7 +1436,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -1456,9 +1452,10 @@ class SecurePaymentsApi:
         payment_categories: Annotated[Optional[StrictStr], Field(description="Set PaymentCategories")] = None,
         suppress_technology_fee: Annotated[Optional[StrictBool], Field(description="SuppressTechnologyFee")] = None,
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
+        transactions_count: Annotated[Optional[StrictBool], Field(description="Set whether to return only the transactions count")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -1529,7 +1526,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -1560,12 +1557,14 @@ class SecurePaymentsApi:
         :type suppress_technology_fee: bool
         :param batch_id: BatchId
         :type batch_id: str
+        :param transactions_count: Set whether to return only the transactions count
+        :type transactions_count: bool
         :param sort_field: SortField
         :type sort_field: str
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1633,6 +1632,7 @@ class SecurePaymentsApi:
             payment_categories=payment_categories,
             suppress_technology_fee=suppress_technology_fee,
             batch_id=batch_id,
+            transactions_count=transactions_count,
             sort_field=sort_field,
             start_row=start_row,
             page_size=page_size,
@@ -1689,7 +1689,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -1705,9 +1705,10 @@ class SecurePaymentsApi:
         payment_categories: Annotated[Optional[StrictStr], Field(description="Set PaymentCategories")] = None,
         suppress_technology_fee: Annotated[Optional[StrictBool], Field(description="SuppressTechnologyFee")] = None,
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
+        transactions_count: Annotated[Optional[StrictBool], Field(description="Set whether to return only the transactions count")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -1778,7 +1779,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -1809,12 +1810,14 @@ class SecurePaymentsApi:
         :type suppress_technology_fee: bool
         :param batch_id: BatchId
         :type batch_id: str
+        :param transactions_count: Set whether to return only the transactions count
+        :type transactions_count: bool
         :param sort_field: SortField
         :type sort_field: str
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1882,6 +1885,7 @@ class SecurePaymentsApi:
             payment_categories=payment_categories,
             suppress_technology_fee=suppress_technology_fee,
             batch_id=batch_id,
+            transactions_count=transactions_count,
             sort_field=sort_field,
             start_row=start_row,
             page_size=page_size,
@@ -1938,7 +1942,7 @@ class SecurePaymentsApi:
         export_to_pdf: Annotated[Optional[StrictBool], Field(description="Export To PDF")] = None,
         transaction_origins: Annotated[Optional[StrictStr], Field(description="Type of origin used in the transaction")] = None,
         transaction_source_type: Annotated[Optional[StrictStr], Field(description="Transaction source type of the transaction")] = None,
-        source_id: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set SourceId")] = None,
+        source_id: Annotated[Optional[StrictInt], Field(description="Set SourceId")] = None,
         trace_numbers: Annotated[Optional[StrictStr], Field(description="TraceNumbers associated with the transaction")] = None,
         bin_number: Annotated[Optional[StrictStr], Field(description="BinNumber")] = None,
         process_method: Annotated[Optional[StrictStr], Field(description="Process Method used for the transaction")] = None,
@@ -1954,9 +1958,10 @@ class SecurePaymentsApi:
         payment_categories: Annotated[Optional[StrictStr], Field(description="Set PaymentCategories")] = None,
         suppress_technology_fee: Annotated[Optional[StrictBool], Field(description="SuppressTechnologyFee")] = None,
         batch_id: Annotated[Optional[StrictStr], Field(description="BatchId")] = None,
+        transactions_count: Annotated[Optional[StrictBool], Field(description="Set whether to return only the transactions count")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="SortField")] = None,
         start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -2027,7 +2032,7 @@ class SecurePaymentsApi:
         :param transaction_source_type: Transaction source type of the transaction
         :type transaction_source_type: str
         :param source_id: Set SourceId
-        :type source_id: float
+        :type source_id: int
         :param trace_numbers: TraceNumbers associated with the transaction
         :type trace_numbers: str
         :param bin_number: BinNumber
@@ -2058,12 +2063,14 @@ class SecurePaymentsApi:
         :type suppress_technology_fee: bool
         :param batch_id: BatchId
         :type batch_id: str
+        :param transactions_count: Set whether to return only the transactions count
+        :type transactions_count: bool
         :param sort_field: SortField
         :type sort_field: str
         :param start_row: Set StartRow
         :type start_row: int
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -2131,6 +2138,7 @@ class SecurePaymentsApi:
             payment_categories=payment_categories,
             suppress_technology_fee=suppress_technology_fee,
             batch_id=batch_id,
+            transactions_count=transactions_count,
             sort_field=sort_field,
             start_row=start_row,
             page_size=page_size,
@@ -2198,6 +2206,7 @@ class SecurePaymentsApi:
         payment_categories,
         suppress_technology_fee,
         batch_id,
+        transactions_count,
         sort_field,
         start_row,
         page_size,
@@ -2376,6 +2385,10 @@ class SecurePaymentsApi:
             
             _query_params.append(('batchId', batch_id))
             
+        if transactions_count is not None:
+            
+            _query_params.append(('transactionsCount', transactions_count))
+            
         if sort_field is not None:
             
             _query_params.append(('sortField', sort_field))
@@ -2416,8 +2429,6 @@ class SecurePaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -2757,8 +2768,6 @@ class SecurePaymentsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

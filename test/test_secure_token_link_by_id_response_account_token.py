@@ -41,6 +41,7 @@ class TestSecureTokenLinkByIdResponseAccountToken(unittest.TestCase):
                 self_token = '',
                 token_provider = '',
                 account_holder_name = '',
+                card_number = '',
                 card_expiry = '',
                 routing_number = '',
                 masked_account_number = '',
@@ -51,7 +52,7 @@ class TestSecureTokenLinkByIdResponseAccountToken(unittest.TestCase):
                     address_line2 = '', 
                     city = '', 
                     state = '', 
-                    country = 1.337, 
+                    country = 56, 
                     postal_code = '', 
                     time_zone = '', )
             )

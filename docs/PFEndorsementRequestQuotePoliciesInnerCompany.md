@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **best_number** | **str** |  | [optional] 
 **unique_id** | **str** |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **care_of** | **str** |  | [optional] 
 **address1** | **str** |  | [optional] 
 **address2** | **str** |  | [optional] 

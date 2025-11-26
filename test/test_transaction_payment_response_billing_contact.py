@@ -47,13 +47,13 @@ class TestTransactionPaymentResponseBillingContact(unittest.TestCase):
                 alternate_phone = '',
                 mobile = '',
                 email = '',
-                u_rl = '',
+                url = '',
                 address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
                     address_line1 = '', 
                     address_line2 = '', 
                     city = '', 
                     state = '', 
-                    country = 1.337, 
+                    country = 56, 
                     postal_code = '', 
                     time_zone = '', )
             )

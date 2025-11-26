@@ -36,11 +36,14 @@ class TestPaymentLinkRequestSettingsIntent(unittest.TestCase):
         if include_optional:
             return PaymentLinkRequestSettingsIntent(
                 payment_types = [
-                    ''
+                    'ACH'
                     ]
             )
         else:
             return PaymentLinkRequestSettingsIntent(
+                payment_types = [
+                    'ACH'
+                    ],
         )
         """
 

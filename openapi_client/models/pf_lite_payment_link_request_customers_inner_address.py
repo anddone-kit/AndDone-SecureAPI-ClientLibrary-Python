@@ -32,8 +32,8 @@ class PFLitePaymentLinkRequestCustomersInnerAddress(BaseModel):
     state: StrictStr
     country: StrictInt
     postal_code: StrictStr = Field(alias="postalCode")
-    time_zone: Optional[StrictStr] = Field(default=None, alias="TimeZone")
-    __properties: ClassVar[List[str]] = ["addressLine1", "addressLine2", "city", "state", "country", "postalCode", "TimeZone"]
+    time_zone: Optional[StrictStr] = Field(default=None, alias="timeZone")
+    __properties: ClassVar[List[str]] = ["addressLine1", "addressLine2", "city", "state", "country", "postalCode", "timeZone"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,7 +92,7 @@ class PFLitePaymentLinkRequestCustomersInnerAddress(BaseModel):
             "state": obj.get("state"),
             "country": obj.get("country"),
             "postalCode": obj.get("postalCode"),
-            "TimeZone": obj.get("TimeZone")
+            "timeZone": obj.get("timeZone")
         })
         return _obj
 

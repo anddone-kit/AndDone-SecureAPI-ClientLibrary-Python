@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **use_same_as_physical_address** | **bool** |  | [optional] 
 **physical_address** | [**VendorResponseDTORemittanceAddress**](VendorResponseDTORemittanceAddress.md) |  | [optional] 
 **remittance_address** | [**VendorResponseDTORemittanceAddress**](VendorResponseDTORemittanceAddress.md) |  | [optional] 
-**verification_results** | [**List[VendorResponseDTOVerificationResultsInner]**](VendorResponseDTOVerificationResultsInner.md) |  | [optional] 
+**verification_results** | [**VendorResponseDTOVerificationResultsInner**](VendorResponseDTOVerificationResultsInner.md) |  | [optional] 
 **created_by** | **str** |  | [optional] 
 **modified_by** | **str** |  | [optional] 
 **created_on** | **str** |  | [optional] 

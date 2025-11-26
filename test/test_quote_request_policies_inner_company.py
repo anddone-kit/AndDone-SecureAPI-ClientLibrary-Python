@@ -47,6 +47,8 @@ class TestQuoteRequestPoliciesInnerCompany(unittest.TestCase):
             )
         else:
             return QuoteRequestPoliciesInnerCompany(
+                name = '',
+                unique_id = '',
         )
         """
 

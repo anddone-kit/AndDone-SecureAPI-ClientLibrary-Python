@@ -46,7 +46,7 @@ class TestSecureTokenLinkResponse(unittest.TestCase):
                 modified_by = '',
                 token_link_status = 'NA',
                 response_type = 'OnScreen',
-                call_back_parameters = openapi_client.models.token_link_secure_request_callback_parameters.TokenLinkSecureRequest_callbackParameters(
+                call_back_parameters = openapi_client.models.payment_link_response_callback_parameters.PaymentLinkResponse_callbackParameters(
                     callback_success_url = '', 
                     callback_failure_url = '', 
                     access_key = '', 
@@ -56,23 +56,21 @@ class TestSecureTokenLinkResponse(unittest.TestCase):
                     transaction_id = '', 
                     callback_api_url = '', 
                     callback_message = '', 
-                    redirection_time = 56, ),
+                    redirection_time = 1.337, ),
                 intent = openapi_client.models.secure_token_link_response_intent.SecureTokenLinkResponse_intent(
-                    payment_types = [
-                        'NotDefined'
-                        ], ),
+                    payment_types = 'NotDefined', ),
                 customers = [
                     openapi_client.models.secure_token_link_response_customers_inner.SecureTokenLinkResponse_customers_inner(
                         first_name = '', 
                         last_name = '', 
                         email = '', 
                         phone = '', 
-                        address = openapi_client.models.token_link_secure_request_customers_inner_address.TokenLinkSecureRequest_customers_inner_address(
+                        address = openapi_client.models.transaction_payment_response_billing_contact_address.TransactionPaymentResponse_billingContact_address(
                             address_line1 = '', 
                             address_line2 = '', 
                             city = '', 
                             state = '', 
-                            country = 1.337, 
+                            country = 56, 
                             postal_code = '', 
                             time_zone = '', ), )
                     ]

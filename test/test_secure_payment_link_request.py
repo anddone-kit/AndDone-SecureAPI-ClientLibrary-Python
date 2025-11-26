@@ -39,6 +39,7 @@ class TestSecurePaymentLinkRequest(unittest.TestCase):
             )
         else:
             return SecurePaymentLinkRequest(
+                payment_link_id = '',
         )
         """
 

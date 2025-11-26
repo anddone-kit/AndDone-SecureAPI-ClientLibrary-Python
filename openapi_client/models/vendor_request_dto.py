@@ -30,7 +30,7 @@ class VendorRequestDTO(BaseModel):
     """ # noqa: E501
     vendor_name: StrictStr = Field(alias="vendorName")
     vendor_alias_name: Optional[StrictStr] = Field(default=None, alias="vendorAliasName")
-    vendor_db_name: StrictStr = Field(description="Database name of the vendor", alias="vendorDbName")
+    vendor_db_name: Optional[StrictStr] = Field(default=None, description="Database name of the vendor", alias="vendorDbName")
     legal_entity_type: StrictStr = Field(alias="legalEntityType")
     payment_method_type: StrictStr = Field(alias="paymentMethodType")
     notification_type: StrictStr = Field(alias="notificationType")

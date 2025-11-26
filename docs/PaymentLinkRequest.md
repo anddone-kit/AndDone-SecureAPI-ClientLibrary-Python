@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **merchant_id** | **str** |  | 
 **title** | **str** |  | 
 **amount** | **float** |  | 
-**payment_description** | **str** |  | [optional] 
+**payment_description** | **str** |  | 
 **customers** | [**List[PaymentLinkResponseCustomersInner]**](PaymentLinkResponseCustomersInner.md) |  | [optional] 
 **invoice_number** | **str** |  | [optional] 
-**expire_by** | **float** |  | [optional] 
+**expire_by** | **int** |  | [optional] 
 **expire_in** | **int** |  | 
 **expire_in_unit** | **str** |  | 
 **expire_on** | **str** |  | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **reference_type** | **str** |  | [optional] 
 **reference_number** | **str** |  | [optional] 
 **reference_key** | **str** |  | [optional] 
-**reference_data_list** | [**List[PaymentLinkResponseReferenceDataListInner]**](PaymentLinkResponseReferenceDataListInner.md) |  | 
+**reference_data_list** | [**List[PaymentLinkRequestReferenceDataListInner]**](PaymentLinkRequestReferenceDataListInner.md) |  | 
 **enable_premium_finance** | **bool** |  | [optional] 
 **suppress_technology_fee** | **bool** |  | [optional] 
 **override_technology_fee** | **float** |  | [optional] 

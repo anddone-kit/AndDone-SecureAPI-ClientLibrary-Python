@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from openapi_client.models.pf_generate_quote_response_item_e_sign_result import PFGenerateQuoteResponseItemESignResult
 from typing import Optional, Set
@@ -27,7 +27,7 @@ class PFGenerateQuoteResponseItem(BaseModel):
     """
     PFGenerateQuoteResponseItem
     """ # noqa: E501
-    quote_key: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The key associated with the quote.", alias="quoteKey")
+    quote_key: Optional[StrictInt] = Field(default=None, description="The key associated with the quote.", alias="quoteKey")
     premium: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The premium amount.")
     down_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The down payment amount.", alias="downAmount")
     amount_financed: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The amount financed.", alias="amountFinanced")
@@ -38,8 +38,9 @@ class PFGenerateQuoteResponseItem(BaseModel):
     first_due_date: Optional[StrictStr] = Field(default=None, description="The first due date.", alias="firstDueDate")
     apr: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The annual percentage rate (APR).")
     installments: Optional[StrictInt] = Field(default=None, description="The number of installments.")
+    offer_auto_pay: Optional[StrictBool] = Field(default=None, description="The offerAutoPay status.", alias="offerAutoPay")
     batch_id: Optional[StrictStr] = Field(default=None, description="The batch ID.", alias="batchId")
-    payments_retained: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The number of payments retained.", alias="paymentsRetained")
+    payments_retained: Optional[StrictInt] = Field(default=None, description="The number of payments retained.", alias="paymentsRetained")
     payment_retained_amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The amount retained from the payment.", alias="paymentRetainedAmount")
     unsigned_pfa_url: Optional[StrictStr] = Field(default=None, description="The URL for the unsigned PFA document.", alias="unsignedPFAUrl")
     retail_agent_register_login_url: Optional[StrictStr] = Field(default=None, description="The URL for the retail agent register login.", alias="retailAgentRegisterLoginURL")
@@ -47,7 +48,7 @@ class PFGenerateQuoteResponseItem(BaseModel):
     errors: Optional[StrictStr] = Field(default=None, description="Any errors associated with the quote generation.")
     pfa: Optional[StrictStr] = Field(default=None, description="The PFA document content.")
     electronic_signature_url: Optional[StrictStr] = Field(default=None, description="The URL for the electronic signature.", alias="electronicSignatureURL")
-    __properties: ClassVar[List[str]] = ["quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "batchId", "paymentsRetained", "paymentRetainedAmount", "unsignedPFAUrl", "retailAgentRegisterLoginURL", "eSignResult", "errors", "pfa", "electronicSignatureURL"]
+    __properties: ClassVar[List[str]] = ["quoteKey", "premium", "downAmount", "amountFinanced", "financeCharge", "totalPayments", "paymentAmount", "docStamp", "firstDueDate", "apr", "installments", "offerAutoPay", "batchId", "paymentsRetained", "paymentRetainedAmount", "unsignedPFAUrl", "retailAgentRegisterLoginURL", "eSignResult", "errors", "pfa", "electronicSignatureURL"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -114,6 +115,7 @@ class PFGenerateQuoteResponseItem(BaseModel):
             "firstDueDate": obj.get("firstDueDate"),
             "apr": obj.get("apr"),
             "installments": obj.get("installments"),
+            "offerAutoPay": obj.get("offerAutoPay"),
             "batchId": obj.get("batchId"),
             "paymentsRetained": obj.get("paymentsRetained"),
             "paymentRetainedAmount": obj.get("paymentRetainedAmount"),

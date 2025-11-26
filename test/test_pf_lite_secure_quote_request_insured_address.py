@@ -45,7 +45,6 @@ class TestPFLiteSecureQuoteRequestInsuredAddress(unittest.TestCase):
         else:
             return PFLiteSecureQuoteRequestInsuredAddress(
                 address1 = '',
-                address2 = '',
                 city = '',
                 state = '',
                 zip = '',

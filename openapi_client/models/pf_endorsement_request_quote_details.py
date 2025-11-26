@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.pf_endorsement_request_quote_details_recurring_ach import PFEndorsementRequestQuoteDetailsRecurringACH
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,30 +27,30 @@ class PFEndorsementRequestQuoteDetails(BaseModel):
     """
     PFEndorsementRequestQuoteDetails
     """ # noqa: E501
-    commercial: Optional[StrictStr] = Field(default=None, description="This denotes the Commercial.", alias="Commercial")
-    coupon: Optional[StrictStr] = Field(default=None, description="This denotes the Coupon.", alias="Coupon")
-    coupon_invoice_printed: Optional[StrictBool] = Field(default=None, description="This denotes the flag if invoice printed or not.", alias="CouponInvoicePrinted")
-    crd: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the Crd.", alias="Crd")
-    interval: Optional[StrictStr] = Field(default=None, description="This denotes the Interval.", alias="Interval")
-    installments: Optional[StrictInt] = Field(default=None, description="This denotes the number of installments.", alias="Installments")
-    program_id: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the program ID.", alias="ProgramID")
-    broker_fee: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the broker fees.", alias="BrokerFee")
-    e_sign_option: Optional[StrictStr] = Field(default=None, description="This denotes the eSign Option.", alias="ESignOption")
-    process_down_payment: Optional[StrictBool] = Field(default=None, description="This denotes the flag that down payment is processed or not.", alias="ProcessDownPayment")
-    process_down_payment_no_reason: Optional[StrictStr] = Field(default=None, description="This denotes the Process Down Payment No Reason.", alias="ProcessDownPaymentNoReason")
-    down_payment_method: Optional[StrictStr] = Field(default=None, description="This denotes the Down Payment Method.", alias="DownPaymentMethod")
-    down_payment_paid_by: Optional[StrictStr] = Field(default=None, description="This denotes the Down Payment Paid by.", alias="DownPaymentPaidBy")
-    recurring_ach: Optional[PFEndorsementRequestQuoteDetailsRecurringACH] = Field(default=None, alias="RecurringACH")
-    batch_id: Optional[StrictStr] = Field(default=None, description="This denotes the batch ID.", alias="BatchID")
-    return_pfa: Optional[StrictBool] = Field(default=None, description="This denotes the flag whether to return PFA or not.", alias="ReturnPFA")
-    equal_payments: Optional[StrictStr] = Field(default=None, description="This denotes the equal payments.", alias="EqualPayments")
-    quote_expiration_days: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="This denotes the number of days to expire.", alias="QuoteExpirationDays")
-    bypass_cadnb: Optional[StrictBool] = Field(default=None, description="This denotes the flag whether to bypass CADNB.", alias="BypassCADNB")
-    allow_zero_apr: Optional[StrictBool] = Field(default=None, description="This denotes the Allow Zero APR.", alias="AllowZeroAPR")
-    associated_account_number: Optional[StrictStr] = Field(default=None, description="This denotes the associated account number.", alias="AssociatedAccountNumber")
-    channel: Optional[StrictStr] = Field(default=None, description="This denotes the channel.", alias="Channel")
-    channel_version: Optional[StrictStr] = Field(default=None, description="This denotes the channel version.", alias="ChannelVersion")
-    __properties: ClassVar[List[str]] = ["Commercial", "Coupon", "CouponInvoicePrinted", "Crd", "Interval", "Installments", "ProgramID", "BrokerFee", "ESignOption", "ProcessDownPayment", "ProcessDownPaymentNoReason", "DownPaymentMethod", "DownPaymentPaidBy", "RecurringACH", "BatchID", "ReturnPFA", "EqualPayments", "QuoteExpirationDays", "BypassCADNB", "AllowZeroAPR", "AssociatedAccountNumber", "Channel", "ChannelVersion"]
+    commercial: Optional[StrictStr] = Field(default=None, description="This denotes the Commercial.")
+    coupon: Optional[StrictStr] = Field(default=None, description="This denotes the Coupon.")
+    coupon_invoice_printed: Optional[StrictBool] = Field(default=None, description="This denotes the flag if invoice printed or not.", alias="couponInvoicePrinted")
+    crd: Optional[StrictInt] = Field(default=None, description="This denotes the Crd.")
+    interval: Optional[StrictStr] = Field(default=None, description="This denotes the Interval.")
+    installments: Optional[StrictInt] = Field(default=None, description="This denotes the number of installments.")
+    program_id: Optional[StrictInt] = Field(default=None, description="This denotes the program ID.", alias="programID")
+    broker_fee: Optional[StrictInt] = Field(default=None, description="This denotes the broker fees.", alias="brokerFee")
+    e_sign_option: Optional[StrictStr] = Field(default=None, description="This denotes the eSign Option.", alias="eSignOption")
+    process_down_payment: Optional[StrictBool] = Field(default=None, description="This denotes the flag that down payment is processed or not.", alias="processDownPayment")
+    process_down_payment_no_reason: Optional[StrictStr] = Field(default=None, description="This denotes the Process Down Payment No Reason.", alias="processDownPaymentNoReason")
+    down_payment_method: Optional[StrictStr] = Field(default=None, description="This denotes the Down Payment Method.", alias="downPaymentMethod")
+    down_payment_paid_by: Optional[StrictStr] = Field(default=None, description="This denotes the Down Payment Paid by.", alias="downPaymentPaidBy")
+    recurring_ach: Optional[PFEndorsementRequestQuoteDetailsRecurringACH] = Field(default=None, alias="recurringACH")
+    batch_id: Optional[StrictStr] = Field(default=None, description="This denotes the batch ID.", alias="batchID")
+    return_pfa: Optional[StrictBool] = Field(default=None, description="This denotes the flag whether to return PFA or not.", alias="returnPFA")
+    equal_payments: Optional[StrictStr] = Field(default=None, description="This denotes the equal payments.", alias="equalPayments")
+    quote_expiration_days: Optional[StrictInt] = Field(default=None, description="This denotes the number of days to expire.", alias="quoteExpirationDays")
+    bypass_cadnb: Optional[StrictBool] = Field(default=None, description="This denotes the flag whether to bypass CADNB.", alias="bypassCADNB")
+    allow_zero_apr: Optional[StrictBool] = Field(default=None, description="This denotes the Allow Zero APR.", alias="allowZeroAPR")
+    associated_account_number: Optional[StrictStr] = Field(default=None, description="This denotes the associated account number.", alias="associatedAccountNumber")
+    channel: Optional[StrictStr] = Field(default=None, description="This denotes the channel.")
+    channel_version: Optional[StrictStr] = Field(default=None, description="This denotes the channel version.", alias="channelVersion")
+    __properties: ClassVar[List[str]] = ["commercial", "coupon", "couponInvoicePrinted", "crd", "interval", "installments", "programID", "brokerFee", "eSignOption", "processDownPayment", "processDownPaymentNoReason", "downPaymentMethod", "downPaymentPaidBy", "recurringACH", "batchID", "returnPFA", "equalPayments", "quoteExpirationDays", "bypassCADNB", "allowZeroAPR", "associatedAccountNumber", "channel", "channelVersion"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -93,7 +93,7 @@ class PFEndorsementRequestQuoteDetails(BaseModel):
         )
         # override the default output from pydantic by calling `to_dict()` of recurring_ach
         if self.recurring_ach:
-            _dict['RecurringACH'] = self.recurring_ach.to_dict()
+            _dict['recurringACH'] = self.recurring_ach.to_dict()
         return _dict
 
     @classmethod
@@ -106,29 +106,29 @@ class PFEndorsementRequestQuoteDetails(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "Commercial": obj.get("Commercial"),
-            "Coupon": obj.get("Coupon"),
-            "CouponInvoicePrinted": obj.get("CouponInvoicePrinted"),
-            "Crd": obj.get("Crd"),
-            "Interval": obj.get("Interval"),
-            "Installments": obj.get("Installments"),
-            "ProgramID": obj.get("ProgramID"),
-            "BrokerFee": obj.get("BrokerFee"),
-            "ESignOption": obj.get("ESignOption"),
-            "ProcessDownPayment": obj.get("ProcessDownPayment"),
-            "ProcessDownPaymentNoReason": obj.get("ProcessDownPaymentNoReason"),
-            "DownPaymentMethod": obj.get("DownPaymentMethod"),
-            "DownPaymentPaidBy": obj.get("DownPaymentPaidBy"),
-            "RecurringACH": PFEndorsementRequestQuoteDetailsRecurringACH.from_dict(obj["RecurringACH"]) if obj.get("RecurringACH") is not None else None,
-            "BatchID": obj.get("BatchID"),
-            "ReturnPFA": obj.get("ReturnPFA"),
-            "EqualPayments": obj.get("EqualPayments"),
-            "QuoteExpirationDays": obj.get("QuoteExpirationDays"),
-            "BypassCADNB": obj.get("BypassCADNB"),
-            "AllowZeroAPR": obj.get("AllowZeroAPR"),
-            "AssociatedAccountNumber": obj.get("AssociatedAccountNumber"),
-            "Channel": obj.get("Channel"),
-            "ChannelVersion": obj.get("ChannelVersion")
+            "commercial": obj.get("commercial"),
+            "coupon": obj.get("coupon"),
+            "couponInvoicePrinted": obj.get("couponInvoicePrinted"),
+            "crd": obj.get("crd"),
+            "interval": obj.get("interval"),
+            "installments": obj.get("installments"),
+            "programID": obj.get("programID"),
+            "brokerFee": obj.get("brokerFee"),
+            "eSignOption": obj.get("eSignOption"),
+            "processDownPayment": obj.get("processDownPayment"),
+            "processDownPaymentNoReason": obj.get("processDownPaymentNoReason"),
+            "downPaymentMethod": obj.get("downPaymentMethod"),
+            "downPaymentPaidBy": obj.get("downPaymentPaidBy"),
+            "recurringACH": PFEndorsementRequestQuoteDetailsRecurringACH.from_dict(obj["recurringACH"]) if obj.get("recurringACH") is not None else None,
+            "batchID": obj.get("batchID"),
+            "returnPFA": obj.get("returnPFA"),
+            "equalPayments": obj.get("equalPayments"),
+            "quoteExpirationDays": obj.get("quoteExpirationDays"),
+            "bypassCADNB": obj.get("bypassCADNB"),
+            "allowZeroAPR": obj.get("allowZeroAPR"),
+            "associatedAccountNumber": obj.get("associatedAccountNumber"),
+            "channel": obj.get("channel"),
+            "channelVersion": obj.get("channelVersion")
         })
         return _obj
 

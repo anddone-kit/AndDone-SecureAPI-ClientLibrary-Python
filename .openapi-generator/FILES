@@ -3,6 +3,8 @@
 .gitlab-ci.yml
 .travis.yml
 README.md
+docs/AutoPayEnrollmentRequest.md
+docs/AutoPayEnrollmentResponse.md
 docs/BankDetailDto.md
 docs/CancelPaymentRequestDTO.md
 docs/DataDto.md
@@ -11,6 +13,7 @@ docs/GetQuoteRequest.md
 docs/HeadingDto.md
 docs/MerchantTransactionEntityResponse.md
 docs/MerchantTransactionEntityResponseDataInner.md
+docs/OutboundPaymentImageResponseDTO.md
 docs/OutboundPaymentTimelineResponseDTOInner.md
 docs/PFCheckEndorsementsRequest.md
 docs/PFCheckEndorsementsResponse.md
@@ -18,8 +21,6 @@ docs/PFCheckEndorsementsResponseItem.md
 docs/PFCheckEndorsementsResponseItemPoliciesInner.md
 docs/PFEndorsementRequest.md
 docs/PFEndorsementRequestQuote.md
-docs/PFEndorsementRequestQuoteAgent.md
-docs/PFEndorsementRequestQuoteAgentAddress.md
 docs/PFEndorsementRequestQuoteCommunication.md
 docs/PFEndorsementRequestQuoteDetails.md
 docs/PFEndorsementRequestQuoteDetailsRecurringACH.md
@@ -53,6 +54,8 @@ docs/PFLiteQuoteByPaymentLinkResponse.md
 docs/PFLiteQuoteByPaymentLinkResponsePoliciesInner.md
 docs/PFLiteQuoteByPaymentLinkResponsePoliciesInnerCarrier.md
 docs/PFLiteSecureQuoteRequest.md
+docs/PFLiteSecureQuoteRequestAgent.md
+docs/PFLiteSecureQuoteRequestAgentAddress.md
 docs/PFLiteSecureQuoteRequestInsured.md
 docs/PFLiteSecureQuoteRequestInsuredAddress.md
 docs/PFLiteSecureQuoteRequestMerchant.md
@@ -87,8 +90,10 @@ docs/PaymentIntentRequestReferenceDataListInner.md
 docs/PaymentIntentRequestSplitsInner.md
 docs/PaymentIntentResponse.md
 docs/PaymentIntentResponseCustomersInner.md
+docs/PaymentIntentResponseIntent.md
 docs/PaymentLinkExpiresResponse.md
 docs/PaymentLinkRequest.md
+docs/PaymentLinkRequestReferenceDataListInner.md
 docs/PaymentLinkRequestSettings.md
 docs/PaymentLinkRequestSettingsIntent.md
 docs/PaymentLinkResponse.md
@@ -111,7 +116,6 @@ docs/PaymentResponseDto.md
 docs/PaymentTimeLineRequestDto.md
 docs/QuoteRequest.md
 docs/QuoteRequestAgent.md
-docs/QuoteRequestAgentAddress.md
 docs/QuoteRequestDetails.md
 docs/QuoteRequestInsured.md
 docs/QuoteRequestInsuredAddress.md
@@ -124,14 +128,14 @@ docs/RefundEligibility.md
 docs/RemittanceDataDto.md
 docs/ReportDownloadRequest.md
 docs/RowDto.md
+docs/SecureAutopayEnrollmentApi.md
 docs/SecureBatchExecuteRequest.md
 docs/SecureCancelledTransactionResponse.md
 docs/SecureEmbeddedPremiumFinanceApi.md
 docs/SecureEmbeddedPremiumFinanceEndorsementsApi.md
-docs/SecureEpfQuotesPost200Response.md
 docs/SecureMerchantTokenShortResponse.md
-docs/SecureOrumApi.md
 docs/SecureOutboundPaymentsApi.md
+docs/SecurePFQuoteBookingRequest.md
 docs/SecurePaymentBatchDetailsRequest.md
 docs/SecurePaymentBatchingApi.md
 docs/SecurePaymentDetailsRequest.md
@@ -173,7 +177,6 @@ docs/TokenLinkResponse.md
 docs/TokenLinkResponseDataInner.md
 docs/TokenLinkSecureRequest.md
 docs/TokenLinkSecureRequestCustomersInner.md
-docs/TokenLinkSecureRequestIntent.md
 docs/TokenRequest.md
 docs/TransactionDetailResponse.md
 docs/TransactionDetailResponseSplitsInner.md
@@ -200,17 +203,12 @@ docs/VendorResponseDTORemittanceAddress.md
 docs/VendorResponseDTOTemplate.md
 docs/VendorResponseDTOVerificationResultsInner.md
 docs/VendorTimelineResponseListInner.md
-docs/VerificationEntityRequest.md
-docs/VerifyBankAccountRequest.md
-docs/VerifyBankAccountRequestBankAccountEntity.md
-docs/VerifyBankAccountResponse.md
-docs/VerifyBankAccountResponseHttpResponse.md
 git_push.sh
 openapi_client/__init__.py
 openapi_client/api/__init__.py
+openapi_client/api/secure_autopay_enrollment_api.py
 openapi_client/api/secure_embedded_premium_finance_api.py
 openapi_client/api/secure_embedded_premium_finance_endorsements_api.py
-openapi_client/api/secure_orum_api.py
 openapi_client/api/secure_outbound_payments_api.py
 openapi_client/api/secure_payment_batching_api.py
 openapi_client/api/secure_payment_intent_api.py
@@ -228,6 +226,8 @@ openapi_client/api_response.py
 openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/models/__init__.py
+openapi_client/models/auto_pay_enrollment_request.py
+openapi_client/models/auto_pay_enrollment_response.py
 openapi_client/models/bank_detail_dto.py
 openapi_client/models/cancel_payment_request_dto.py
 openapi_client/models/data_dto.py
@@ -236,6 +236,7 @@ openapi_client/models/get_quote_request.py
 openapi_client/models/heading_dto.py
 openapi_client/models/merchant_transaction_entity_response.py
 openapi_client/models/merchant_transaction_entity_response_data_inner.py
+openapi_client/models/outbound_payment_image_response_dto.py
 openapi_client/models/outbound_payment_timeline_response_dto_inner.py
 openapi_client/models/page_payment_list_response_dto.py
 openapi_client/models/page_payment_list_response_dto_data_inner.py
@@ -257,8 +258,10 @@ openapi_client/models/payment_intent_request_reference_data_list_inner.py
 openapi_client/models/payment_intent_request_splits_inner.py
 openapi_client/models/payment_intent_response.py
 openapi_client/models/payment_intent_response_customers_inner.py
+openapi_client/models/payment_intent_response_intent.py
 openapi_client/models/payment_link_expires_response.py
 openapi_client/models/payment_link_request.py
+openapi_client/models/payment_link_request_reference_data_list_inner.py
 openapi_client/models/payment_link_request_settings.py
 openapi_client/models/payment_link_request_settings_intent.py
 openapi_client/models/payment_link_response.py
@@ -285,8 +288,6 @@ openapi_client/models/pf_check_endorsements_response_item.py
 openapi_client/models/pf_check_endorsements_response_item_policies_inner.py
 openapi_client/models/pf_endorsement_request.py
 openapi_client/models/pf_endorsement_request_quote.py
-openapi_client/models/pf_endorsement_request_quote_agent.py
-openapi_client/models/pf_endorsement_request_quote_agent_address.py
 openapi_client/models/pf_endorsement_request_quote_communication.py
 openapi_client/models/pf_endorsement_request_quote_details.py
 openapi_client/models/pf_endorsement_request_quote_details_recurring_ach.py
@@ -320,6 +321,8 @@ openapi_client/models/pf_lite_quote_by_payment_link_response.py
 openapi_client/models/pf_lite_quote_by_payment_link_response_policies_inner.py
 openapi_client/models/pf_lite_quote_by_payment_link_response_policies_inner_carrier.py
 openapi_client/models/pf_lite_secure_quote_request.py
+openapi_client/models/pf_lite_secure_quote_request_agent.py
+openapi_client/models/pf_lite_secure_quote_request_agent_address.py
 openapi_client/models/pf_lite_secure_quote_request_insured.py
 openapi_client/models/pf_lite_secure_quote_request_insured_address.py
 openapi_client/models/pf_lite_secure_quote_request_merchant.py
@@ -336,7 +339,6 @@ openapi_client/models/pf_update_pfa_request_dto.py
 openapi_client/models/pf_update_pfa_response.py
 openapi_client/models/quote_request.py
 openapi_client/models/quote_request_agent.py
-openapi_client/models/quote_request_agent_address.py
 openapi_client/models/quote_request_details.py
 openapi_client/models/quote_request_insured.py
 openapi_client/models/quote_request_insured_address.py
@@ -351,11 +353,11 @@ openapi_client/models/report_download_request.py
 openapi_client/models/row_dto.py
 openapi_client/models/secure_batch_execute_request.py
 openapi_client/models/secure_cancelled_transaction_response.py
-openapi_client/models/secure_epf_quotes_post200_response.py
 openapi_client/models/secure_merchant_token_short_response.py
 openapi_client/models/secure_payment_batch_details_request.py
 openapi_client/models/secure_payment_details_request.py
 openapi_client/models/secure_payment_link_request.py
+openapi_client/models/secure_pf_quote_booking_request.py
 openapi_client/models/secure_token_link_by_id_response.py
 openapi_client/models/secure_token_link_by_id_response_account_token.py
 openapi_client/models/secure_token_link_by_id_response_time_line_inner.py
@@ -383,7 +385,6 @@ openapi_client/models/token_link_response.py
 openapi_client/models/token_link_response_data_inner.py
 openapi_client/models/token_link_secure_request.py
 openapi_client/models/token_link_secure_request_customers_inner.py
-openapi_client/models/token_link_secure_request_intent.py
 openapi_client/models/token_request.py
 openapi_client/models/transaction_detail_response.py
 openapi_client/models/transaction_detail_response_splits_inner.py
@@ -410,11 +411,6 @@ openapi_client/models/vendor_response_dto_remittance_address.py
 openapi_client/models/vendor_response_dto_template.py
 openapi_client/models/vendor_response_dto_verification_results_inner.py
 openapi_client/models/vendor_timeline_response_list_inner.py
-openapi_client/models/verification_entity_request.py
-openapi_client/models/verify_bank_account_request.py
-openapi_client/models/verify_bank_account_request_bank_account_entity.py
-openapi_client/models/verify_bank_account_response.py
-openapi_client/models/verify_bank_account_response_http_response.py
 openapi_client/py.typed
 openapi_client/rest.py
 pyproject.toml
@@ -423,4 +419,12 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_auto_pay_enrollment_request.py
+test/test_auto_pay_enrollment_response.py
+test/test_outbound_payment_image_response_dto.py
+test/test_payment_link_request_reference_data_list_inner.py
+test/test_pf_lite_secure_quote_request_agent.py
+test/test_pf_lite_secure_quote_request_agent_address.py
+test/test_secure_autopay_enrollment_api.py
+test/test_secure_pf_quote_booking_request.py
 tox.ini

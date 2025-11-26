@@ -35,7 +35,7 @@ class TestPaymentIntentRequestReferenceDataListInner(unittest.TestCase):
         model = PaymentIntentRequestReferenceDataListInner()
         if include_optional:
             return PaymentIntentRequestReferenceDataListInner(
-                reference_type = 'QuoteNumber',
+                reference_type = 'None',
                 reference_number = '',
                 reference_key = ''
             )

@@ -39,8 +39,8 @@ class TestSecureVendorUpdateRequestDTO(unittest.TestCase):
                 vendor_name = '',
                 vendor_alias_name = '',
                 vendor_db_name = '',
-                legal_entity_type = 'Corporation',
-                payment_method_type = 'Checks',
+                legal_entity_type = 'NA',
+                payment_method_type = 'Check',
                 notification_type = 'NA',
                 vendor_notes = '',
                 phone_number = '',
@@ -56,7 +56,6 @@ class TestSecureVendorUpdateRequestDTO(unittest.TestCase):
                     state = '', 
                     country = '', 
                     postal_code = '', 
-                    address_type = 'NA', 
                     address_source = 'NA', ),
                 physical_address = openapi_client.models.secure_vendor_update_request_dto_remittance_address.SecureVendorUpdateRequestDTO_remittanceAddress(
                     attention = '', 
@@ -66,11 +65,11 @@ class TestSecureVendorUpdateRequestDTO(unittest.TestCase):
                     state = '', 
                     country = '', 
                     postal_code = '', 
-                    address_type = 'NA', 
                     address_source = 'NA', )
             )
         else:
             return SecureVendorUpdateRequestDTO(
+                vendor_id = '',
         )
         """
 

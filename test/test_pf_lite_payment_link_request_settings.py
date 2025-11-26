@@ -36,14 +36,27 @@ class TestPFLitePaymentLinkRequestSettings(unittest.TestCase):
         if include_optional:
             return PFLitePaymentLinkRequestSettings(
                 selected_customer_fields = '',
-                additional_details_preference = 'AskShopper',
+                additional_details_preference = 'None',
+                display_summary = True,
+                accept_customer_info = True,
+                remove_header = True,
+                accept_card = True,
+                accept_bank_account = True,
+                save_customer = True,
+                save_customer_account = True,
                 intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
                     payment_types = [
-                        ''
+                        'ACH'
                         ], )
             )
         else:
             return PFLitePaymentLinkRequestSettings(
+                selected_customer_fields = '',
+                additional_details_preference = 'None',
+                intent = openapi_client.models.payment_link_request_settings_intent.PaymentLinkRequest_settings_intent(
+                    payment_types = [
+                        'ACH'
+                        ], ),
         )
         """
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **unique_id** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
-**address** | [**QuoteRequestAgentAddress**](QuoteRequestAgentAddress.md) |  | [optional] 
+**address** | [**QuoteRequestInsuredAddress**](QuoteRequestInsuredAddress.md) |  | [optional] 
 
 ## Example
 

@@ -55,6 +55,7 @@ class TestPFLiteSecureQuoteRequestInsured(unittest.TestCase):
             return PFLiteSecureQuoteRequestInsured(
                 first_name = '',
                 last_name = '',
+                email_address = '',
                 address = openapi_client.models.pf_lite_secure_quote_request_insured_address.PFLiteSecureQuoteRequest_insured_address(
                     address1 = '', 
                     address2 = '', 

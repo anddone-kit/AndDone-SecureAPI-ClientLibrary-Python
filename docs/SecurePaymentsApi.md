@@ -17,8 +17,6 @@ This API gets Secure payment by search criteria for the merchant.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -31,22 +29,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -78,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     export_to_pdf = True # bool | Export To PDF (optional)
     transaction_origins = 'transaction_origins_example' # str | Type of origin used in the transaction (optional)
     transaction_source_type = 'transaction_source_type_example' # str | Transaction source type of the transaction (optional)
-    source_id = 3.4 # float | Set SourceId (optional)
+    source_id = 56 # int | Set SourceId (optional)
     trace_numbers = 'trace_numbers_example' # str | TraceNumbers associated with the transaction (optional)
     bin_number = 'bin_number_example' # str | BinNumber (optional)
     process_method = 'process_method_example' # str | Process Method used for the transaction (optional)
@@ -96,7 +78,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     batch_id = 'batch_id_example' # str | BatchId (optional)
     sort_field = 'sort_field_example' # str | SortField (optional)
     start_row = 56 # int | Set StartRow (optional)
-    page_size = 3.4 # float | Set PageSize (optional)
+    page_size = 56 # int | Set PageSize (optional)
     asc = True # bool | Set Asc (optional)
 
     try:
@@ -139,7 +121,7 @@ Name | Type | Description  | Notes
  **export_to_pdf** | **bool**| Export To PDF | [optional] 
  **transaction_origins** | **str**| Type of origin used in the transaction | [optional] 
  **transaction_source_type** | **str**| Transaction source type of the transaction | [optional] 
- **source_id** | **float**| Set SourceId | [optional] 
+ **source_id** | **int**| Set SourceId | [optional] 
  **trace_numbers** | **str**| TraceNumbers associated with the transaction | [optional] 
  **bin_number** | **str**| BinNumber | [optional] 
  **process_method** | **str**| Process Method used for the transaction | [optional] 
@@ -157,7 +139,7 @@ Name | Type | Description  | Notes
  **batch_id** | **str**| BatchId | [optional] 
  **sort_field** | **str**| SortField | [optional] 
  **start_row** | **int**| Set StartRow | [optional] 
- **page_size** | **float**| Set PageSize | [optional] 
+ **page_size** | **int**| Set PageSize | [optional] 
  **asc** | **bool**| Set Asc | [optional] 
 
 ### Return type
@@ -166,7 +148,7 @@ void (empty response body)
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -191,8 +173,6 @@ This API posts new Secure payment request for the merchant.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -207,22 +187,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -262,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -281,14 +245,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **secure_payments_search_post**
-> MerchantTransactionEntityResponse secure_payments_search_post(x_api_key, x_app_key, x_version, origin, start_date=start_date, end_date=end_date, transaction_ids=transaction_ids, reference_transaction_id=reference_transaction_id, transaction_statuses=transaction_statuses, customer_ids=customer_ids, transaction_type=transaction_type, auth_code=auth_code, card_holder_name=card_holder_name, shopper_name=shopper_name, amount=amount, from_amount=from_amount, to_amount=to_amount, channel_types=channel_types, mask_account=mask_account, customer_name=customer_name, recurring_id=recurring_id, reference_no=reference_no, export_to_csv=export_to_csv, export_to_pdf=export_to_pdf, transaction_origins=transaction_origins, transaction_source_type=transaction_source_type, source_id=source_id, trace_numbers=trace_numbers, bin_number=bin_number, process_method=process_method, search_text=search_text, merchant_reference=merchant_reference, additional_fields=additional_fields, additional_field_value=additional_field_value, payment_method=payment_method, account_alias=account_alias, is_paid=is_paid, payment_types=payment_types, merchant_id=merchant_id, payment_categories=payment_categories, suppress_technology_fee=suppress_technology_fee, batch_id=batch_id, sort_field=sort_field, start_row=start_row, page_size=page_size, asc=asc)
+> MerchantTransactionEntityResponse secure_payments_search_post(x_api_key, x_app_key, x_version, origin, start_date=start_date, end_date=end_date, transaction_ids=transaction_ids, reference_transaction_id=reference_transaction_id, transaction_statuses=transaction_statuses, customer_ids=customer_ids, transaction_type=transaction_type, auth_code=auth_code, card_holder_name=card_holder_name, shopper_name=shopper_name, amount=amount, from_amount=from_amount, to_amount=to_amount, channel_types=channel_types, mask_account=mask_account, customer_name=customer_name, recurring_id=recurring_id, reference_no=reference_no, export_to_csv=export_to_csv, export_to_pdf=export_to_pdf, transaction_origins=transaction_origins, transaction_source_type=transaction_source_type, source_id=source_id, trace_numbers=trace_numbers, bin_number=bin_number, process_method=process_method, search_text=search_text, merchant_reference=merchant_reference, additional_fields=additional_fields, additional_field_value=additional_field_value, payment_method=payment_method, account_alias=account_alias, is_paid=is_paid, payment_types=payment_types, merchant_id=merchant_id, payment_categories=payment_categories, suppress_technology_fee=suppress_technology_fee, batch_id=batch_id, transactions_count=transactions_count, sort_field=sort_field, start_row=start_row, page_size=page_size, asc=asc)
 
 This API gets Secure payment by search criteria for the merchant.
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -302,22 +264,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -349,7 +295,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     export_to_pdf = True # bool | Export To PDF (optional)
     transaction_origins = 'transaction_origins_example' # str | Type of origin used in the transaction (optional)
     transaction_source_type = 'transaction_source_type_example' # str | Transaction source type of the transaction (optional)
-    source_id = 3.4 # float | Set SourceId (optional)
+    source_id = 56 # int | Set SourceId (optional)
     trace_numbers = 'trace_numbers_example' # str | TraceNumbers associated with the transaction (optional)
     bin_number = 'bin_number_example' # str | BinNumber (optional)
     process_method = 'process_method_example' # str | Process Method used for the transaction (optional)
@@ -365,14 +311,15 @@ with openapi_client.ApiClient(configuration) as api_client:
     payment_categories = 'payment_categories_example' # str | Set PaymentCategories (optional)
     suppress_technology_fee = True # bool | SuppressTechnologyFee (optional)
     batch_id = 'batch_id_example' # str | BatchId (optional)
+    transactions_count = True # bool | Set whether to return only the transactions count (optional)
     sort_field = 'sort_field_example' # str | SortField (optional)
     start_row = 56 # int | Set StartRow (optional)
-    page_size = 3.4 # float | Set PageSize (optional)
+    page_size = 56 # int | Set PageSize (optional)
     asc = True # bool | Set Asc (optional)
 
     try:
         # This API gets Secure payment by search criteria for the merchant.
-        api_response = api_instance.secure_payments_search_post(x_api_key, x_app_key, x_version, origin, start_date=start_date, end_date=end_date, transaction_ids=transaction_ids, reference_transaction_id=reference_transaction_id, transaction_statuses=transaction_statuses, customer_ids=customer_ids, transaction_type=transaction_type, auth_code=auth_code, card_holder_name=card_holder_name, shopper_name=shopper_name, amount=amount, from_amount=from_amount, to_amount=to_amount, channel_types=channel_types, mask_account=mask_account, customer_name=customer_name, recurring_id=recurring_id, reference_no=reference_no, export_to_csv=export_to_csv, export_to_pdf=export_to_pdf, transaction_origins=transaction_origins, transaction_source_type=transaction_source_type, source_id=source_id, trace_numbers=trace_numbers, bin_number=bin_number, process_method=process_method, search_text=search_text, merchant_reference=merchant_reference, additional_fields=additional_fields, additional_field_value=additional_field_value, payment_method=payment_method, account_alias=account_alias, is_paid=is_paid, payment_types=payment_types, merchant_id=merchant_id, payment_categories=payment_categories, suppress_technology_fee=suppress_technology_fee, batch_id=batch_id, sort_field=sort_field, start_row=start_row, page_size=page_size, asc=asc)
+        api_response = api_instance.secure_payments_search_post(x_api_key, x_app_key, x_version, origin, start_date=start_date, end_date=end_date, transaction_ids=transaction_ids, reference_transaction_id=reference_transaction_id, transaction_statuses=transaction_statuses, customer_ids=customer_ids, transaction_type=transaction_type, auth_code=auth_code, card_holder_name=card_holder_name, shopper_name=shopper_name, amount=amount, from_amount=from_amount, to_amount=to_amount, channel_types=channel_types, mask_account=mask_account, customer_name=customer_name, recurring_id=recurring_id, reference_no=reference_no, export_to_csv=export_to_csv, export_to_pdf=export_to_pdf, transaction_origins=transaction_origins, transaction_source_type=transaction_source_type, source_id=source_id, trace_numbers=trace_numbers, bin_number=bin_number, process_method=process_method, search_text=search_text, merchant_reference=merchant_reference, additional_fields=additional_fields, additional_field_value=additional_field_value, payment_method=payment_method, account_alias=account_alias, is_paid=is_paid, payment_types=payment_types, merchant_id=merchant_id, payment_categories=payment_categories, suppress_technology_fee=suppress_technology_fee, batch_id=batch_id, transactions_count=transactions_count, sort_field=sort_field, start_row=start_row, page_size=page_size, asc=asc)
         print("The response of SecurePaymentsApi->secure_payments_search_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -412,7 +359,7 @@ Name | Type | Description  | Notes
  **export_to_pdf** | **bool**| Export To PDF | [optional] 
  **transaction_origins** | **str**| Type of origin used in the transaction | [optional] 
  **transaction_source_type** | **str**| Transaction source type of the transaction | [optional] 
- **source_id** | **float**| Set SourceId | [optional] 
+ **source_id** | **int**| Set SourceId | [optional] 
  **trace_numbers** | **str**| TraceNumbers associated with the transaction | [optional] 
  **bin_number** | **str**| BinNumber | [optional] 
  **process_method** | **str**| Process Method used for the transaction | [optional] 
@@ -428,9 +375,10 @@ Name | Type | Description  | Notes
  **payment_categories** | **str**| Set PaymentCategories | [optional] 
  **suppress_technology_fee** | **bool**| SuppressTechnologyFee | [optional] 
  **batch_id** | **str**| BatchId | [optional] 
+ **transactions_count** | **bool**| Set whether to return only the transactions count | [optional] 
  **sort_field** | **str**| SortField | [optional] 
  **start_row** | **int**| Set StartRow | [optional] 
- **page_size** | **float**| Set PageSize | [optional] 
+ **page_size** | **int**| Set PageSize | [optional] 
  **asc** | **bool**| Set Asc | [optional] 
 
 ### Return type
@@ -439,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 
@@ -464,8 +412,6 @@ This API is used for getting details of Payments
 
 ### Example
 
-* Api Key Authentication (x-api-key):
-* Api Key Authentication (x-app-key):
 
 ```python
 import openapi_client
@@ -480,22 +426,6 @@ configuration = openapi_client.Configuration(
     host = "https://api.uat.anddone.com"
 )
 
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: x-api-key
-configuration.api_key['x-api-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-api-key'] = 'Bearer'
-
-# Configure API key authorization: x-app-key
-configuration.api_key['x-app-key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['x-app-key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
@@ -535,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[x-api-key](../README.md#x-api-key), [x-app-key](../README.md#x-app-key)
+No authorization required
 
 ### HTTP request headers
 

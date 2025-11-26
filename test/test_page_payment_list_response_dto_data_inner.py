@@ -38,12 +38,12 @@ class TestPagePaymentListResponseDTODataInner(unittest.TestCase):
                 id = '',
                 merchant_id = '',
                 merchant_dba_name = '',
-                payment_method_type = '',
+                payment_method_type = 'Check',
                 payment_based_id = '',
                 vendor_id = '',
                 vendor_name = '',
                 payment_id = '',
-                payment_method_status = '',
+                payment_method_status = 'NA',
                 requested_date = '',
                 amount = ''
             )

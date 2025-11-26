@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **track_data** | **str** |  | [optional] 
 **remove_discounting** | **bool** |  | [optional] 
 **suppress_commission** | **bool** |  | [optional] 
-**amount** | **float** |  | [optional] 
+**amount** | **float** |  | 
 **convenience_amount** | **float** |  | [optional] 
 **pre_auth_code** | **str** |  | [optional] 
 **create_account_token** | **bool** |  | [optional] 

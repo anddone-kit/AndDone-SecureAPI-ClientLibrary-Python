@@ -47,12 +47,6 @@ class TestPFEndorsementRequestQuotePoliciesInnerGa(unittest.TestCase):
             )
         else:
             return PFEndorsementRequestQuotePoliciesInnerGa(
-                unique_id = '',
-                name = '',
-                address1 = '',
-                city = '',
-                state = '',
-                zip = '',
         )
         """
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **vendor_name** | **str** |  | 
 **vendor_alias_name** | **str** |  | [optional] 
-**vendor_db_name** | **str** | Database name of the vendor | 
+**vendor_db_name** | **str** | Database name of the vendor | [optional] 
 **legal_entity_type** | **str** |  | 
 **payment_method_type** | **str** |  | 
 **notification_type** | **str** |  | 

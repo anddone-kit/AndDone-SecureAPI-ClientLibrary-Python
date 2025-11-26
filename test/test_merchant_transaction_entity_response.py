@@ -35,7 +35,7 @@ class TestMerchantTransactionEntityResponse(unittest.TestCase):
         model = MerchantTransactionEntityResponse()
         if include_optional:
             return MerchantTransactionEntityResponse(
-                total_row_counts = 1.337,
+                total_row_count = 1.337,
                 data = [
                     openapi_client.models.merchant_transaction_entity_response_data_inner.MerchantTransactionEntityResponse_data_inner(
                         transaction_id = '', 
@@ -48,9 +48,8 @@ class TestMerchantTransactionEntityResponse(unittest.TestCase):
                         is_debit = True, 
                         reference_transaction_id = '', 
                         reference_customer_id = '', 
-                        customer_account_id = '', 
                         recurring_id = '', 
-                        batch_id = 56, 
+                        batch_id = 1.337, 
                         transaction_status = 'Created', 
                         settlement_date = '', 
                         auth_code = '', 
@@ -64,11 +63,8 @@ class TestMerchantTransactionEntityResponse(unittest.TestCase):
                         account_category = 'Unknown', 
                         training_mode = True, 
                         amount = 1.337, 
-                        tip_amount = 1.337, 
                         convenience_amount = 1.337, 
                         capture_amount = 1.337, 
-                        tax_percent = 1.337, 
-                        tax_amount = 1.337, 
                         card_type = '', 
                         created_on = '', 
                         created_by = '', 
@@ -82,6 +78,7 @@ class TestMerchantTransactionEntityResponse(unittest.TestCase):
                         payment_link_id = '', 
                         reference_no = '', 
                         processor_name = '', 
+                        processor_display_name = '', 
                         verification2_code = '', 
                         transaction_origin = 'Terminal', 
                         previous_transaction_status = 'Created', 
@@ -97,8 +94,11 @@ class TestMerchantTransactionEntityResponse(unittest.TestCase):
                         commission_type = 'Fixed', 
                         commission_value = 1.337, 
                         commission_fixed_value = 1.337, 
+                        account_token = '', 
                         payment_type = 'None', 
                         payment_category = 'None', 
+                        refund_reason = '', 
+                        refund_detail = '', 
                         full_account_number = '', 
                         refund_type = 'NA', 
                         suppress_technology_fee = True, )

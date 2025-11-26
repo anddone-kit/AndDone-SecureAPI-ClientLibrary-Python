@@ -39,7 +39,15 @@ class TestTransactionPaymentResponseTransactionResult(unittest.TestCase):
                 processor_auth_code = '',
                 trace_number = '',
                 reason_code = '',
-                reason_message = ''
+                reason_message = '',
+                addition_result_data = '',
+                addition_result_data2 = '',
+                verification_status = True,
+                verification1_code = '',
+                verification2_code = '',
+                error_code = '',
+                error_message = '',
+                merchant_reference = ''
             )
         else:
             return TransactionPaymentResponseTransactionResult(

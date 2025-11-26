@@ -26,12 +26,12 @@ class PFEndorsementRequestQuoteDetailsRecurringACH(BaseModel):
     """
     PFEndorsementRequestQuoteDetailsRecurringACH
     """ # noqa: E501
-    enroll_recurring_ach: Optional[StrictBool] = Field(default=None, alias="EnrollRecurringAch")
-    bank_routing_number: Optional[StrictStr] = Field(default=None, alias="BankRoutingNumber")
-    bank_acct_number: Optional[StrictStr] = Field(default=None, alias="BankAcctNumber")
-    is_checking_account: Optional[StrictBool] = Field(default=None, alias="IsCheckingAccount")
-    ach_disclosure: Optional[StrictStr] = Field(default=None, alias="AchDisclosure")
-    __properties: ClassVar[List[str]] = ["EnrollRecurringAch", "BankRoutingNumber", "BankAcctNumber", "IsCheckingAccount", "AchDisclosure"]
+    enroll_recurring_ach: Optional[StrictBool] = Field(default=None, alias="enrollRecurringAch")
+    bank_routing_number: Optional[StrictStr] = Field(default=None, alias="bankRoutingNumber")
+    bank_acct_number: Optional[StrictStr] = Field(default=None, alias="bankAcctNumber")
+    is_checking_account: Optional[StrictBool] = Field(default=None, alias="isCheckingAccount")
+    ach_disclosure: Optional[StrictStr] = Field(default=None, alias="achDisclosure")
+    __properties: ClassVar[List[str]] = ["enrollRecurringAch", "bankRoutingNumber", "bankAcctNumber", "isCheckingAccount", "achDisclosure"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,11 +84,11 @@ class PFEndorsementRequestQuoteDetailsRecurringACH(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "EnrollRecurringAch": obj.get("EnrollRecurringAch"),
-            "BankRoutingNumber": obj.get("BankRoutingNumber"),
-            "BankAcctNumber": obj.get("BankAcctNumber"),
-            "IsCheckingAccount": obj.get("IsCheckingAccount"),
-            "AchDisclosure": obj.get("AchDisclosure")
+            "enrollRecurringAch": obj.get("enrollRecurringAch"),
+            "bankRoutingNumber": obj.get("bankRoutingNumber"),
+            "bankAcctNumber": obj.get("bankAcctNumber"),
+            "isCheckingAccount": obj.get("isCheckingAccount"),
+            "achDisclosure": obj.get("achDisclosure")
         })
         return _obj
 

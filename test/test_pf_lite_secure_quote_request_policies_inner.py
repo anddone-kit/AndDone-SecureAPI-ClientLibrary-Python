@@ -43,20 +43,23 @@ class TestPFLiteSecureQuoteRequestPoliciesInner(unittest.TestCase):
                 coverage_type = '',
                 effective_date = '',
                 minimum_earned_percent = 1.337,
+                cancel_days = '',
                 carrier = openapi_client.models.pf_lite_secure_quote_request_policies_inner_carrier.PFLiteSecureQuoteRequest_policies_inner_carrier(
                     name = '', 
                     best_number = '', 
                     unique_id = '', ),
-                expiration_date = '',
-                cancel_days = ''
+                expiration_date = ''
             )
         else:
             return PFLiteSecureQuoteRequestPoliciesInner(
-                policy_number = '',
+                premium = 1.337,
+                coverage_type = '',
                 effective_date = '',
-                minimum_earned_percent = 1.337,
-                expiration_date = '',
                 cancel_days = '',
+                carrier = openapi_client.models.pf_lite_secure_quote_request_policies_inner_carrier.PFLiteSecureQuoteRequest_policies_inner_carrier(
+                    name = '', 
+                    best_number = '', 
+                    unique_id = '', ),
         )
         """
 

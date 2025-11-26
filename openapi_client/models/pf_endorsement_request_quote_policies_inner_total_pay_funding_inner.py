@@ -26,15 +26,15 @@ class PFEndorsementRequestQuotePoliciesInnerTotalPayFundingInner(BaseModel):
     """
     PFEndorsementRequestQuotePoliciesInnerTotalPayFundingInner
     """ # noqa: E501
-    pay_to: Optional[StrictStr] = Field(default=None, alias="PayTo")
-    payment_method: Optional[StrictStr] = Field(default=None, alias="PaymentMethod")
-    funding_type: Optional[StrictStr] = Field(default=None, alias="FundingType")
-    bank_routing_number: Optional[StrictStr] = Field(default=None, alias="BankRoutingNumber")
-    bank_acct_number: Optional[StrictStr] = Field(default=None, alias="BankAcctNumber")
-    is_checking_account: Optional[StrictBool] = Field(default=None, alias="IsCheckingAccount")
-    amount: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="Amount")
-    funding_date: Optional[StrictStr] = Field(default=None, alias="FundingDate")
-    __properties: ClassVar[List[str]] = ["PayTo", "PaymentMethod", "FundingType", "BankRoutingNumber", "BankAcctNumber", "IsCheckingAccount", "Amount", "FundingDate"]
+    pay_to: Optional[StrictStr] = Field(default=None, alias="payTo")
+    payment_method: Optional[StrictStr] = Field(default=None, alias="paymentMethod")
+    funding_type: Optional[StrictStr] = Field(default=None, alias="fundingType")
+    bank_routing_number: Optional[StrictStr] = Field(default=None, alias="bankRoutingNumber")
+    bank_acct_number: Optional[StrictStr] = Field(default=None, alias="bankAcctNumber")
+    is_checking_account: Optional[StrictBool] = Field(default=None, alias="isCheckingAccount")
+    amount: Optional[Union[StrictFloat, StrictInt]] = None
+    funding_date: Optional[StrictStr] = Field(default=None, alias="fundingDate")
+    __properties: ClassVar[List[str]] = ["payTo", "paymentMethod", "fundingType", "bankRoutingNumber", "bankAcctNumber", "isCheckingAccount", "amount", "fundingDate"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -87,14 +87,14 @@ class PFEndorsementRequestQuotePoliciesInnerTotalPayFundingInner(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "PayTo": obj.get("PayTo"),
-            "PaymentMethod": obj.get("PaymentMethod"),
-            "FundingType": obj.get("FundingType"),
-            "BankRoutingNumber": obj.get("BankRoutingNumber"),
-            "BankAcctNumber": obj.get("BankAcctNumber"),
-            "IsCheckingAccount": obj.get("IsCheckingAccount"),
-            "Amount": obj.get("Amount"),
-            "FundingDate": obj.get("FundingDate")
+            "payTo": obj.get("payTo"),
+            "paymentMethod": obj.get("paymentMethod"),
+            "fundingType": obj.get("fundingType"),
+            "bankRoutingNumber": obj.get("bankRoutingNumber"),
+            "bankAcctNumber": obj.get("bankAcctNumber"),
+            "isCheckingAccount": obj.get("isCheckingAccount"),
+            "amount": obj.get("amount"),
+            "fundingDate": obj.get("fundingDate")
         })
         return _obj
 

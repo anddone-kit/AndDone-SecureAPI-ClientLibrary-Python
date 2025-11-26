@@ -45,6 +45,11 @@ class TestQuoteRequestInsuredAddress(unittest.TestCase):
             )
         else:
             return QuoteRequestInsuredAddress(
+                name = '',
+                address1 = '',
+                city = '',
+                state = '',
+                zip = '',
         )
         """
 

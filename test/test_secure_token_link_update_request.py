@@ -36,16 +36,34 @@ class TestSecureTokenLinkUpdateRequest(unittest.TestCase):
         if include_optional:
             return SecureTokenLinkUpdateRequest(
                 token_link_id = '',
-                expire_in = 1.337,
+                expire_in = 56,
                 response_type = 'OnScreen',
-                expire_in_unit = 'Minutes',
-                intent = openapi_client.models.payment_intent_response_intent.PaymentIntentResponse_intent(
+                expire_in_unit = 'Seconds',
+                intent = openapi_client.models.payment_intent_request_intent.PaymentIntentRequest_intent(
                     payment_types = [
                         'CreditCard'
-                        ], )
+                        ], ),
+                call_back_parameters = openapi_client.models.payment_link_response_callback_parameters.PaymentLinkResponse_callbackParameters(
+                    callback_success_url = '', 
+                    callback_failure_url = '', 
+                    access_key = '', 
+                    secret_key = '', 
+                    reference_no = '', 
+                    reference_type = '', 
+                    transaction_id = '', 
+                    callback_api_url = '', 
+                    callback_message = '', 
+                    redirection_time = 1.337, )
             )
         else:
             return SecureTokenLinkUpdateRequest(
+                token_link_id = '',
+                expire_in = 56,
+                expire_in_unit = 'Seconds',
+                intent = openapi_client.models.payment_intent_request_intent.PaymentIntentRequest_intent(
+                    payment_types = [
+                        'CreditCard'
+                        ], ),
         )
         """
 

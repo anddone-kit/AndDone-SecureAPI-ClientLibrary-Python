@@ -35,11 +35,11 @@ class TestPFUpdatePFARequestDTO(unittest.TestCase):
         model = PFUpdatePFARequestDTO()
         if include_optional:
             return PFUpdatePFARequestDTO(
-                quote_key = 1.337
+                quote_key = 56
             )
         else:
             return PFUpdatePFARequestDTO(
-                quote_key = 1.337,
+                quote_key = 56,
         )
         """
 

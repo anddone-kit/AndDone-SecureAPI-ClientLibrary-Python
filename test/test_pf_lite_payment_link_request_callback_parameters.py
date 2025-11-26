@@ -36,7 +36,13 @@ class TestPFLitePaymentLinkRequestCallbackParameters(unittest.TestCase):
         if include_optional:
             return PFLitePaymentLinkRequestCallbackParameters(
                 callback_api_url = '',
-                callback_message = ''
+                callback_message = '',
+                access_key = '',
+                secret_key = '',
+                reference_no = '',
+                reference_type = '',
+                transaction_id = '',
+                redirection_time = 1.337
             )
         else:
             return PFLitePaymentLinkRequestCallbackParameters(

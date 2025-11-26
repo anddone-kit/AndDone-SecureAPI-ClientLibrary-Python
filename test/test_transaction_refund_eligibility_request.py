@@ -41,7 +41,7 @@ class TestTransactionRefundEligibilityRequest(unittest.TestCase):
                 transaction_id = '',
                 remarks = '',
                 splits = [
-                    openapi_client.models.payment_intent_response_splits_inner.PaymentIntentResponse_splits_inner(
+                    openapi_client.models.payment_intent_request_splits_inner.PaymentIntentRequest_splits_inner(
                         virtual_account = '', 
                         amount = 1.337, 
                         reference = '', 
@@ -51,6 +51,7 @@ class TestTransactionRefundEligibilityRequest(unittest.TestCase):
             )
         else:
             return TransactionRefundEligibilityRequest(
+                transaction_id = '',
         )
         """
 

@@ -39,6 +39,7 @@ class TestVerificationEntityRequest(unittest.TestCase):
             )
         else:
             return VerificationEntityRequest(
+                id = '',
         )
         """
 

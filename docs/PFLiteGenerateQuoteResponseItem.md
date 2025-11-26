@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**quote_key** | **float** |  | [optional] 
+**quote_key** | **int** |  | [optional] 
 **premium** | **float** |  | [optional] 
 **down_amount** | **float** |  | [optional] 
 **amount_financed** | **float** |  | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **apr** | **float** |  | [optional] 
 **installments** | **int** |  | [optional] 
 **batch_id** | **str** |  | [optional] 
-**payments_retained** | **float** |  | [optional] 
+**payments_retained** | **int** |  | [optional] 
 **payment_retained_amount** | **float** |  | [optional] 
 **unsigned_pfa_url** | **str** |  | [optional] 
 **retail_agent_register_login_url** | **str** |  | [optional] 
@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **errors** | **str** |  | [optional] 
 **pfa** | **str** |  | [optional] 
 **electronic_signature_url** | **str** |  | [optional] 
+**offer_auto_pay** | **bool** |  | [optional] 
 
 ## Example
 

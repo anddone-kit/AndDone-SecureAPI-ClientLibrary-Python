@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **transaction_id** | **str** |  | [optional] 
 **callback_api_url** | **str** |  | [optional] 
 **callback_message** | **str** |  | [optional] 
-**redirection_time** | **float** |  | [optional] 
+**redirection_time** | **int** |  | [optional] 
 
 ## Example
 

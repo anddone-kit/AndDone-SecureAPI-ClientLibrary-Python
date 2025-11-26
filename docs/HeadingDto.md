@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
+**is_aggregate_amount** | **bool** |  | [optional] 
 
 ## Example
 

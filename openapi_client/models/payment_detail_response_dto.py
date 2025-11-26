@@ -31,7 +31,7 @@ class PaymentDetailResponseDTO(BaseModel):
     vendor_name: Optional[StrictStr] = Field(default=None, alias="vendorName")
     merchant_dba_name: Optional[StrictStr] = Field(default=None, alias="merchantDBAName")
     payment_id: Optional[StrictStr] = Field(default=None, alias="paymentId")
-    check_number: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="checkNumber")
+    check_number: Optional[StrictInt] = Field(default=None, alias="checkNumber")
     payment_method: Optional[StrictStr] = Field(default=None, alias="paymentMethod")
     amount: Optional[Union[StrictFloat, StrictInt]] = None
     bank_name: Optional[StrictStr] = Field(default=None, alias="bankName")

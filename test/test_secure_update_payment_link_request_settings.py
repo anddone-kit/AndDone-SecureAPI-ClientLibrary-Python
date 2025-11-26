@@ -35,6 +35,8 @@ class TestSecureUpdatePaymentLinkRequestSettings(unittest.TestCase):
         model = SecureUpdatePaymentLinkRequestSettings()
         if include_optional:
             return SecureUpdatePaymentLinkRequestSettings(
+                selected_customer_fields = '',
+                additional_details_preference = 'None',
                 display_summary = True,
                 accept_customer_info = True,
                 remove_header = True,
@@ -42,7 +44,10 @@ class TestSecureUpdatePaymentLinkRequestSettings(unittest.TestCase):
                 accept_bank_account = True,
                 save_customer = True,
                 save_customer_account = True,
-                additional_details_preference = 'AskShopper'
+                intent = openapi_client.models.secure_update_payment_link_request_settings_intent.SecureUpdatePaymentLinkRequest_settings_intent(
+                    payment_types = [
+                        'ACH'
+                        ], )
             )
         else:
             return SecureUpdatePaymentLinkRequestSettings(

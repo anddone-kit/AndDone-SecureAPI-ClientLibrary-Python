@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **payment_description** | **str** |  | [optional] 
 **customers** | [**List[PaymentLinkResponseCustomersInner]**](PaymentLinkResponseCustomersInner.md) |  | [optional] 
 **invoice_number** | **str** |  | [optional] 
-**expire_by** | **float** |  | [optional] 
+**expire_by** | **int** |  | [optional] 
 **expire_on** | **str** |  | [optional] 
 **line_items** | [**List[PaymentLinkResponseLineItemsInner]**](PaymentLinkResponseLineItemsInner.md) |  | [optional] 
 **short_description** | **str** |  | [optional] 

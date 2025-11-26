@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **created_by** | **str** |  | [optional] 
 **modified_on** | **str** |  | [optional] 
 **modified_by** | **str** |  | [optional] 
-**capture_count** | **float** |  | [optional] 
+**capture_count** | **int** |  | [optional] 
 **capture_amount** | **float** |  | [optional] 
-**voided_count** | **float** |  | [optional] 
+**voided_count** | **int** |  | [optional] 
 **voided_amount** | **float** |  | [optional] 
 
 ## Example

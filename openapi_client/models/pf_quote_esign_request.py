@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -33,7 +33,8 @@ class PFQuoteEsignRequest(BaseModel):
     mac_address: Optional[StrictStr] = Field(default=None, description="This denotes the MAC address of the client.", alias="macAddress")
     captcha_token: Optional[StrictStr] = Field(default=None, description="This denotes the captchaToken.", alias="captchaToken")
     action_name: Optional[StrictStr] = Field(default=None, description="This denotes the action name.", alias="actionName")
-    __properties: ClassVar[List[str]] = ["merchantToken", "quoteKey", "insuredName", "ipAddress", "macAddress", "captchaToken", "actionName"]
+    is_sign_apa: Optional[StrictBool] = Field(default=None, description="This denotes isSignAPA status.", alias="isSignAPA")
+    __properties: ClassVar[List[str]] = ["merchantToken", "quoteKey", "insuredName", "ipAddress", "macAddress", "captchaToken", "actionName", "isSignAPA"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,7 +93,8 @@ class PFQuoteEsignRequest(BaseModel):
             "ipAddress": obj.get("ipAddress"),
             "macAddress": obj.get("macAddress"),
             "captchaToken": obj.get("captchaToken"),
-            "actionName": obj.get("actionName")
+            "actionName": obj.get("actionName"),
+            "isSignAPA": obj.get("isSignAPA")
         })
         return _obj
 

@@ -39,6 +39,7 @@ class TestSecurePaymentBatchDetailsRequest(unittest.TestCase):
             )
         else:
             return SecurePaymentBatchDetailsRequest(
+                batch_id = '',
         )
         """
 

@@ -16,8 +16,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
-from typing import List, Optional, Union
+from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
+from typing import List, Optional
 from typing_extensions import Annotated
 from openapi_client.models.page_vendor_response_dto import PageVendorResponseDTO
 from openapi_client.models.secure_vendor_request_dto import SecureVendorRequestDTO
@@ -359,8 +359,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -700,8 +698,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1041,8 +1037,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1382,8 +1376,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -1419,10 +1411,10 @@ class SecureVendorManagementApi:
         created_by: Annotated[Optional[StrictStr], Field(description="Set createdBy")] = None,
         start_date: Annotated[Optional[StrictStr], Field(description="set start Date")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="set end Date")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="search Text")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
-        start_row: Annotated[Optional[StrictStr], Field(description="Set StartRow")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -1465,13 +1457,13 @@ class SecureVendorManagementApi:
         :param end_date: set end Date
         :type end_date: str
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param search_text: search Text
         :type search_text: str
         :param sort_field: Set SortField
         :type sort_field: str
         :param start_row: Set StartRow
-        :type start_row: str
+        :type start_row: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1552,10 +1544,10 @@ class SecureVendorManagementApi:
         created_by: Annotated[Optional[StrictStr], Field(description="Set createdBy")] = None,
         start_date: Annotated[Optional[StrictStr], Field(description="set start Date")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="set end Date")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="search Text")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
-        start_row: Annotated[Optional[StrictStr], Field(description="Set StartRow")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -1598,13 +1590,13 @@ class SecureVendorManagementApi:
         :param end_date: set end Date
         :type end_date: str
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param search_text: search Text
         :type search_text: str
         :param sort_field: Set SortField
         :type sort_field: str
         :param start_row: Set StartRow
-        :type start_row: str
+        :type start_row: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1685,10 +1677,10 @@ class SecureVendorManagementApi:
         created_by: Annotated[Optional[StrictStr], Field(description="Set createdBy")] = None,
         start_date: Annotated[Optional[StrictStr], Field(description="set start Date")] = None,
         end_date: Annotated[Optional[StrictStr], Field(description="set end Date")] = None,
-        page_size: Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="Set PageSize")] = None,
+        page_size: Annotated[Optional[StrictInt], Field(description="Set PageSize")] = None,
         search_text: Annotated[Optional[StrictStr], Field(description="search Text")] = None,
         sort_field: Annotated[Optional[StrictStr], Field(description="Set SortField")] = None,
-        start_row: Annotated[Optional[StrictStr], Field(description="Set StartRow")] = None,
+        start_row: Annotated[Optional[StrictInt], Field(description="Set StartRow")] = None,
         asc: Annotated[Optional[StrictBool], Field(description="Set Asc")] = None,
         _request_timeout: Union[
             None,
@@ -1731,13 +1723,13 @@ class SecureVendorManagementApi:
         :param end_date: set end Date
         :type end_date: str
         :param page_size: Set PageSize
-        :type page_size: float
+        :type page_size: int
         :param search_text: search Text
         :type search_text: str
         :param sort_field: Set SortField
         :type sort_field: str
         :param start_row: Set StartRow
-        :type start_row: str
+        :type start_row: int
         :param asc: Set Asc
         :type asc: bool
         :param _request_timeout: timeout setting for this request. If one
@@ -1916,8 +1908,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -2250,8 +2240,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -2591,8 +2579,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(
@@ -2925,8 +2911,6 @@ class SecureVendorManagementApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'x-api-key', 
-            'x-app-key'
         ]
 
         return self.api_client.param_serialize(

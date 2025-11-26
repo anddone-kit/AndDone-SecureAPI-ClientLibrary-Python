@@ -17,8 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +31,7 @@ class PFEndorsementResponseItemQuoteESignResult(BaseModel):
     batch_id: Optional[StrictStr] = Field(default=None, alias="batchID")
     agent_url: Optional[StrictStr] = Field(default=None, alias="agentURL")
     insured_url: Optional[StrictStr] = Field(default=None, alias="insuredURL")
-    e_sign_option: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="eSignOption")
+    e_sign_option: Optional[StrictInt] = Field(default=None, alias="eSignOption")
     __properties: ClassVar[List[str]] = ["processed", "message", "batchID", "agentURL", "insuredURL", "eSignOption"]
 
     model_config = ConfigDict(

@@ -48,12 +48,7 @@ class TestPFEndorsementRequestQuotePoliciesInnerCompany(unittest.TestCase):
             )
         else:
             return PFEndorsementRequestQuotePoliciesInnerCompany(
-                unique_id = '',
                 name = '',
-                address1 = '',
-                city = '',
-                state = '',
-                zip = '',
         )
         """
 

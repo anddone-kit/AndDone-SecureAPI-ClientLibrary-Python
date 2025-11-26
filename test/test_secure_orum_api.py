@@ -13,6 +13,7 @@
 
 
 import unittest
+import json
 
 from openapi_client.api.secure_orum_api import SecureOrumApi
 
@@ -21,6 +22,16 @@ class TestSecureOrumApi(unittest.TestCase):
     """SecureOrumApi unit test stubs"""
 
     def setUp(self) -> None:
+        # call configuration file and store as object
+        with open('anddone-python-sdk-openapi-codegen/config.json') as f:
+            config = json.load(f)
+        # store api key, app key, version and origin from config file
+        self.api_key = config.api_key
+        self.app_key = config.app_key
+        self.version = config.version
+        self.origin = config.origin
+
+        # store Orum functions as objects
         self.api = SecureOrumApi()
 
     def tearDown(self) -> None:
@@ -31,14 +42,37 @@ class TestSecureOrumApi(unittest.TestCase):
 
         This API will request for verified bank account.
         """
-        pass
+        try:
+            request = {
+                "id": "b9a85673-9c47-4554-ac09-b0a2d66cb69a"
+            }
+
+            response = self.api.secure_bankaccounts_details_post(self.api_key, self.app_key, self.version, self.origin, request)
+            print(response)
+        except Exception as e:
+            print(e)
 
     def test_secure_bankaccounts_verify_post(self) -> None:
         """Test case for secure_bankaccounts_verify_post
 
         This API will request for account verification.
         """
-        pass
+        try:
+            request = {
+                "accountNumber": "123456780",
+                "routingNumber": "121000358",
+                "accountHolderName": "John Doe",
+                "statementDisplayName": "Johns Account",
+                "bankAccountEntity": {
+                    "id": "1",
+                    "type": "Vendor"
+                }
+            }
+
+            response = self.api.secure_bankaccounts_verify_post(self.api_key, self.app_key, self.version, self.origin, request)
+            print(response)
+        except Exception as e:
+            print(e)
 
 
 if __name__ == '__main__':

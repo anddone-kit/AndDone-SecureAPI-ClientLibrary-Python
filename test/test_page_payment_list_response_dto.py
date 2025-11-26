@@ -35,19 +35,19 @@ class TestPagePaymentListResponseDTO(unittest.TestCase):
         model = PagePaymentListResponseDTO()
         if include_optional:
             return PagePaymentListResponseDTO(
-                total_row_count = 56,
-                total_amount = 56,
+                total_row_count = 1.337,
+                total_amount = 1.337,
                 data = [
                     openapi_client.models.page_payment_list_response_dto_data_inner.PagePaymentListResponseDTO_data_inner(
                         id = '', 
                         merchant_id = '', 
                         merchant_dba_name = '', 
-                        payment_method_type = '', 
+                        payment_method_type = 'Check', 
                         payment_based_id = '', 
                         vendor_id = '', 
                         vendor_name = '', 
                         payment_id = '', 
-                        payment_method_status = '', 
+                        payment_method_status = 'NA', 
                         requested_date = '', 
                         amount = '', )
                     ]

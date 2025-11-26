@@ -36,9 +36,9 @@ class TestQuoteRequestDetails(unittest.TestCase):
         if include_optional:
             return QuoteRequestDetails(
                 coupon_invoice_printed = True,
-                installments = 1.337,
+                installments = 56,
                 program_ids = [
-                    1.337
+                    56
                     ],
                 batch_id = '',
                 commercial = 'NA',
@@ -49,9 +49,6 @@ class TestQuoteRequestDetails(unittest.TestCase):
             )
         else:
             return QuoteRequestDetails(
-                program_ids = [
-                    1.337
-                    ],
         )
         """
 

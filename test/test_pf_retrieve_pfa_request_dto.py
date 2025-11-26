@@ -40,6 +40,7 @@ class TestPFRetrievePFARequestDTO(unittest.TestCase):
             )
         else:
             return PFRetrievePFARequestDTO(
+                quote_key = '',
         )
         """
 

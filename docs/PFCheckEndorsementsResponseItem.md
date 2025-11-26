@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agreement_id** | **float** |  | [optional] 
-**client_id** | **float** |  | [optional] 
+**agreement_id** | **int** |  | [optional] 
+**client_id** | **int** |  | [optional] 
 **account_number** | **str** |  | [optional] 
 **client_name** | **str** |  | [optional] 
 **is_commercial** | **bool** |  | [optional] 

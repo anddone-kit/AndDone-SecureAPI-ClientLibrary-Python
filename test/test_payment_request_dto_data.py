@@ -38,7 +38,7 @@ class TestPaymentRequestDtoData(unittest.TestCase):
                 check_number = 56,
                 memo = '',
                 check_date = '',
-                remittance_data = openapi_client.models.payment_request_dto_data_remittance_data.PaymentRequestDto_Data_remittanceData(
+                remittance_data = openapi_client.models.payment_request_dto_data_remittance_data.PaymentRequestDto_data_remittanceData(
                     headings = [
                         openapi_client.models.heading_dto.HeadingDto(
                             name = '', 

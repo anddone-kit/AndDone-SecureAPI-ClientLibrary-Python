@@ -42,6 +42,7 @@ class TestSecurePaymentDetailsRequest(unittest.TestCase):
             )
         else:
             return SecurePaymentDetailsRequest(
+                type = 'AnytimePayment',
         )
         """
 

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**report_id** | **str** |  | [optional] 
+**report_id** | **str** |  | 
 **report_generation_log_id** | **str** |  | [optional] 
 **file_compress** | **bool** |  | [optional] 
 **var_date** | **str** |  | [optional] 

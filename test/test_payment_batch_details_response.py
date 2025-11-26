@@ -36,9 +36,27 @@ class TestPaymentBatchDetailsResponse(unittest.TestCase):
         if include_optional:
             return PaymentBatchDetailsResponse(
                 batch_id = '',
+                merchant_id = '',
                 batch_status = '',
+                process_methods = '',
+                processor_name = '',
+                is_default = True,
+                executed_on_demand = True,
                 execution_time = '',
                 completion_time = '',
+                created_on = '',
+                created_by = '',
+                modified_on = '',
+                modified_by = '',
+                capture_count = 1.337,
+                capture_amount = 1.337,
+                voided_count = 1.337,
+                voided_amount = 1.337,
+                total_live_amount = 1.337,
+                refunded_count = 1.337,
+                refunded_amount = 1.337,
+                chargeback_count = 1.337,
+                chargeback_amount = 1.337,
                 transaction_details = [
                     openapi_client.models.payment_batch_details_response_transaction_details_inner.PaymentBatchDetailsResponse_transactionDetails_inner(
                         transaction_id = '', 
