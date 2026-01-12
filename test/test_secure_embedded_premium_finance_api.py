@@ -65,7 +65,7 @@ class TestSecureEmbeddedPremiumFinanceApi(unittest.TestCase):
                 "insured": {
                     "uniqueId": self.app_key,
                     "agentCustomerNumber": "Suyash",
-                    "email": "dylan.smith@fmkagency.com",
+                    "email": "test@test.com",
                     "careOf": "Test",
                     "address": {
                         "name": "Sam",
@@ -79,7 +79,7 @@ class TestSecureEmbeddedPremiumFinanceApi(unittest.TestCase):
                 },
                 "agent": {
                     "uniqueID": self.app_key,
-                    "email": "dylan.smith@fmkagency.com",
+                    "email": "test@test.com",
                     "address": {
                         "name": "Insurance Agency",
                         "address1": "PO Box 486",
@@ -214,7 +214,7 @@ class TestSecureEmbeddedPremiumFinanceApi(unittest.TestCase):
                     ],
                     "insured": {
                         "AgentCustomerNumber": "Suyash",
-                        "Email": "dylan.smith@fmkagency.com",
+                        "Email": "test@test.com",
                         "CareOf": "",
                         "Address": {
                             "Name": "Sam",
