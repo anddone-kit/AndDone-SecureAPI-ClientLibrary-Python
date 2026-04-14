@@ -14,7 +14,7 @@ python = "^3.8"
 
 urllib3 = ">=2.2.3"
 python-dateutil = ">=2.9.0.post0"
-pydantic = ">= 2"
+pydantic = ">=2.10.6"
 typing-extensions = ">= 4.7.1"
 
 [tool.poetry.dev-dependencies]
