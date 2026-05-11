@@ -33,7 +33,7 @@ class TestSecureOutboundPaymentsApi(unittest.TestCase):
         # self.origin = config.origin
         self.api_key = ''
         self.app_key = ''
-        self.version = 2.3
+        self.version = '2.3'
         self.origin = ''
 
         # self.config = Configuration()

@@ -14,7 +14,7 @@
 
 import unittest
 import datetime
-import pytest
+# import pytest
 import json
 
 import openapi_client
@@ -36,7 +36,7 @@ class TestSecurePaymentLinksApi(unittest.TestCase):
         # self.origin = config.origin
         self.api_key = ''
         self.app_key = ''
-        self.version = 2.3
+        self.version = '2.3'
         self.origin = ''
 
         # store secure payment link api functions as an object

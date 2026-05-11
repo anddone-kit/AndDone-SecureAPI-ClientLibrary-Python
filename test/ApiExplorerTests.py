@@ -25,7 +25,7 @@ import json
 
 x_api_key = ''
 x_app_key = ''
-x_version = 2.3
+x_version = '2.3'
 origin = ''
 # configuration = Configuration(
 #     host="https://api2.uat.anddone.com", server_index=1
