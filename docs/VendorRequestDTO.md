@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **payment_method_type** | **str** |  | 
 **notification_type** | **str** |  | 
 **vendor_notes** | **str** |  | [optional] 
-**phone_number** | **str** |  | 
+**phone_number** | **str** |  | [optional] 
 **is_mobile_number** | **bool** |  | [optional] 
 **use_same_as_physical_address** | **bool** |  | [optional] 
 **email** | **str** |  | 

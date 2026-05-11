@@ -19,7 +19,6 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.transaction_payment_response_ach_tender_info_commission_type import TransactionPaymentResponseAchTenderInfoCommissionType
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -80,7 +79,7 @@ class MerchantTransactionEntityResponseDataInner(BaseModel):
     adjustment_display_name: Optional[StrictStr] = Field(default=None, alias="adjustmentDisplayName")
     adjustment_descriptor_message: Optional[StrictStr] = Field(default=None, alias="adjustmentDescriptorMessage")
     payment_adjustment_type: Optional[StrictStr] = Field(default=None, alias="paymentAdjustmentType")
-    commission_type: Optional[TransactionPaymentResponseAchTenderInfoCommissionType] = Field(default=None, alias="commissionType")
+    commission_type: Optional[StrictStr] = Field(default=None, alias="commissionType")
     commission_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="commissionValue")
     commission_fixed_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="commissionFixedValue")
     account_token: Optional[StrictStr] = Field(default=None, alias="accountToken")
@@ -173,6 +172,16 @@ class MerchantTransactionEntityResponseDataInner(BaseModel):
             raise ValueError("must be one of enum values ('None', 'CashIncentive', 'Surcharge', 'ConvenienceFee', 'CashDiscount')")
         return value
 
+    @field_validator('commission_type')
+    def commission_type_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['Fixed', 'Percentage']):
+            raise ValueError("must be one of enum values ('Fixed', 'Percentage')")
+        return value
+
     @field_validator('payment_type')
     def payment_type_validate_enum(cls, value):
         """Validates the enum"""
@@ -242,9 +251,6 @@ class MerchantTransactionEntityResponseDataInner(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of commission_type
-        if self.commission_type:
-            _dict['commissionType'] = self.commission_type.to_dict()
         return _dict
 
     @classmethod
@@ -310,7 +316,7 @@ class MerchantTransactionEntityResponseDataInner(BaseModel):
             "adjustmentDisplayName": obj.get("adjustmentDisplayName"),
             "adjustmentDescriptorMessage": obj.get("adjustmentDescriptorMessage"),
             "paymentAdjustmentType": obj.get("paymentAdjustmentType"),
-            "commissionType": TransactionPaymentResponseAchTenderInfoCommissionType.from_dict(obj["commissionType"]) if obj.get("commissionType") is not None else None,
+            "commissionType": obj.get("commissionType"),
             "commissionValue": obj.get("commissionValue"),
             "commissionFixedValue": obj.get("commissionFixedValue"),
             "accountToken": obj.get("accountToken"),

@@ -9,17 +9,11 @@ Name | Type | Description | Notes
 **verification_entity_id** | **str** |  | [optional] 
 **verifying_entity** | **str** |  | [optional] 
 **verification_status** | **str** |  | [optional] 
-**status_reason** | **str** |  | [optional] 
-**estimated_verification_date** | **str** |  | [optional] 
-**event_id** | **str** |  | [optional] 
-**event_type** | **str** |  | [optional] 
-**bank_account_entity_id** | **float** |  | [optional] 
-**bank_account_entity_type** | **str** |  | [optional] 
+**message** | **str** |  | [optional] 
 **created_on** | **str** |  | [optional] 
 **created_by** | **str** |  | [optional] 
 **modified_on** | **str** |  | [optional] 
 **modified_by** | **str** |  | [optional] 
-**http_response** | [**VerifyBankAccountResponseHttpResponse**](VerifyBankAccountResponseHttpResponse.md) |  | [optional] 
 
 ## Example
 

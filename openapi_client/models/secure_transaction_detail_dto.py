@@ -21,7 +21,6 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from openapi_client.models.secure_transaction_detail_dto_tender_info import SecureTransactionDetailDTOTenderInfo
 from openapi_client.models.transaction_payment_response_billing_contact import TransactionPaymentResponseBillingContact
-from openapi_client.models.transaction_payment_response_refund_origin import TransactionPaymentResponseRefundOrigin
 from openapi_client.models.transaction_payment_response_transaction_result import TransactionPaymentResponseTransactionResult
 from typing import Optional, Set
 from typing_extensions import Self
@@ -34,7 +33,7 @@ class SecureTransactionDetailDTO(BaseModel):
     trace_number: Optional[StrictStr] = Field(default=None, alias="traceNumber")
     transaction_code: Optional[StrictStr] = Field(default=None, alias="transactionCode")
     transaction_origin: Optional[StrictStr] = Field(default=None, alias="transactionOrigin")
-    refund_origin: Optional[TransactionPaymentResponseRefundOrigin] = Field(default=None, alias="refundOrigin")
+    refund_origin: Optional[StrictStr] = Field(default=None, alias="refundOrigin")
     billing_contact: Optional[TransactionPaymentResponseBillingContact] = Field(default=None, alias="billingContact")
     shipping_contact: Optional[TransactionPaymentResponseBillingContact] = Field(default=None, alias="shippingContact")
     reference_transaction_id: Optional[StrictStr] = Field(default=None, alias="referenceTransactionId")
@@ -85,6 +84,16 @@ class SecureTransactionDetailDTO(BaseModel):
 
         if value not in set(['Terminal', 'VirtualTerminal', 'WebForm', 'API', 'Schedule', 'Batch', 'PaymentIntent']):
             raise ValueError("must be one of enum values ('Terminal', 'VirtualTerminal', 'WebForm', 'API', 'Schedule', 'Batch', 'PaymentIntent')")
+        return value
+
+    @field_validator('refund_origin')
+    def refund_origin_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['API', 'Callback']):
+            raise ValueError("must be one of enum values ('API', 'Callback')")
         return value
 
     @field_validator('operation_type')
@@ -186,9 +195,6 @@ class SecureTransactionDetailDTO(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of refund_origin
-        if self.refund_origin:
-            _dict['refundOrigin'] = self.refund_origin.to_dict()
         # override the default output from pydantic by calling `to_dict()` of billing_contact
         if self.billing_contact:
             _dict['billingContact'] = self.billing_contact.to_dict()
@@ -217,7 +223,7 @@ class SecureTransactionDetailDTO(BaseModel):
             "traceNumber": obj.get("traceNumber"),
             "transactionCode": obj.get("transactionCode"),
             "transactionOrigin": obj.get("transactionOrigin"),
-            "refundOrigin": TransactionPaymentResponseRefundOrigin.from_dict(obj["refundOrigin"]) if obj.get("refundOrigin") is not None else None,
+            "refundOrigin": obj.get("refundOrigin"),
             "billingContact": TransactionPaymentResponseBillingContact.from_dict(obj["billingContact"]) if obj.get("billingContact") is not None else None,
             "shippingContact": TransactionPaymentResponseBillingContact.from_dict(obj["shippingContact"]) if obj.get("shippingContact") is not None else None,
             "referenceTransactionId": obj.get("referenceTransactionId"),

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **batch_id** | **str** |  | [optional] 
 **transaction_code** | **str** |  | [optional] 
 **transaction_origin** | **str** |  | [optional] 
-**refund_origin** | [**TransactionPaymentResponseRefundOrigin**](TransactionPaymentResponseRefundOrigin.md) |  | [optional] 
+**refund_origin** | **str** |  | [optional] 
 **billing_contact** | [**TransactionPaymentResponseBillingContact**](TransactionPaymentResponseBillingContact.md) |  | [optional] 
 **reference_transaction_id** | **str** |  | [optional] 
 **transaction_date** | **str** |  | [optional] 

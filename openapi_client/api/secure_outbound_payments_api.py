@@ -52,7 +52,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="PaymentTimeLineRequestDto")],
         _request_timeout: Union[
@@ -76,7 +76,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: PaymentTimeLineRequestDto (required)
@@ -137,7 +137,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="PaymentTimeLineRequestDto")],
         _request_timeout: Union[
@@ -161,7 +161,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: PaymentTimeLineRequestDto (required)
@@ -222,7 +222,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="PaymentTimeLineRequestDto")],
         _request_timeout: Union[
@@ -246,7 +246,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: PaymentTimeLineRequestDto (required)
@@ -391,7 +391,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         cancel_payment_request_dto: Annotated[CancelPaymentRequestDTO, Field(description="CancelPaymentRequestDTO")],
         _request_timeout: Union[
@@ -415,7 +415,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param cancel_payment_request_dto: CancelPaymentRequestDTO (required)
@@ -475,7 +475,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         cancel_payment_request_dto: Annotated[CancelPaymentRequestDTO, Field(description="CancelPaymentRequestDTO")],
         _request_timeout: Union[
@@ -499,7 +499,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param cancel_payment_request_dto: CancelPaymentRequestDTO (required)
@@ -559,7 +559,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         cancel_payment_request_dto: Annotated[CancelPaymentRequestDTO, Field(description="CancelPaymentRequestDTO")],
         _request_timeout: Union[
@@ -583,7 +583,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param cancel_payment_request_dto: CancelPaymentRequestDTO (required)
@@ -720,7 +720,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_detail_dto: Annotated[PaymentRequestDetailDTO, Field(description="PaymentRequestDetailDTO")],
         _request_timeout: Union[
@@ -744,7 +744,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_detail_dto: PaymentRequestDetailDTO (required)
@@ -804,7 +804,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_detail_dto: Annotated[PaymentRequestDetailDTO, Field(description="PaymentRequestDetailDTO")],
         _request_timeout: Union[
@@ -828,7 +828,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_detail_dto: PaymentRequestDetailDTO (required)
@@ -888,7 +888,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_detail_dto: Annotated[PaymentRequestDetailDTO, Field(description="PaymentRequestDetailDTO")],
         _request_timeout: Union[
@@ -912,7 +912,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_detail_dto: PaymentRequestDetailDTO (required)
@@ -1056,7 +1056,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
         _request_timeout: Union[
@@ -1080,7 +1080,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
@@ -1141,7 +1141,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
         _request_timeout: Union[
@@ -1165,7 +1165,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
@@ -1226,7 +1226,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_time_line_request_dto: Annotated[PaymentTimeLineRequestDto, Field(description="OutboundPaymentImageRequestDto")],
         _request_timeout: Union[
@@ -1250,7 +1250,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_time_line_request_dto: OutboundPaymentImageRequestDto (required)
@@ -1395,7 +1395,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_dto: Annotated[PaymentRequestDto, Field(description="PaymentRequestDto")],
         _request_timeout: Union[
@@ -1419,7 +1419,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_dto: PaymentRequestDto (required)
@@ -1480,7 +1480,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_dto: Annotated[PaymentRequestDto, Field(description="PaymentRequestDto")],
         _request_timeout: Union[
@@ -1504,7 +1504,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_dto: PaymentRequestDto (required)
@@ -1565,7 +1565,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_request_dto: Annotated[PaymentRequestDto, Field(description="PaymentRequestDto")],
         _request_timeout: Union[
@@ -1589,7 +1589,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_request_dto: PaymentRequestDto (required)
@@ -1734,7 +1734,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_id: Annotated[Optional[StrictStr], Field(description="sets vendorId")] = None,
         payment_based_id: Annotated[Optional[StrictStr], Field(description="sets paymentBasedId")] = None,
@@ -1773,7 +1773,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_id: sets vendorId
@@ -1878,7 +1878,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_id: Annotated[Optional[StrictStr], Field(description="sets vendorId")] = None,
         payment_based_id: Annotated[Optional[StrictStr], Field(description="sets paymentBasedId")] = None,
@@ -1917,7 +1917,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_id: sets vendorId
@@ -2022,7 +2022,7 @@ class SecureOutboundPaymentsApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_id: Annotated[Optional[StrictStr], Field(description="sets vendorId")] = None,
         payment_based_id: Annotated[Optional[StrictStr], Field(description="sets paymentBasedId")] = None,
@@ -2061,7 +2061,7 @@ class SecureOutboundPaymentsApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_id: sets vendorId

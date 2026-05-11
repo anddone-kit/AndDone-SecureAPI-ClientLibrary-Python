@@ -1,6 +1,7 @@
 # flake8: noqa
 
 # import apis into api package
+from openapi_client.api.secure_ach_validation_api import SecureACHValidationApi
 from openapi_client.api.secure_autopay_enrollment_api import SecureAutopayEnrollmentApi
 from openapi_client.api.secure_embedded_premium_finance_api import SecureEmbeddedPremiumFinanceApi
 from openapi_client.api.secure_embedded_premium_finance_endorsements_api import SecureEmbeddedPremiumFinanceEndorsementsApi
