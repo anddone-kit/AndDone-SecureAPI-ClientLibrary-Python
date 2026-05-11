@@ -1,6 +1,6 @@
 # openapi_client.SecureOutboundPaymentsApi
 
-All URIs are relative to *https://api.uat.anddone.com*
+All URIs are relative to *https://api.anddone.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,10 +27,10 @@ from openapi_client.models.payment_time_line_request_dto import PaymentTimeLineR
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -40,7 +40,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     payment_time_line_request_dto = openapi_client.PaymentTimeLineRequestDto() # PaymentTimeLineRequestDto | PaymentTimeLineRequestDto
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **payment_time_line_request_dto** | [**PaymentTimeLineRequestDto**](PaymentTimeLineRequestDto.md)| PaymentTimeLineRequestDto | 
 
@@ -104,10 +104,10 @@ from openapi_client.models.cancel_payment_request_dto import CancelPaymentReques
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -117,7 +117,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     cancel_payment_request_dto = openapi_client.CancelPaymentRequestDTO() # CancelPaymentRequestDTO | CancelPaymentRequestDTO
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **cancel_payment_request_dto** | [**CancelPaymentRequestDTO**](CancelPaymentRequestDTO.md)| CancelPaymentRequestDTO | 
 
@@ -179,10 +179,10 @@ from openapi_client.models.payment_request_detail_dto import PaymentRequestDetai
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -192,7 +192,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     payment_request_detail_dto = openapi_client.PaymentRequestDetailDTO() # PaymentRequestDetailDTO | PaymentRequestDetailDTO
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **payment_request_detail_dto** | [**PaymentRequestDetailDTO**](PaymentRequestDetailDTO.md)| PaymentRequestDetailDTO | 
 
@@ -256,10 +256,10 @@ from openapi_client.models.payment_time_line_request_dto import PaymentTimeLineR
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -269,7 +269,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     payment_time_line_request_dto = openapi_client.PaymentTimeLineRequestDto() # PaymentTimeLineRequestDto | OutboundPaymentImageRequestDto
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **payment_time_line_request_dto** | [**PaymentTimeLineRequestDto**](PaymentTimeLineRequestDto.md)| OutboundPaymentImageRequestDto | 
 
@@ -334,10 +334,10 @@ from openapi_client.models.payment_response_dto import PaymentResponseDto
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -347,7 +347,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     payment_request_dto = openapi_client.PaymentRequestDto() # PaymentRequestDto | PaymentRequestDto
 
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **payment_request_dto** | [**PaymentRequestDto**](PaymentRequestDto.md)| PaymentRequestDto | 
 
@@ -411,10 +411,10 @@ from openapi_client.models.page_payment_list_response_dto import PagePaymentList
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -424,7 +424,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureOutboundPaymentsApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     vendor_id = 'vendor_id_example' # str | sets vendorId (optional)
     payment_based_id = 'payment_based_id_example' # str | sets paymentBasedId (optional)
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **vendor_id** | **str**| sets vendorId | [optional] 
  **payment_based_id** | **str**| sets paymentBasedId | [optional] 

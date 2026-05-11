@@ -25,8 +25,8 @@ Name | Type | Description | Notes
 **splits** | [**List[PaymentIntentRequestSplitsInner]**](PaymentIntentRequestSplitsInner.md) |  | [optional] 
 **quote_key** | **str** |  | [optional] 
 **account_number** | **str** |  | [optional] 
-**reference_type** | **str** |  | [optional] 
-**reference_number** | **str** |  | [optional] 
+**reference_type** | **str** |  | 
+**reference_number** | **str** |  | 
 **reference_key** | **str** |  | [optional] 
 **reference_data_list** | [**List[PaymentLinkRequestReferenceDataListInner]**](PaymentLinkRequestReferenceDataListInner.md) |  | 
 **enable_premium_finance** | **bool** |  | [optional] 

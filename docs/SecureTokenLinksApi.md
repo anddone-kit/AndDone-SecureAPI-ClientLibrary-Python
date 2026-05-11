@@ -1,6 +1,6 @@
 # openapi_client.SecureTokenLinksApi
 
-All URIs are relative to *https://api.uat.anddone.com*
+All URIs are relative to *https://api.anddone.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,10 @@ from openapi_client.models.secure_token_link_request import SecureTokenLinkReque
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -104,10 +104,10 @@ from openapi_client.models.secure_token_link_request import SecureTokenLinkReque
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -180,10 +180,10 @@ from openapi_client.models.token_link_response import TokenLinkResponse
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -291,10 +291,10 @@ from openapi_client.models.token_link_secure_request import TokenLinkSecureReque
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -368,10 +368,10 @@ from openapi_client.models.secure_token_link_update_request import SecureTokenLi
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 

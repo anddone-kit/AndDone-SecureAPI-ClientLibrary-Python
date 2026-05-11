@@ -1,6 +1,6 @@
 # openapi_client.SecureVendorManagementApi
 
-All URIs are relative to *https://api.uat.anddone.com*
+All URIs are relative to *https://api.anddone.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ from openapi_client.models.secure_vendor_status_request_dto import SecureVendorS
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -41,7 +41,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_status_request_dto = openapi_client.SecureVendorStatusRequestDTO() # SecureVendorStatusRequestDTO | SecureVendorStatusRequestDTO
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_status_request_dto** | [**SecureVendorStatusRequestDTO**](SecureVendorStatusRequestDTO.md)| SecureVendorStatusRequestDTO | 
 
@@ -104,10 +104,10 @@ from openapi_client.models.vendor_response_dto import VendorResponseDTO
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -117,7 +117,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_request_dto = openapi_client.SecureVendorRequestDTO() # SecureVendorRequestDTO | SecureVendorRequestDTO
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_request_dto** | [**SecureVendorRequestDTO**](SecureVendorRequestDTO.md)| SecureVendorRequestDTO | 
 
@@ -182,10 +182,10 @@ from openapi_client.models.secure_vendor_update_request_dto import SecureVendorU
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -195,7 +195,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_update_request_dto = openapi_client.SecureVendorUpdateRequestDTO() # SecureVendorUpdateRequestDTO | SecureVendorUpdateRequestDTO
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_update_request_dto** | [**SecureVendorUpdateRequestDTO**](SecureVendorUpdateRequestDTO.md)| SecureVendorUpdateRequestDTO | 
 
@@ -260,10 +260,10 @@ from openapi_client.models.vendor_request_dto import VendorRequestDTO
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -273,7 +273,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     vendor_request_dto = openapi_client.VendorRequestDTO() # VendorRequestDTO | VendorRequestDTO
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **vendor_request_dto** | [**VendorRequestDTO**](VendorRequestDTO.md)| VendorRequestDTO | 
 
@@ -337,10 +337,10 @@ from openapi_client.models.page_vendor_response_dto import PageVendorResponseDTO
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -350,7 +350,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     payment_method_type = 'payment_method_type_example' # str | Set paymentMethodType (optional)
     attention = 'attention_example' # str | Set attention (optional)
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **payment_method_type** | **str**| Set paymentMethodType | [optional] 
  **attention** | **str**| Set attention | [optional] 
@@ -438,10 +438,10 @@ from openapi_client.models.secure_vendor_status_request_dto import SecureVendorS
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -451,7 +451,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_status_request_dto = openapi_client.SecureVendorStatusRequestDTO() # SecureVendorStatusRequestDTO | SecureVendorStatusRequestDTO
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_status_request_dto** | [**SecureVendorStatusRequestDTO**](SecureVendorStatusRequestDTO.md)| SecureVendorStatusRequestDTO | 
 
@@ -514,10 +514,10 @@ from openapi_client.models.vendor_timeline_response_list_inner import VendorTime
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -527,7 +527,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_timeline_request_dto = openapi_client.SecureVendorTimelineRequestDTO() # SecureVendorTimelineRequestDTO | SecureVendorTimelineRequestDTO
 
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_timeline_request_dto** | [**SecureVendorTimelineRequestDTO**](SecureVendorTimelineRequestDTO.md)| SecureVendorTimelineRequestDTO | 
 
@@ -591,10 +591,10 @@ from openapi_client.models.secure_vendor_status_request_dto import SecureVendorS
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -604,7 +604,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     api_instance = openapi_client.SecureVendorManagementApi(api_client)
     x_api_key = 'x_api_key_example' # str | an authorization header
     x_app_key = 'x_app_key_example' # str | an authorization header
-    x_version = 'x_version_example' # str | x-version
+    x_version = 3.4 # float | x-version
     origin = 'origin_example' # str | origin
     secure_vendor_status_request_dto = openapi_client.SecureVendorStatusRequestDTO() # SecureVendorStatusRequestDTO | SecureVendorStatusRequestDTO
 
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_api_key** | **str**| an authorization header | 
  **x_app_key** | **str**| an authorization header | 
- **x_version** | **str**| x-version | 
+ **x_version** | **float**| x-version | 
  **origin** | **str**| origin | 
  **secure_vendor_status_request_dto** | [**SecureVendorStatusRequestDTO**](SecureVendorStatusRequestDTO.md)| SecureVendorStatusRequestDTO | 
 

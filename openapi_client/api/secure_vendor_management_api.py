@@ -16,8 +16,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
-from typing import List, Optional
+from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
+from typing import List, Optional, Union
 from typing_extensions import Annotated
 from openapi_client.models.page_vendor_response_dto import PageVendorResponseDTO
 from openapi_client.models.secure_vendor_request_dto import SecureVendorRequestDTO
@@ -52,7 +52,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -76,7 +76,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -137,7 +137,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -161,7 +161,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -222,7 +222,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -246,7 +246,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -384,7 +384,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_request_dto: Annotated[SecureVendorRequestDTO, Field(description="SecureVendorRequestDTO")],
         _request_timeout: Union[
@@ -408,7 +408,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_request_dto: SecureVendorRequestDTO (required)
@@ -469,7 +469,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_request_dto: Annotated[SecureVendorRequestDTO, Field(description="SecureVendorRequestDTO")],
         _request_timeout: Union[
@@ -493,7 +493,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_request_dto: SecureVendorRequestDTO (required)
@@ -554,7 +554,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_request_dto: Annotated[SecureVendorRequestDTO, Field(description="SecureVendorRequestDTO")],
         _request_timeout: Union[
@@ -578,7 +578,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_request_dto: SecureVendorRequestDTO (required)
@@ -723,7 +723,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_update_request_dto: Annotated[SecureVendorUpdateRequestDTO, Field(description="SecureVendorUpdateRequestDTO")],
         _request_timeout: Union[
@@ -747,7 +747,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_update_request_dto: SecureVendorUpdateRequestDTO (required)
@@ -808,7 +808,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_update_request_dto: Annotated[SecureVendorUpdateRequestDTO, Field(description="SecureVendorUpdateRequestDTO")],
         _request_timeout: Union[
@@ -832,7 +832,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_update_request_dto: SecureVendorUpdateRequestDTO (required)
@@ -893,7 +893,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_update_request_dto: Annotated[SecureVendorUpdateRequestDTO, Field(description="SecureVendorUpdateRequestDTO")],
         _request_timeout: Union[
@@ -917,7 +917,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_update_request_dto: SecureVendorUpdateRequestDTO (required)
@@ -1062,7 +1062,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_request_dto: Annotated[VendorRequestDTO, Field(description="VendorRequestDTO")],
         _request_timeout: Union[
@@ -1086,7 +1086,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_request_dto: VendorRequestDTO (required)
@@ -1147,7 +1147,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_request_dto: Annotated[VendorRequestDTO, Field(description="VendorRequestDTO")],
         _request_timeout: Union[
@@ -1171,7 +1171,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_request_dto: VendorRequestDTO (required)
@@ -1232,7 +1232,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         vendor_request_dto: Annotated[VendorRequestDTO, Field(description="VendorRequestDTO")],
         _request_timeout: Union[
@@ -1256,7 +1256,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param vendor_request_dto: VendorRequestDTO (required)
@@ -1401,7 +1401,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_method_type: Annotated[Optional[StrictStr], Field(description="Set paymentMethodType")] = None,
         attention: Annotated[Optional[StrictStr], Field(description="Set attention")] = None,
@@ -1437,7 +1437,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_method_type: Set paymentMethodType
@@ -1534,7 +1534,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_method_type: Annotated[Optional[StrictStr], Field(description="Set paymentMethodType")] = None,
         attention: Annotated[Optional[StrictStr], Field(description="Set attention")] = None,
@@ -1570,7 +1570,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_method_type: Set paymentMethodType
@@ -1667,7 +1667,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         payment_method_type: Annotated[Optional[StrictStr], Field(description="Set paymentMethodType")] = None,
         attention: Annotated[Optional[StrictStr], Field(description="Set attention")] = None,
@@ -1703,7 +1703,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param payment_method_type: Set paymentMethodType
@@ -1933,7 +1933,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -1957,7 +1957,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -2018,7 +2018,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -2042,7 +2042,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -2103,7 +2103,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -2127,7 +2127,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -2265,7 +2265,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_timeline_request_dto: Annotated[SecureVendorTimelineRequestDTO, Field(description="SecureVendorTimelineRequestDTO")],
         _request_timeout: Union[
@@ -2289,7 +2289,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_timeline_request_dto: SecureVendorTimelineRequestDTO (required)
@@ -2350,7 +2350,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_timeline_request_dto: Annotated[SecureVendorTimelineRequestDTO, Field(description="SecureVendorTimelineRequestDTO")],
         _request_timeout: Union[
@@ -2374,7 +2374,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_timeline_request_dto: SecureVendorTimelineRequestDTO (required)
@@ -2435,7 +2435,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_timeline_request_dto: Annotated[SecureVendorTimelineRequestDTO, Field(description="SecureVendorTimelineRequestDTO")],
         _request_timeout: Union[
@@ -2459,7 +2459,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_timeline_request_dto: SecureVendorTimelineRequestDTO (required)
@@ -2604,7 +2604,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -2628,7 +2628,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -2689,7 +2689,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -2713,7 +2713,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)
@@ -2774,7 +2774,7 @@ class SecureVendorManagementApi:
         self,
         x_api_key: Annotated[StrictStr, Field(description="an authorization header")],
         x_app_key: Annotated[StrictStr, Field(description="an authorization header")],
-        x_version: Annotated[StrictStr, Field(description="x-version")],
+        x_version: Annotated[Union[StrictFloat, StrictInt], Field(description="x-version")],
         origin: Annotated[StrictStr, Field(description="origin")],
         secure_vendor_status_request_dto: Annotated[SecureVendorStatusRequestDTO, Field(description="SecureVendorStatusRequestDTO")],
         _request_timeout: Union[
@@ -2798,7 +2798,7 @@ class SecureVendorManagementApi:
         :param x_app_key: an authorization header (required)
         :type x_app_key: str
         :param x_version: x-version (required)
-        :type x_version: str
+        :type x_version: float
         :param origin: origin (required)
         :type origin: str
         :param secure_vendor_status_request_dto: SecureVendorStatusRequestDTO (required)

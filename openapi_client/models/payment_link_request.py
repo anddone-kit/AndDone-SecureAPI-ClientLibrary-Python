@@ -53,8 +53,8 @@ class PaymentLinkRequest(BaseModel):
     splits: Optional[List[PaymentIntentRequestSplitsInner]] = None
     quote_key: Optional[StrictStr] = Field(default=None, alias="quoteKey")
     account_number: Optional[StrictStr] = Field(default=None, alias="accountNumber")
-    reference_type: Optional[StrictStr] = Field(default=None, alias="referenceType")
-    reference_number: Optional[StrictStr] = Field(default=None, alias="referenceNumber")
+    reference_type: StrictStr = Field(alias="referenceType")
+    reference_number: StrictStr = Field(alias="referenceNumber")
     reference_key: Optional[StrictStr] = Field(default=None, alias="referenceKey")
     reference_data_list: List[PaymentLinkRequestReferenceDataListInner] = Field(alias="referenceDataList")
     enable_premium_finance: Optional[StrictBool] = Field(default=None, alias="enablePremiumFinance")
@@ -97,9 +97,6 @@ class PaymentLinkRequest(BaseModel):
     @field_validator('reference_type')
     def reference_type_validate_enum(cls, value):
         """Validates the enum"""
-        if value is None:
-            return value
-
         if value not in set(['None', 'QuoteNumber', 'AccountNumber', 'PolicyNumber', 'InvoiceNumber', 'OtherNumber']):
             raise ValueError("must be one of enum values ('None', 'QuoteNumber', 'AccountNumber', 'PolicyNumber', 'InvoiceNumber', 'OtherNumber')")
         return value

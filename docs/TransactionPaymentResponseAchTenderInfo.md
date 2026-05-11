@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **account_token** | **str** |  | [optional] 
 **account_token_message** | **str** |  | [optional] 
 **create_account_token** | **bool** |  | [optional] 
-**commission_type** | [**TransactionPaymentResponseAchTenderInfoCommissionType**](TransactionPaymentResponseAchTenderInfoCommissionType.md) |  | [optional] 
+**commission_type** | **str** |  | [optional] 
 **commission_value** | **float** |  | [optional] 
 **commission_fixed_value** | **float** |  | [optional] 
 

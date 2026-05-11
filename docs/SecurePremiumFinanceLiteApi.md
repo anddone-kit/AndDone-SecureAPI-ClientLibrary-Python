@@ -1,6 +1,6 @@
 # openapi_client.SecurePremiumFinanceLiteApi
 
-All URIs are relative to *https://api.uat.anddone.com*
+All URIs are relative to *https://api.anddone.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,10 +24,10 @@ from openapi_client.models.pf_lite_secure_quote_request import PFLiteSecureQuote
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -102,10 +102,10 @@ from openapi_client.models.pf_lite_quote_by_payment_link_response import PFLiteQ
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -180,10 +180,10 @@ from openapi_client.models.payment_link_response import PaymentLinkResponse
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 

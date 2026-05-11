@@ -17,45 +17,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class VerifyBankAccountResponse(BaseModel):
+class SecureVerifyBankAccountRequestDTO(BaseModel):
     """
-    VerifyBankAccountResponse
+    SecureVerifyBankAccountRequestDTO
     """ # noqa: E501
-    id: Optional[StrictStr] = None
     verification_entity_id: Optional[StrictStr] = Field(default=None, alias="verificationEntityId")
-    verifying_entity: Optional[StrictStr] = Field(default=None, alias="verifyingEntity")
-    verification_status: Optional[StrictStr] = Field(default=None, alias="verificationStatus")
-    message: Optional[StrictStr] = None
-    created_on: Optional[StrictStr] = Field(default=None, alias="createdOn")
-    created_by: Optional[StrictStr] = Field(default=None, alias="createdBy")
-    modified_on: Optional[StrictStr] = Field(default=None, alias="modifiedOn")
-    modified_by: Optional[StrictStr] = Field(default=None, alias="modifiedBy")
-    __properties: ClassVar[List[str]] = ["id", "verificationEntityId", "verifyingEntity", "verificationStatus", "message", "createdOn", "createdBy", "modifiedOn", "modifiedBy"]
-
-    @field_validator('verifying_entity')
-    def verifying_entity_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['Other', 'Adyen']):
-            raise ValueError("must be one of enum values ('Other', 'Adyen')")
-        return value
-
-    @field_validator('verification_status')
-    def verification_status_validate_enum(cls, value):
-        """Validates the enum"""
-        if value is None:
-            return value
-
-        if value not in set(['Pending', 'Valid', 'Closed', 'Invalid', 'Failed']):
-            raise ValueError("must be one of enum values ('Pending', 'Valid', 'Closed', 'Invalid', 'Failed')")
-        return value
+    account_number: StrictStr = Field(alias="accountNumber")
+    routing_number: StrictStr = Field(alias="routingNumber")
+    account_holder_name: Optional[StrictStr] = Field(default=None, alias="accountHolderName")
+    explicit_verification: Optional[StrictBool] = Field(default=None, alias="explicitVerification")
+    __properties: ClassVar[List[str]] = ["verificationEntityId", "accountNumber", "routingNumber", "accountHolderName", "explicitVerification"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -75,7 +51,7 @@ class VerifyBankAccountResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of VerifyBankAccountResponse from a JSON string"""
+        """Create an instance of SecureVerifyBankAccountRequestDTO from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -100,7 +76,7 @@ class VerifyBankAccountResponse(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of VerifyBankAccountResponse from a dict"""
+        """Create an instance of SecureVerifyBankAccountRequestDTO from a dict"""
         if obj is None:
             return None
 
@@ -108,15 +84,11 @@ class VerifyBankAccountResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
             "verificationEntityId": obj.get("verificationEntityId"),
-            "verifyingEntity": obj.get("verifyingEntity"),
-            "verificationStatus": obj.get("verificationStatus"),
-            "message": obj.get("message"),
-            "createdOn": obj.get("createdOn"),
-            "createdBy": obj.get("createdBy"),
-            "modifiedOn": obj.get("modifiedOn"),
-            "modifiedBy": obj.get("modifiedBy")
+            "accountNumber": obj.get("accountNumber"),
+            "routingNumber": obj.get("routingNumber"),
+            "accountHolderName": obj.get("accountHolderName"),
+            "explicitVerification": obj.get("explicitVerification")
         })
         return _obj
 

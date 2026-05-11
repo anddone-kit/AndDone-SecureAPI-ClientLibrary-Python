@@ -1,6 +1,6 @@
 # openapi_client.SecurePaymentBatchingApi
 
-All URIs are relative to *https://api.uat.anddone.com*
+All URIs are relative to *https://api.anddone.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,10 +26,10 @@ from openapi_client.models.secure_payment_batch_details_request import SecurePay
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -103,10 +103,10 @@ from openapi_client.models.secure_batch_execute_request import SecureBatchExecut
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -178,10 +178,10 @@ from openapi_client.models.payment_batch_response import PaymentBatchResponse
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -262,10 +262,10 @@ from openapi_client.models.secure_payment_batch_details_request import SecurePay
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 
@@ -339,10 +339,10 @@ from openapi_client.models.payment_batch_cancellation_request import PaymentBatc
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.uat.anddone.com
+# Defining the host is optional and defaults to https://api.anddone.com
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://api.uat.anddone.com"
+    host = "https://api.anddone.com"
 )
 
 

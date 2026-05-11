@@ -22,7 +22,6 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 from openapi_client.models.transaction_payment_response_ach_tender_info import TransactionPaymentResponseAchTenderInfo
 from openapi_client.models.transaction_payment_response_billing_contact import TransactionPaymentResponseBillingContact
 from openapi_client.models.transaction_payment_response_cc_tender_info import TransactionPaymentResponseCcTenderInfo
-from openapi_client.models.transaction_payment_response_refund_origin import TransactionPaymentResponseRefundOrigin
 from openapi_client.models.transaction_payment_response_refund_transactions import TransactionPaymentResponseRefundTransactions
 from openapi_client.models.transaction_payment_response_transaction_entity_split_responses_inner import TransactionPaymentResponseTransactionEntitySplitResponsesInner
 from openapi_client.models.transaction_payment_response_transaction_result import TransactionPaymentResponseTransactionResult
@@ -43,7 +42,7 @@ class TransactionPaymentResponse(BaseModel):
     process_method: Optional[StrictStr] = Field(default=None, alias="processMethod")
     processor_name: Optional[StrictStr] = Field(default=None, alias="processorName")
     transaction_origin: Optional[StrictStr] = Field(default=None, alias="transactionOrigin")
-    refund_origin: Optional[TransactionPaymentResponseRefundOrigin] = Field(default=None, alias="refundOrigin")
+    refund_origin: Optional[StrictStr] = Field(default=None, alias="refundOrigin")
     ach_tender_info: Optional[TransactionPaymentResponseAchTenderInfo] = Field(default=None, alias="achTenderInfo")
     cc_tender_info: Optional[TransactionPaymentResponseCcTenderInfo] = Field(default=None, alias="ccTenderInfo")
     debit_card_tender_info: Optional[TransactionPaymentResponseCcTenderInfo] = Field(default=None, alias="debitCardTenderInfo")
@@ -99,6 +98,16 @@ class TransactionPaymentResponse(BaseModel):
 
         if value not in set(['WebForm', 'PaymentIntent']):
             raise ValueError("must be one of enum values ('WebForm', 'PaymentIntent')")
+        return value
+
+    @field_validator('refund_origin')
+    def refund_origin_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['API', 'Callback']):
+            raise ValueError("must be one of enum values ('API', 'Callback')")
         return value
 
     @field_validator('transaction_status')
@@ -173,9 +182,6 @@ class TransactionPaymentResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of billing_contact
         if self.billing_contact:
             _dict['billingContact'] = self.billing_contact.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of refund_origin
-        if self.refund_origin:
-            _dict['refundOrigin'] = self.refund_origin.to_dict()
         # override the default output from pydantic by calling `to_dict()` of ach_tender_info
         if self.ach_tender_info:
             _dict['achTenderInfo'] = self.ach_tender_info.to_dict()
@@ -198,11 +204,6 @@ class TransactionPaymentResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of refund_transactions
         if self.refund_transactions:
             _dict['refundTransactions'] = self.refund_transactions.to_dict()
-        # set to None if charge_back_amount (nullable) is None
-        # and model_fields_set contains the field
-        if self.charge_back_amount is None and "charge_back_amount" in self.model_fields_set:
-            _dict['chargeBackAmount'] = None
-
         return _dict
 
     @classmethod
@@ -225,7 +226,7 @@ class TransactionPaymentResponse(BaseModel):
             "processMethod": obj.get("processMethod"),
             "processorName": obj.get("processorName"),
             "transactionOrigin": obj.get("transactionOrigin"),
-            "refundOrigin": TransactionPaymentResponseRefundOrigin.from_dict(obj["refundOrigin"]) if obj.get("refundOrigin") is not None else None,
+            "refundOrigin": obj.get("refundOrigin"),
             "achTenderInfo": TransactionPaymentResponseAchTenderInfo.from_dict(obj["achTenderInfo"]) if obj.get("achTenderInfo") is not None else None,
             "ccTenderInfo": TransactionPaymentResponseCcTenderInfo.from_dict(obj["ccTenderInfo"]) if obj.get("ccTenderInfo") is not None else None,
             "debitCardTenderInfo": TransactionPaymentResponseCcTenderInfo.from_dict(obj["debitCardTenderInfo"]) if obj.get("debitCardTenderInfo") is not None else None,

@@ -35,7 +35,7 @@ class VendorRequestDTO(BaseModel):
     payment_method_type: StrictStr = Field(alias="paymentMethodType")
     notification_type: StrictStr = Field(alias="notificationType")
     vendor_notes: Optional[StrictStr] = Field(default=None, alias="vendorNotes")
-    phone_number: StrictStr = Field(alias="phoneNumber")
+    phone_number: Optional[StrictStr] = Field(default=None, alias="phoneNumber")
     is_mobile_number: Optional[StrictBool] = Field(default=None, alias="isMobileNumber")
     use_same_as_physical_address: Optional[StrictBool] = Field(default=None, alias="useSameAsPhysicalAddress")
     email: StrictStr
