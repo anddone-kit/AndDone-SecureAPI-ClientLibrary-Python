@@ -23,15 +23,18 @@ class TestSecureOutboundPaymentsApi(unittest.TestCase):
     """SecureOutboundPaymentsApi unit test stubs"""
 
     def setUp(self) -> None:
-        # call configuration file and store as object
-        with open('C:/Work/AndDone_SDKs/anddone-python-sdk-openapi-codegen/config.json') as f:
-            config = json.load(f)
-        # store api key, app key, version and origin from config file
-
-        self.x_api_key = config['xApiKey']
-        self.x_app_key = config['xAppKey']
-        self.x_version = config['xVersion']
-        self.origin = config['origin']
+        # # call configuration file and store as object
+        # with open('anddone-python-sdk-openapi-codegen/config.json') as f:
+        #     config = json.load(f)
+        # # store api key, app key, version and origin from config file
+        # self.api_key = config.api_key
+        # self.app_key = config.app_key
+        # self.version = config.version
+        # self.origin = config.origin
+        self.api_key = ''
+        self.app_key = ''
+        self.version = 2.3
+        self.origin = ''
 
         # self.config = Configuration()
         # self.config.host("https://api2.uat.anddone.com")

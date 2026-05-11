@@ -16,12 +16,17 @@ from openapi_client.api.secure_voids_api import SecureVoidsApi
 from openapi_client import Configuration, ApiClient
 import json
 
-with open('C:/Work/AndDone_SDKs/anddone-python-sdk-openapi-codegen/config.json') as f:
-  config = json.load(f)
-x_api_key = config['xApiKey']
-x_app_key = config['xAppKey']
-x_version = config['xVersion']
-origin = config['origin']
+# with open('C:/Work/AndDone_SDKs/anddone-python-sdk-openapi-codegen/config.json') as f:
+#   config = json.load(f)
+# x_api_key = config['xApiKey']
+# x_app_key = config['xAppKey']
+# x_version = config['xVersion']
+# origin = config['origin']
+
+x_api_key = ''
+x_app_key = ''
+x_version = 2.3
+origin = ''
 # configuration = Configuration(
 #     host="https://api2.uat.anddone.com", server_index=1
 # )

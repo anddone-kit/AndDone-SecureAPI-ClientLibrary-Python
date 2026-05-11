@@ -23,14 +23,18 @@ class TestSecureReportsApi(unittest.TestCase):
     """SecureReportsApi unit test stubs"""
 
     def setUp(self) -> None:
-        # call configuration file and store as object
-        with open('anddone-python-sdk-openapi-codegen/config.json') as f:
-            config = json.load(f)
-        # store api key, app key, version and origin from config file
-        self.api_key = config.api_key
-        self.app_key = config.app_key
-        self.version = config.version
-        self.origin = config.origin
+        # # call configuration file and store as object
+        # with open('anddone-python-sdk-openapi-codegen/config.json') as f:
+        #     config = json.load(f)
+        # # store api key, app key, version and origin from config file
+        # self.api_key = config.api_key
+        # self.app_key = config.app_key
+        # self.version = config.version
+        # self.origin = config.origin
+        self.api_key = ''
+        self.app_key = ''
+        self.version = 2.3
+        self.origin = ''
 
         # store secure payments api functions as an object
         self.api = SecureReportsApi()
