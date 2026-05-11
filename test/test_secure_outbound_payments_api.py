@@ -13,9 +13,7 @@
 
 
 import unittest
-import json
 
-from openapi_client import Configuration
 from openapi_client.api.secure_outbound_payments_api import SecureOutboundPaymentsApi
 
 
@@ -23,22 +21,6 @@ class TestSecureOutboundPaymentsApi(unittest.TestCase):
     """SecureOutboundPaymentsApi unit test stubs"""
 
     def setUp(self) -> None:
-        # # call configuration file and store as object
-        # with open('anddone-python-sdk-openapi-codegen/config.json') as f:
-        #     config = json.load(f)
-        # # store api key, app key, version and origin from config file
-        # self.api_key = config.api_key
-        # self.app_key = config.app_key
-        # self.version = config.version
-        # self.origin = config.origin
-        self.api_key = ''
-        self.app_key = ''
-        self.version = '2.3'
-        self.origin = ''
-
-        # self.config = Configuration()
-        # self.config.host("https://api2.uat.anddone.com")
-
         self.api = SecureOutboundPaymentsApi()
 
     def tearDown(self) -> None:
@@ -49,45 +31,42 @@ class TestSecureOutboundPaymentsApi(unittest.TestCase):
 
         This API gets outbound payment timelines
         """
-        request = {
-            "paymentId": "3a5167e6-bd18-4c44-9d5e-075813f30896"
-        }
-        result = self.api.vendorapi_secure_outbound_payments_timelines_post(self.x_api_key, self.x_app_key, self.x_version, self.origin, request)
-        print(result)
+        pass
 
     def test_vendorapi_secure_outboundpayments_cancel_post(self) -> None:
         """Test case for vendorapi_secure_outboundpayments_cancel_post
 
         This API cancel outbound payment request
         """
-        request = {}
-        self.api.vendorapi_secure_outboundpayments_cancel_post(self.x_api_key, self.x_app_key, self.x_version, self.origin, request)
+        pass
 
     def test_vendorapi_secure_outboundpayments_detail_post(self) -> None:
         """Test case for vendorapi_secure_outboundpayments_detail_post
 
         This API fetch outbound payment by paymentId
         """
-        request = {
-          "paymentId": "3a5167e6-bd18-4c44-9d5e-075813f30896"
-        }
-        result = self.api.vendorapi_secure_outboundpayments_detail_post(self.x_api_key, self.x_app_key, self.x_version, self.origin, request)
-        print(result)
+        pass
+
+    def test_vendorapi_secure_outboundpayments_image_post(self) -> None:
+        """Test case for vendorapi_secure_outboundpayments_image_post
+
+        This API gets outbound payment JPG image in Base64 string format
+        """
+        pass
 
     def test_vendorapi_secure_outboundpayments_post(self) -> None:
         """Test case for vendorapi_secure_outboundpayments_post
 
         This API creates outbound payment request
         """
-        request = {}
-        result = self.api.vendorapi_secure_outboundpayments_post(self.x_api_key, self.x_app_key, self.x_version, self.origin, request)
+        pass
 
     def test_vendorapi_secure_outboundpayments_search_post(self) -> None:
         """Test case for vendorapi_secure_outboundpayments_search_post
 
         This API gets all outbound payment
         """
-        result = self.api.vendorapi_secure_outboundpayments_search_post(self.x_api_key, self.x_app_key, self.x_version, self.origin)
+        pass
 
 
 if __name__ == '__main__':

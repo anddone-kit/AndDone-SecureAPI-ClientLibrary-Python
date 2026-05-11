@@ -1,5 +1,4 @@
 .github/workflows/python.yml
-.gitignore
 .gitlab-ci.yml
 .travis.yml
 docs/AutoPayEnrollmentRequest.md
@@ -421,5 +420,19 @@ setup.py
 test-requirements.txt
 test/__init__.py
 test/test_secure_ach_validation_api.py
-test/test_secure_verify_bank_account_request_dto.py
+test/test_secure_autopay_enrollment_api.py
+test/test_secure_embedded_premium_finance_api.py
+test/test_secure_embedded_premium_finance_endorsements_api.py
+test/test_secure_outbound_payments_api.py
+test/test_secure_payment_batching_api.py
+test/test_secure_payment_intent_api.py
+test/test_secure_payment_links_api.py
+test/test_secure_payments_api.py
+test/test_secure_premium_finance_lite_api.py
+test/test_secure_refunds_api.py
+test/test_secure_reports_api.py
+test/test_secure_token_links_api.py
+test/test_secure_token_management_api.py
+test/test_secure_vendor_management_api.py
+test/test_secure_voids_api.py
 tox.ini
