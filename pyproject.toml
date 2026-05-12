@@ -13,7 +13,7 @@ include = ["openapi_client/py.typed"]
 python = "^3.8"
 
 urllib3 = ">=2.2.3"
-python-dateutil = ">= 2.8.2"
+python-dateutil = ">=2.9.0.post0"
 pydantic = ">=2.10.6"
 typing-extensions = ">=4.13.2"
 
