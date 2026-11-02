@@ -11,8 +11,7 @@ include = ["openapi_client/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-
-urllib3 = ">=2.2.3"
+urllib3 = ">= 2.8.0"
 python-dateutil = ">=2.9.0.post0"
 pydantic = ">=2.10.6"
 typing-extensions = ">=4.13.2"
@@ -25,6 +24,8 @@ flake8 = ">=5.0.4"
 types-python-dateutil = ">=2.9.0.20241206"
 mypy = ">=1.14.1"
 
+[tool.tox]
+virtualenv_spec = "virtualenv>=21.14.9"
 
 [build-system]
 requires = ["setuptools"]
